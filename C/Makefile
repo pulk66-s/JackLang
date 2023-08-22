@@ -5,9 +5,12 @@
 CC		=	gcc
 
 SRC		= 	src/main.c \
-			src/files/read.c
+			src/files/read.c \
+			src/packrat/packrat_init.c \
+			src/packrat/default_grammar.c \
+			src/packrat/words.c \
 
-CFLAGS	=	-W -Wall -Wextra -I./src
+CFLAGS	=	-W -Wall -Wextra -I./src -g3
 
 OBJ		=	$(SRC:.c=.o)
 

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "packrat_init.h": "c",
+        "stdbool.h": "c",
+        "grammar.h": "c"
+    }
+}

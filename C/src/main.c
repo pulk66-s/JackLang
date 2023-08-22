@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "files.h"
+#include "packrat.h"
 
 int main(int ac, char **av)
 {
@@ -14,7 +15,7 @@ int main(int ac, char **av)
             printf("Cannot read %s\n", av[i]);
             continue;
         }
-        printf("%s\n", content);
+        packrat_init(content);
         free(content);
     }
     return 0;
