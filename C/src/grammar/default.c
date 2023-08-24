@@ -57,3 +57,4 @@ struct result ordered_choice(struct packrat *p, expr_t *exprs, size_t size)
     }
     return FAIL_RESULT;
 }
+

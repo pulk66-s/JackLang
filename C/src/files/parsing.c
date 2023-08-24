@@ -22,9 +22,9 @@ static char *trim(char *str)
     size_t size = strlen(str);
 
     for (; size > 0 && str[size - 1] == ' '; size--);
+    str[size] = '\0';
     return str;
 }
-
 static char **create_line(const char *content, size_t line)
 {
     size_t index = 0;

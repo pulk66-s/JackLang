@@ -13,7 +13,7 @@ void print_expr(struct result *r)
     struct expr *e = r->data;
     struct result *datas = e->data;
 
-    printf("Expr: %d\n", r->size);
+    printf("Expr: %ld\n", r->size);
     for (size_t i = 0; i < r->size; i++) {
         printf("Expr %ld: ", i);
         repartition(&datas[i]);

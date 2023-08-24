@@ -16,30 +16,20 @@ struct result word(struct packrat *p)
         return FAIL_RESULT;
     }
 
-    char *buf = NULL;
-    size_t cursor_index = p->cursor;
-    size_t x = p->x;
-    size_t y = p->y;
+    const char *buf = &p->content[p->y][p->x][p->cursor];
     size_t size = 0;
 
-    while (true) {
-        if (is_alpha(next(p))) {
-            size++;
-        } else {
-            prev(p);
-            break;
-        }
-    }
+    for (; buf[size] && is_alpha(buf[size]); size++);
     if (!size) {
         return FAIL_RESULT;
     }
-    buf = malloc(sizeof(char) * (size + 1));
-    memset(buf, 0, sizeof(char) * (size + 1));
-    strncpy(buf, &p->content[y][x][cursor_index], size);
+    for (size_t i = 0; i < size; i++) {
+        next(p);
+    }
     return (struct result) {
         .size = 1,
         .success = true,
-        .data = buf,
+        .data = strndup(buf, size),
         .datatype = STRING
     };
 }

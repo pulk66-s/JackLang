@@ -3,6 +3,7 @@
 #include "print/word.h"
 #include "print/expr.h"
 #include "print/operation.h"
+#include "print/function.h"
 #include <stdio.h>
 
 static void print_datatype(enum result_data_type type)
@@ -28,6 +29,9 @@ static void print_datatype(enum result_data_type type)
             break;
         case PROGRAM:
             printf("PROGRAM");
+            break;
+        case FUNCTION_DECL:
+            printf("FUNCTION_DECL");
             break;
         default:
             printf("Unknown datatype: %d\n", type);
@@ -55,6 +59,9 @@ void repartition(struct result *r)
             break;
         case OPERATION:
             print_operation(r);
+            break;
+        case FUNCTION_DECL:
+            print_function(r);
             break;
         default:
             printf("Unknown datatype: ");

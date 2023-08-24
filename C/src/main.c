@@ -29,6 +29,7 @@ void print_parse_content(const char ***content)
         }
         printf("\n");
     }
+    printf("======\n");
 }
 
 int main(int ac, char **av)

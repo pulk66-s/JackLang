@@ -11,7 +11,8 @@ enum result_data_type {
     EXPR_STATEMENT,
     OPERATION,
     NUMBER,
-    PROGRAM
+    PROGRAM,
+    FUNCTION_DECL
 };
 
 struct result {

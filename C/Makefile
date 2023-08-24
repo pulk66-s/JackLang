@@ -13,6 +13,8 @@ SRC		= 	src/main.c 						\
 			src/grammar/program.c			\
 			src/grammar/chars.c				\
 			src/grammar/expr.c				\
+			src/grammar/typing.c			\
+			src/grammar/function.c			\
 			src/grammar/operation/basic.c	\
 			src/print/expr.c				\
 			src/print/packrat.c				\
@@ -20,6 +22,7 @@ SRC		= 	src/main.c 						\
 			src/print/word.c				\
 			src/print/program.c				\
 			src/print/operation.c			\
+			src/print/function.c			\
 
 CFLAGS	=	-W -Wall -Wextra -I./src -g3
 
