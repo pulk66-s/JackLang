@@ -4,8 +4,8 @@
 #include "grammar/types.h"
 
 struct expr {
+    struct result *data;
     char terminate;
-    char *name;
 };
 
 struct result expr(struct packrat *p);

@@ -4,17 +4,9 @@
 
 void print_packrat(struct result *r)
 {
-    if (!r->success) {
-        printf("Failed to parse\n");
+    if (!r->success || !r->size) {
+        printf("packrat Failed to parse, success: %d, size: %ld\n", r->success, r->size);
         return;
     }
-    if (r->size == 1) {
-        repartition(r);
-        return;
-    }
-    for (size_t i = 0; i < r->size; i++) {
-        struct result *res = (struct result *)r->data + i;
-
-        repartition(res);
-    }
+    repartition(r);
 }

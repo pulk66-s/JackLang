@@ -1,9 +1,11 @@
 #include "grammar/default.h"
+#include "grammar/operation/basic.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 struct result zero_or_more(struct packrat *p, expr_t e)
 {
-    struct result res = {.success = true, .data = NULL};
+    struct result res = DEFAULT_RESULT;
     size_t nb_success = 0;
 
     while (true) {
@@ -21,6 +23,7 @@ struct result zero_or_more(struct packrat *p, expr_t e)
         ((struct result *) res.data)[nb_success - 1] = r;
     }
     res.size = nb_success;
+    res.success = true;
     return res;
 }
 
@@ -41,4 +44,16 @@ struct result sequence(struct packrat *p, expr_t *exprs, size_t size)
     res.size = size;
     res.data = datas;
     return res;
+}
+
+struct result ordered_choice(struct packrat *p, expr_t *exprs, size_t size)
+{
+    for (size_t i = 0; i < size; i++) {
+        struct result r = exprs[i](p);
+
+        if (r.success) {
+            return r;
+        }
+    }
+    return FAIL_RESULT;
 }

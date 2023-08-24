@@ -8,6 +8,10 @@
         "files.h": "c",
         "string.h": "c",
         "default.h": "c",
-        "expr.h": "c"
+        "expr.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "functional": "c"
     }
 }

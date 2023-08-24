@@ -1,15 +1,21 @@
 #include "print/expr.h"
+#include "print/repartition.h"
 #include "grammar/expr.h"
 #include <stdio.h>
 
 void print_expr(struct result *r)
 {
     if (!r->success) {
-        printf("Failed to parse\n");
+        printf("Expr Failed to parse\n");
         return;
     }
 
     struct expr *e = r->data;
+    struct result *datas = e->data;
 
-    printf("Expr: %s, terminate: %c\n", e->name, e->terminate);
+    printf("Expr: %d\n", r->size);
+    for (size_t i = 0; i < r->size; i++) {
+        printf("Expr %ld: ", i);
+        repartition(&datas[i]);
+    }
 }

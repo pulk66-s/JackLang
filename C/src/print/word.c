@@ -4,7 +4,7 @@
 void print_string(struct result *r)
 {
     if (!r->success) {
-        printf("Failed to parse\n");
+        printf("string Failed to parse\n");
         return;
     }
 
@@ -16,11 +16,23 @@ void print_string(struct result *r)
 void print_char(struct result *r)
 {
     if (!r->success) {
-        printf("Failed to parse\n");
+        printf("char Failed to parse\n");
         return;
     }
 
     char *c = r->data;
 
     printf("Char: %c\n", *c);
+}
+
+void print_nb(struct result *r)
+{
+    if (!r->success) {
+        printf("number Failed to parse\n");
+        return;
+    }
+
+    int *nb = r->data;
+
+    printf("Number: %d\n", *nb);
 }

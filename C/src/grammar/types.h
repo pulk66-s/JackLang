@@ -8,7 +8,10 @@ enum result_data_type {
     STRING,
     CHAR,
     UNKNOWN,
-    EXPR
+    EXPR_STATEMENT,
+    OPERATION,
+    NUMBER,
+    PROGRAM
 };
 
 struct result {
@@ -36,6 +39,7 @@ struct packrat {
 typedef struct result (*expr_t)(struct packrat *p);
 
 char next(struct packrat *p);
+void prev(struct packrat *p);
 void next_word(struct packrat *p);
 
 #endif

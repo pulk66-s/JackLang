@@ -12,7 +12,6 @@ void packrat_launch(const char ***content)
         .y = 0,
         .content = content
     };
-
     struct result res = program(&p);
 
     print_packrat(&res);
@@ -24,8 +23,9 @@ void print_parse_content(const char ***content)
         return;
     }
     for (size_t i = 0; content[i]; i++) {
+        printf("Line %ld: ", i);
         for (size_t j = 0; content[i][j]; j++) {
-            printf("%s ", content[i][j]);
+            printf("(%s) ", content[i][j]);
         }
         printf("\n");
     }

@@ -5,5 +5,6 @@
 
 struct result zero_or_more(struct packrat *p, expr_t e);
 struct result sequence(struct packrat *p, expr_t *exprs, size_t size);
+struct result ordered_choice(struct packrat *p, expr_t *exprs, size_t size);
 
 #endif

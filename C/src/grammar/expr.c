@@ -3,33 +3,48 @@
 #include "grammar/word.h"
 #include "grammar/chars.h"
 #include "grammar/expr.h"
+#include "grammar/operation/basic.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-static struct result terminated_line(struct packrat *p)
+static struct result primary_expr(struct packrat *p)
 {
-    struct result res = sequence(p, (expr_t[]) {word, terminate_char}, 2);
-    struct expr *e = malloc(sizeof(struct expr));
+    return operation(p);
+}
+
+static struct result expr_statement(struct packrat *p)
+{
+    struct result res = sequence(
+        p,
+        (expr_t[]) {
+            primary_expr,
+            terminate_char
+        },
+        2
+    );
 
     if (!res.success) {
-        return FAIL_RESULT;
+        return res;
     }
 
-    char *word = (char *)((struct result *)res.data)[0].data;
-    char terminate = *(char *)((struct result *)res.data)[1].data;
+    struct result *datas = res.data;
+    struct result *data = &datas[0];
+    struct result *terminated = &datas[1];
+    struct expr *expr = malloc(sizeof(struct expr));
 
-    *e = (struct expr) {
-        .name = word,
-        .terminate = terminate,
+    *expr = (struct expr) {
+        .data = data,
+        .terminate = *(char *)terminated->data
     };
     return (struct result) {
-        .success = true,
-        .data = e,
-        .datatype = EXPR,
+        .data = expr,
+        .success = res.success,
+        .datatype = EXPR_STATEMENT,
         .size = 1
     };
 }
 
 struct result expr(struct packrat *p)
 {
-    return terminated_line(p);
+    return expr_statement(p);
 }

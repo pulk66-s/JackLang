@@ -4,5 +4,6 @@
 #include "grammar/types.h"
 
 struct result word(struct packrat *p);
+struct result number(struct packrat *p);
 
 #endif

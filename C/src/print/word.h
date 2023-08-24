@@ -5,5 +5,6 @@
 
 void print_string(struct result *r);
 void print_char(struct result *r);
+void print_nb(struct result *r);
 
 #endif
