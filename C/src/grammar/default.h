@@ -3,8 +3,7 @@
 
 #include "grammar/types.h"
 
-char next(struct packrat *p);
-void next_word(struct packrat *p);
 struct result zero_or_more(struct packrat *p, expr_t e);
+struct result sequence(struct packrat *p, expr_t *exprs, size_t size);
 
 #endif

@@ -74,7 +74,7 @@ static char **create_line(const char *content, size_t line)
     return buf;
 }
 
-char ***parse_content(const char *content)
+const char ***parse_content(const char *content)
 {
     size_t nb_lines = count('\n', content) + 1;
     size_t nb_chars = strlen(content);
@@ -94,5 +94,5 @@ char ***parse_content(const char *content)
     for (size_t i = 0; i < nb_lines; i++) {
         buf[i] = create_line(content, i);
     }
-    return buf;
+    return (const char ***)buf;
 }

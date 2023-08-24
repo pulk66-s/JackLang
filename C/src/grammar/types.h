@@ -6,7 +6,9 @@
 
 enum result_data_type {
     STRING,
-    UNKNOWN
+    CHAR,
+    UNKNOWN,
+    EXPR
 };
 
 struct result {
@@ -23,6 +25,17 @@ struct packrat {
     const char ***content;
 };
 
+#define FAIL_RESULT (struct result) { \
+    .success = false, \
+    .size = 0, \
+    .data = NULL, \
+    .datatype = UNKNOWN \
+}
+#define DEFAULT_RESULT FAIL_RESULT
+
 typedef struct result (*expr_t)(struct packrat *p);
+
+char next(struct packrat *p);
+void next_word(struct packrat *p);
 
 #endif

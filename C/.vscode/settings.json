@@ -7,6 +7,7 @@
         "types.h": "c",
         "files.h": "c",
         "string.h": "c",
-        "default.h": "c"
+        "default.h": "c",
+        "expr.h": "c"
     }
 }

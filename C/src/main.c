@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "files.h"
 #include "grammar.h"
+#include "print.h"
 
 void packrat_launch(const char ***content)
 {
@@ -14,15 +15,7 @@ void packrat_launch(const char ***content)
 
     struct result res = program(&p);
 
-    for (size_t i = 0; i < res.size; i++) {
-        struct result *r = &((struct result *) res.data)[i];
-
-        if (r->success) {
-            printf("SUCCESS: %s\n", (char *) r->data);
-        } else {
-            printf("FAILURE\n");
-        }
-    }
+    print_packrat(&res);
 }
 
 void print_parse_content(const char ***content)
@@ -45,7 +38,7 @@ int main(int ac, char **av)
         return 1;
     }
     for (int i = 1; i < ac; i++) {
-        char *content = read_file(av[i]);
+        const char *content = read_file(av[i]);
         const char ***parsed = parse_content(content);
 
         if (!parsed) {

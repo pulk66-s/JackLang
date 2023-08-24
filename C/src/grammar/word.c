@@ -45,6 +45,6 @@ struct result word(struct packrat *p)
         .data = buf,
         .datatype = STRING
     };
-    next_word(p);
+    p->cursor += letter_index;
     return res;
 }
