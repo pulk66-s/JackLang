@@ -2,6 +2,11 @@
     "files.associations": {
         "packrat_init.h": "c",
         "stdbool.h": "c",
-        "grammar.h": "c"
+        "grammar.h": "c",
+        "word.h": "c",
+        "types.h": "c",
+        "files.h": "c",
+        "string.h": "c",
+        "default.h": "c"
     }
 }

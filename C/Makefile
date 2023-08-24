@@ -4,11 +4,12 @@
 
 CC		=	gcc
 
-SRC		= 	src/main.c \
-			src/files/read.c \
-			src/packrat/packrat_init.c \
-			src/packrat/default_grammar.c \
-			src/packrat/words.c \
+SRC		= 	src/main.c 						\
+			src/files/read.c 				\
+			src/files/parsing.c				\
+			src/grammar/word.c		 		\
+			src/grammar/default.c	 		\
+			src/grammar/program.c	 		\
 
 CFLAGS	=	-W -Wall -Wextra -I./src -g3
 
