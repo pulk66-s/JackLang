@@ -1,4 +1,5 @@
 #include "print/word.h"
+#include "logger.h"
 #include <stdio.h>
 
 void print_string(struct result *r)
@@ -10,7 +11,7 @@ void print_string(struct result *r)
 
     char *s = r->data;
 
-    printf("String: %s\n", s);
+    logger().syntax("\"String\": \"%s\",\n", s);
 }
 
 void print_char(struct result *r)
@@ -22,7 +23,7 @@ void print_char(struct result *r)
 
     char *c = r->data;
 
-    printf("Char: %c\n", *c);
+    logger().syntax("\"Char\": \"%c\",\n", *c);
 }
 
 void print_nb(struct result *r)
@@ -34,5 +35,5 @@ void print_nb(struct result *r)
 
     int *nb = r->data;
 
-    printf("Number: %d\n", *nb);
+    logger().syntax("\"Number\": %d,\n", *nb);
 }

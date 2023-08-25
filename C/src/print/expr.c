@@ -5,9 +5,7 @@
 
 void print_expr(struct result *r)
 {
-    printf("Enter print_expr\n");
     if (!r->success) {
-        printf("Expr Failed to parse\n");
         return;
     }
 

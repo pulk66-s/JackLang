@@ -4,5 +4,6 @@
 #include "grammar/types.h"
 
 void print_function_decl(struct result *r);
+void print_arg_decl(struct result *r);
 
 #endif

@@ -2,6 +2,7 @@
 #include "grammar/word.h"
 #include "grammar/default.h"
 #include <string.h>
+#include <stdlib.h>
 
 struct result name(struct packrat *p)
 {

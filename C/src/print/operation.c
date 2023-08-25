@@ -1,5 +1,6 @@
 #include "print/operation.h"
 #include "print/repartition.h"
+#include "logger.h"
 #include <stdio.h>
 
 void print_operation(struct result *r)
@@ -14,7 +15,9 @@ void print_operation(struct result *r)
     struct result *right = op->right;
     char operand = op->operand;
 
+    logger().syntax("\"Operation\": {\n");
     repartition(left);
-    printf(" %c ", operand);
+    logger().syntax("\"Operand\": \"%c\",\n", operand);
     repartition(right);
+    logger().syntax("},\n");
 }

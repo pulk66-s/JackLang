@@ -25,6 +25,7 @@ SRC		= 	src/main.c 						\
 			src/print/program.c				\
 			src/print/operation.c			\
 			src/print/function.c			\
+			src/logger/manager.c			\
 
 CFLAGS	=	-W -Wall -Wextra -I./src -g3
 

@@ -57,16 +57,8 @@ static struct result function_args_decl(struct packrat *p)
 static struct result function_decl_lines(struct packrat *p)
 {
     struct result res = zero_or_more(p, expr);
-    struct result first_data = ((struct result *)res.data)[0];
-    struct result expr_data = *((struct expr *)first_data.data)->data;
 
     res.datatype = EXPR_STATEMENT;
-    printf("function_decl_lines success %d\n", res.success);
-    printf("function_decl_lines size %d\n", res.size);
-    printf("function_decl_lines datatype %d\n", res.datatype);
-    printf("function_decl_lines datatype %d\n", first_data.datatype);
-    printf("function_decl_lines operation_res %d\n", expr_data.datatype);
-    printf("function_decl_lines operation_res %d\n", expr_data.size);
     return res;
 }
 
