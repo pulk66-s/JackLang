@@ -58,3 +58,10 @@ struct result ordered_choice(struct packrat *p, expr_t *exprs, size_t size)
     return FAIL_RESULT;
 }
 
+struct result zero_or_one(struct packrat *p, expr_t expr)
+{
+    struct result res = expr(p);
+
+    res.success = true;
+    return res;
+}

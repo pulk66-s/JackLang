@@ -5,14 +5,15 @@
 #include <stdbool.h>
 
 enum result_data_type {
+    UNKNOWN,
     STRING,
     CHAR,
-    UNKNOWN,
     EXPR_STATEMENT,
     OPERATION,
     NUMBER,
     PROGRAM,
-    FUNCTION_DECL
+    FUNCTION_DECL,
+    ARG_DECL
 };
 
 struct result {

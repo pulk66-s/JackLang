@@ -5,17 +5,23 @@
 
 void print_expr(struct result *r)
 {
+    printf("Enter print_expr\n");
     if (!r->success) {
         printf("Expr Failed to parse\n");
         return;
     }
 
-    struct expr *e = r->data;
-    struct result *datas = e->data;
+    if (r->size == 1) {
+        struct expr *e = r->data;
 
-    printf("Expr: %ld\n", r->size);
-    for (size_t i = 0; i < r->size; i++) {
-        printf("Expr %ld: ", i);
-        repartition(&datas[i]);
+        repartition(e->data);
+    } else {
+        struct result *datas = r->data;
+
+        for (size_t i = 0; i < r->size; i++) {
+            struct result *data = &datas[i];
+
+            repartition(data);
+        }
     }
 }

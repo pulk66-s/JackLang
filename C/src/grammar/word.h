@@ -5,5 +5,7 @@
 
 struct result word(struct packrat *p);
 struct result number(struct packrat *p);
+struct result alpha_letter(struct packrat *p);
+struct result alphanumeric(struct packrat *p);
 
 #endif

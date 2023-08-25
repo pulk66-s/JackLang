@@ -33,6 +33,9 @@ static void print_datatype(enum result_data_type type)
         case FUNCTION_DECL:
             printf("FUNCTION_DECL");
             break;
+        case ARG_DECL:
+            printf("ARG_DECL");
+            break;
         default:
             printf("Unknown datatype: %d\n", type);
             break;
@@ -61,7 +64,10 @@ void repartition(struct result *r)
             print_operation(r);
             break;
         case FUNCTION_DECL:
-            print_function(r);
+            print_function_decl(r);
+            break;
+        case ARG_DECL:
+            print_arg_decl(r);
             break;
         default:
             printf("Unknown datatype: ");

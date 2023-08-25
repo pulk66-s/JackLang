@@ -25,6 +25,7 @@ static char *trim(char *str)
     str[size] = '\0';
     return str;
 }
+
 static char **create_line(const char *content, size_t line)
 {
     size_t index = 0;
@@ -36,6 +37,7 @@ static char **create_line(const char *content, size_t line)
             i++;
         }
     }
+    for (; content[index] == ' '; index++);
     for (size_t i = index; content[i] != '\n' && content[i] != '\0'; i++) {
         if (content[i] == ' ' && content[i + 1] != ' ' && content[i + 1] != '\n') {
             nb_words++;
@@ -70,6 +72,7 @@ static char **create_line(const char *content, size_t line)
     }
     memset(buf[k], 0, sizeof(char) * (i - j + 1));
     strncpy(buf[k], content + j, i - j);
+    buf[k] = trim(buf[k]);
     buf[k] = buf[k][0] == '\0' ? NULL : buf[k];
     return buf;
 }

@@ -15,6 +15,8 @@ SRC		= 	src/main.c 						\
 			src/grammar/expr.c				\
 			src/grammar/typing.c			\
 			src/grammar/function.c			\
+			src/grammar/name.c				\
+			src/grammar/letters.c			\
 			src/grammar/operation/basic.c	\
 			src/print/expr.c				\
 			src/print/packrat.c				\

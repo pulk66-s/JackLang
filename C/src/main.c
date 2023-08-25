@@ -40,6 +40,7 @@ int main(int ac, char **av)
     }
     for (int i = 1; i < ac; i++) {
         const char *content = read_file(av[i]);
+        printf("content: %s\n", content);
         const char ***parsed = parse_content(content);
 
         if (!parsed) {

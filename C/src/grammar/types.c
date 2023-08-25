@@ -1,9 +1,15 @@
 #include "grammar/types.h"
+#include <stdio.h>
 
 inline char next(struct packrat *p)
 {
     if (!p->content[p->y]) {
         return '\0';
+    }
+    if (!p->content[p->y][p->x]) {
+        p->x = 0;
+        p->y++;
+        return next(p);
     }
 
     char c = p->content[p->y][p->x][p->cursor];

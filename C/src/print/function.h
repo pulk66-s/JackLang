@@ -3,6 +3,6 @@
 
 #include "grammar/types.h"
 
-void print_function(struct result *r);
+void print_function_decl(struct result *r);
 
 #endif
