@@ -1,24 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "files.h"
-#include "grammar.h"
-#include "print.h"
-
-void packrat_launch(const char ***content)
-{
-    struct packrat p = {
-        .cursor = 0,
-        .x = 0,
-        .y = 0,
-        .save_x = 0,
-        .save_y = 0,
-        .save_cursor = 0,
-        .content = content
-    };
-    struct result res = program(&p);
-
-    print_packrat(&res);
-}
 
 void print_parse_content(const char ***content)
 {
@@ -43,7 +25,6 @@ int main(int ac, char **av)
     }
     for (int i = 1; i < ac; i++) {
         const char *content = read_file(av[i]);
-        printf("content: %s\n", content);
         const char ***parsed = parse_content(content);
 
         if (!parsed) {
@@ -51,11 +32,6 @@ int main(int ac, char **av)
             continue;
         }
         print_parse_content(parsed);
-        if (content == NULL) {
-            printf("Cannot read %s\n", av[i]);
-            continue;
-        }
-        packrat_launch(parsed);
     }
     return 0;
 }
