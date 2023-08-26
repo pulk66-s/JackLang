@@ -6,5 +6,7 @@
 #include "parsing/prgm.h"
 #include "parsing/default/char.h"
 #include "parsing/words/letters.h"
+#include "parsing/words/numbers.h"
+#include "parsing/words/words.h"
 
 #endif

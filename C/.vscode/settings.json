@@ -20,6 +20,7 @@
         "random": "c",
         "categories.h": "c",
         "packrat.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "initializer_list": "c"
     }
 }

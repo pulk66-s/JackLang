@@ -5,6 +5,19 @@
 #include <stdlib.h>
 
 /**
+ * @brief   Initialize the category that tests the numbers parser
+ * @return  The category
+*/
+struct category *init_numbers_category(void)
+{
+    struct category *category = create_default_category("Numbers", "Tests the numbers parser");
+
+    add_test(category, create_unit_test(test_digit, "test_digit"));
+    add_test(category, create_unit_test(test_number, "test_number"));
+    return category;
+}
+
+/**
  * @brief   Initializes the packrat unit tests.
  * @return  The packrat category.
 */

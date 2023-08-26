@@ -16,6 +16,7 @@ static struct categories *init_tests(void)
     };
     add_category(categories, init_default_category());
     add_category(categories, init_words_category());
+    add_category(categories, init_numbers_category());
     return categories;
 }
 

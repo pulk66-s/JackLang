@@ -18,7 +18,14 @@ void save(struct parser *p);
 
 /**
  * @brief       Restore the last saved position of the parser
+ * @param   p   The parsing structure
 */
 void rollback(struct parser *p);
+
+/**
+ * @brief       Delete the last saved position of the parser
+ * @param   p   The parsing structure
+*/
+void delete_save(struct parser *p);
 
 #endif

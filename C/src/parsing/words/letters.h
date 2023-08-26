@@ -20,4 +20,11 @@ struct result *alpha(struct parser *p);
 */
 bool is_alpha(char c);
 
+/**
+ * @brief       Check if a char is a digit
+ * @param   c   The char to check
+ * @return      1 if the char is a digit else 0
+*/
+bool is_digit(char c);
+
 #endif

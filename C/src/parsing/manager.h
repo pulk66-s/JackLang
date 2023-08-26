@@ -22,7 +22,8 @@ struct parser {
 
 enum cpt_type {
     NUMBER,
-    CHAR
+    CHAR,
+    STRING
 };
 
 struct result {
@@ -37,5 +38,14 @@ struct result {
  * @return          The parsing structure
 */
 struct parser init(const char ***tokens);
+
+/**
+ * @brief           Create a result structure
+ * @param   data    The data of the result
+ * @param   type    The type of the result
+ * @param   size    The size of the result
+ * @return          The result structure
+*/
+struct result *result(void *data, enum cpt_type type, size_t size);
 
 #endif

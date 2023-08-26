@@ -47,3 +47,17 @@ void rollback(struct parser *p)
     p->save_pos = save->next;
     free(save);
 }
+
+/**
+ * @brief       Delete the last saved position of the parser
+*/
+void delete_save(struct parser *p)
+{
+    struct save_pos *save = p->save_pos;
+
+    if (!save) {
+        return;
+    }
+    p->save_pos = save->next;
+    free(save);
+}

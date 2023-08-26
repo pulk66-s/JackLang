@@ -21,4 +21,10 @@ struct category *init_words_category(void);
 */
 struct parser *init_packrat_parsing(const char ***tokens);
 
+/**
+ * @brief   Initialize the category that tests the numbers parser
+ * @return  The category
+*/
+struct category *init_numbers_category(void);
+
 #endif

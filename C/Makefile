@@ -13,6 +13,8 @@ SRC			= 	src/files/read.c 				\
 				src/parsing/prgm.c				\
 				src/parsing/default/char.c		\
 				src/parsing/words/letters.c		\
+				src/parsing/words/words.c		\
+				src/parsing/words/numbers.c		\
 
 TESTS_SRC	=	$(SRC)								\
 				tests/main.c						\
@@ -22,6 +24,7 @@ TESTS_SRC	=	$(SRC)								\
 				tests/units/packrat/init.c			\
 				tests/units/packrat/next.c			\
 				tests/units/packrat/alpha.c			\
+				tests/units/packrat/numbers.c		\
 				tests/units/tokens/create_tokens.c	\
 				tests/units/asserts/char.c			\
 				tests/units/asserts/null.c			\
@@ -49,7 +52,7 @@ re: fclean all
 
 run_tests: clean_tests $(TESTS_OBJ)
 	$(CC) $(CFLAGS) $(TESTS_OBJ) -o $@
-	./$@
+	valgrind ./$@
 
 clean_tests:
 	$(RM) $(TESTS_OBJ)

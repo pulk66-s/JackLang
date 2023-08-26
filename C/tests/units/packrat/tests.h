@@ -3,5 +3,6 @@
 
 #include "units/packrat/next.h"
 #include "units/packrat/alpha.h"
+#include "units/packrat/numbers.h"
 
 #endif
