@@ -9,9 +9,26 @@ struct pos {
     size_t cursor;
 };
 
-struct parsing {
+struct save_pos {
     struct pos pos;
+    struct save_pos *next;
+};
+
+struct parser {
+    struct pos pos;
+    struct save_pos *save_pos;
     const char ***tokens;
+};
+
+enum cpt_type {
+    NUMBER,
+    CHAR
+};
+
+struct result {
+    size_t size;
+    enum cpt_type datatype;
+    void *data;
 };
 
 /**
@@ -19,6 +36,6 @@ struct parsing {
  * @param   tokens  The tokens of the program
  * @return          The parsing structure
 */
-struct parsing init(const char ***tokens);
+struct parser init(const char ***tokens);
 
 #endif

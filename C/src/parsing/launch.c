@@ -9,7 +9,7 @@
  */
 struct prgm_cpt *launch_parsing(const char ***tokens)
 {
-    struct parsing parsing = init(tokens);
+    struct parser parsing = init(tokens);
 
     return NULL;
 }

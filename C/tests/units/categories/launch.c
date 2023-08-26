@@ -3,6 +3,25 @@
 #include <stdlib.h>
 
 /**
+ * @brief           Create a default category
+ * @param   name    The name of the category
+ * @param   desc    The description of the category
+ * @return          The category
+*/
+struct category *create_default_category(char *name, char *desc)
+{
+    struct category *category = malloc(sizeof(struct category));
+
+    *category = (struct category) {
+        .name = name,
+        .description = desc,
+        .tests = NULL,
+        .next = NULL
+    };
+    return category;
+}
+
+/**
  * @brief               Launches the unit tests for the categories
  * @param   categories  The categories to test
 */

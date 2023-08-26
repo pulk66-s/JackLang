@@ -11,10 +11,6 @@ void add_category(struct categories *categories, struct category *category)
     if (!categories) {
         return;
     }
-    if (!categories->categories) {
-        categories->categories = category;
-        return;
-    }
     category->next = categories->categories;
     categories->categories = category;
 }
@@ -27,10 +23,6 @@ void add_category(struct categories *categories, struct category *category)
 void add_test(struct category *category, struct tests *test)
 {
     if (!category) {
-        return;
-    }
-    if (!category->tests) {
-        category->tests = test;
         return;
     }
     test->next = category->tests;

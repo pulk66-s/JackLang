@@ -15,4 +15,12 @@ void launch_categories_unit_tests(struct categories *categories);
 */
 void launch_category_unit_tests(struct category *category);
 
+/**
+ * @brief           Create a default category
+ * @param   name    The name of the category
+ * @param   desc    The description of the category
+ * @return          The category
+*/
+struct category *create_default_category(char *name, char *desc);
+
 #endif

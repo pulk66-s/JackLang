@@ -5,5 +5,6 @@
 #include "parsing/manager.h"
 #include "parsing/prgm.h"
 #include "parsing/default/char.h"
+#include "parsing/words/letters.h"
 
 #endif

@@ -3,6 +3,22 @@
 
 #include "parsing/manager.h"
 
-char next(struct parsing *p);
+/**
+ * @brief       Get the next character of the program
+ * @param   p   The parsing structure
+ * @return      The next character of the program (0 if the end of the program is reached)
+*/
+char next(struct parser *p);
+
+/**
+ * @brief       Save the current position of the parser
+ * @param   p   The parsing structure
+*/
+void save(struct parser *p);
+
+/**
+ * @brief       Restore the last saved position of the parser
+*/
+void rollback(struct parser *p);
 
 #endif

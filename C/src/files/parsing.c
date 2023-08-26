@@ -3,99 +3,70 @@
 #include <string.h>
 #include <stdlib.h>
 
-static size_t count(char c, const char *str)
+static size_t count_nb_words(const char *str, char c)
 {
-    size_t occur = 0;
-
-    for (size_t i = 0; str[i]; i++) {
-        if (str[i] == c) {
-            occur++;
-        }
-    }
-    return occur;
-}
-
-static char *trim(char *str)
-{
-    for (; str[0] && str[0] == ' '; str++);
-
-    size_t size = strlen(str);
-
-    for (; size > 0 && str[size - 1] == ' '; size--);
-    str[size] = '\0';
-    return str;
-}
-
-static char **create_line(const char *content, size_t line)
-{
-    size_t index = 0;
-    char **buf = NULL;
     size_t nb_words = 0;
 
-    for (size_t i = 0; i < line; index++) {
-        if (content[index] == '\n') {
-            i++;
-        }
-    }
-    for (; content[index] == ' '; index++);
-    for (size_t i = index; content[i] != '\n' && content[i] != '\0'; i++) {
-        if (content[i] == ' ' && content[i + 1] != ' ' && content[i + 1] != '\n') {
+    for (; str[0] && str[0] == c; str++);
+    for (size_t i = 0; str[i + 1]; i++) {
+        if (str[i] == c && str[i + 1] != c) {
             nb_words++;
         }
     }
-    nb_words++;
-    buf = malloc(sizeof(char *) * (nb_words + 1));
+    return nb_words + 1;
+}
+
+static char **splitting(const char *str, char c)
+{
+    size_t nb_words = count_nb_words(str, c);
+    char **buf = malloc(sizeof(char *) * (nb_words + 1));
+
     if (!buf) {
         return NULL;
     }
     buf[nb_words] = NULL;
+    for (size_t i = 0; i < nb_words; i++) {
+        size_t len = 0;
 
-    size_t i = index, j = index, k = 0;
-
-    for (; content[i] != '\n' && content[i] != '\0'; i++) {
-        if (content[i] == ' ' && content[i + 1] != ' ' && content[i + 1] != '\n') {
-            buf[k] = malloc(sizeof(char) * (i - j + 1));
-            if (!buf[k]) {
-                return NULL;
-            }
-            memset(buf[k], 0, sizeof(char) * (i - j + 1));
-            strncpy(buf[k], content + j, i - j);
-            buf[k] = trim(buf[k]);
-            buf[k] = buf[k][0] == '\0' ? NULL : buf[k];
-            j = i + 1;
-            k++;
+        for (; str[0] && str[0] == c; str++);
+        for (; str[len] && str[len] != c; len++);
+        buf[i] = malloc(sizeof(char) * (len + 1));
+        if (!buf[i]) {
+            return NULL;
         }
+        strncpy(buf[i], str, len);
+        buf[i][len] = '\0';
+        str += len;
     }
-    buf[k] = malloc(sizeof(char) * (i - j + 1));
-    if (!buf[k]) {
+    return buf;
+}
+
+static char **create_line(char *line)
+{
+    char **buf = splitting(line, ' ');
+
+    if (!buf) {
         return NULL;
     }
-    memset(buf[k], 0, sizeof(char) * (i - j + 1));
-    strncpy(buf[k], content + j, i - j);
-    buf[k] = trim(buf[k]);
-    buf[k] = buf[k][0] == '\0' ? NULL : buf[k];
     return buf;
 }
 
 const char ***parse_content(const char *content)
 {
-    size_t nb_lines = count('\n', content) + 1;
-    size_t nb_chars = strlen(content);
-    char ***buf = NULL;
+    size_t nb_lines = count_nb_words(content, '\n');
+    char ***buf = malloc(sizeof(char **) * (nb_lines + 1));
+    char **lines = NULL;
 
-    if (nb_chars <= 2) {
-        return NULL;
-    }
-    if (content[nb_chars] == '\0' && content[nb_chars - 1] == '\n') {
-        nb_lines--;
-    }
-    buf = malloc(sizeof(char **) * (nb_lines + 1));
     if (!buf) {
         return NULL;
     }
     buf[nb_lines] = NULL;
+    lines = splitting(content, '\n');
+    if (!lines) {
+        return NULL;
+    }
     for (size_t i = 0; i < nb_lines; i++) {
-        buf[i] = create_line(content, i);
+        buf[i] = create_line(lines[i]);
     }
     return (const char ***)buf;
 }

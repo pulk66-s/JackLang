@@ -7,12 +7,18 @@
  * @brief   Initialize the category that tests the packrat parser
  * @return  The category
 */
-struct category *init_packrat_category(void);
+struct category *init_default_category(void);
+
+/**
+ * @brief   Initialize the category that tests the words parser
+ * @return  The category
+*/
+struct category *init_words_category(void);
 
 /**
  * @brief   Initialize the parsing unit tests
  * @return  The parsing struct
 */
-struct parsing *init_packrat_parsing(const char ***tokens);
+struct parser *init_packrat_parsing(const char ***tokens);
 
 #endif

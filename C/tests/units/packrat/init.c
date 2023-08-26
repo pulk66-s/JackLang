@@ -8,16 +8,25 @@
  * @brief   Initializes the packrat unit tests.
  * @return  The packrat category.
 */
-struct category *init_packrat_category(void)
+struct category *init_default_category(void)
 {
-    struct category *category = malloc(sizeof(struct category));
-
-    category->name = "Packrat";
-    category->description = "Tests the packrat parser";
-    category->tests = NULL;
-    category->next = NULL;
+    struct category *category = create_default_category("Packrat", "Tests the packrat parser");
 
     add_test(category, create_unit_test(basic_next_test, "basic_next_test"));
+    add_test(category, create_unit_test(too_far_next, "too_far_next"));
+    return category;
+}
+
+/**
+ * @brief   Initialize the category that tests the words parser
+ * @return  The category
+*/
+struct category *init_words_category(void)
+{
+    struct category *category = create_default_category("Words", "Tests the words parser");
+
+    add_test(category, create_unit_test(test_alpha_char, "test_alpha_char"));
+    add_test(category, create_unit_test(test_non_alpha_char, "test_non_alpha_char"));
     return category;
 }
 
@@ -25,11 +34,11 @@ struct category *init_packrat_category(void)
  * @brief   Initialize the parsing unit tests
  * @return  The parsing struct
 */
-struct parsing *init_packrat_parsing(const char ***tokens)
+struct parser *init_packrat_parsing(const char ***tokens)
 {
-    struct parsing *parsing = malloc(sizeof(struct parsing));
+    struct parser *parsing = malloc(sizeof(struct parser));
 
-    *parsing = (struct parsing) {
+    *parsing = (struct parser) {
         .pos = (struct pos) {
             .x = 0,
             .y = 0,

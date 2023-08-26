@@ -11,7 +11,11 @@ static struct categories *init_tests(void)
 {
     struct categories *categories = malloc(sizeof(struct categories));
 
-    add_category(categories, init_packrat_category());
+    *categories = (struct categories) {
+        .categories = NULL
+    };
+    add_category(categories, init_default_category());
+    add_category(categories, init_words_category());
     return categories;
 }
 

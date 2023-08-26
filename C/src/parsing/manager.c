@@ -5,14 +5,15 @@
  * @param   tokens  The tokens of the program
  * @return          The parsing structure
 */
-struct parsing init(const char ***tokens)
+struct parser init(const char ***tokens)
 {
-    return (struct parsing) {
+    return (struct parser) {
         .pos = (struct pos) {
             .x = 0,
             .y = 0,
             .cursor = 0
         },
+        .save_pos = NULL,
         .tokens = tokens,
     };
 }

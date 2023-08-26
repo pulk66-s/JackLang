@@ -4,5 +4,6 @@
 #include <stdbool.h>
 
 bool basic_next_test(void);
+bool too_far_next(void);
 
 #endif
