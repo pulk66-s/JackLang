@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "files.h"
 #include "parsing.h"
+#include "print.h"
 
 void print_parse_content(const char ***content)
 {
@@ -34,7 +35,9 @@ int main(int ac, char **av)
         }
         print_parse_content(parsed);
 
-        struct prgm_cpt *cpt = launch_parsing(parsed);
+        struct result *cpt = launch_parsing(parsed);
+
+        print_result(cpt);
     }
     return 0;
 }

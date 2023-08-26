@@ -52,3 +52,18 @@ inline bool is_digit(char c)
 {
     return c >= '0' && c <= '9';
 }
+
+/**
+ * @brief       Parse a letter
+ * @param   p   The parsing structure
+ * @return      The result of the parsing
+*/
+struct result *character(struct parser *p)
+{
+    char c = next(p);
+    char *buf = malloc(sizeof(char) * 2);
+
+    buf[0] = c;
+    buf[1] = '\0';
+    return result(buf, CHAR, 1);
+}

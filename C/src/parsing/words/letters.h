@@ -27,4 +27,11 @@ bool is_alpha(char c);
 */
 bool is_digit(char c);
 
+/**
+ * @brief       Parse a letter
+ * @param   p   The parsing structure
+ * @return      The result of the parsing
+*/
+struct result *character(struct parser *p);
+
 #endif

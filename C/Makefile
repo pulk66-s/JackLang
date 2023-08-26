@@ -5,16 +5,28 @@
 CC			=	gcc
 
 MAIN_SRC	=	src/main.c
-SRC			= 	src/files/read.c 				\
-				src/files/parsing.c				\
-				src/logger/manager.c			\
-				src/parsing/launch.c			\
-				src/parsing/manager.c			\
-				src/parsing/prgm.c				\
-				src/parsing/default/char.c		\
-				src/parsing/words/letters.c		\
-				src/parsing/words/words.c		\
-				src/parsing/words/numbers.c		\
+SRC			= 	src/files/read.c 					\
+				src/files/parsing.c					\
+				src/logger/manager.c				\
+				src/parsing/launch.c				\
+				src/parsing/manager.c				\
+				src/parsing/default/char.c			\
+				src/parsing/default/choice.c		\
+				src/parsing/words/letters.c			\
+				src/parsing/words/words.c			\
+				src/parsing/words/numbers.c			\
+				src/parsing/words/special_char.c	\
+				src/grammar/program.c				\
+				src/grammar/expr.c					\
+				src/grammar/operation.c				\
+				src/print/char.c					\
+				src/print/program.c					\
+				src/print/repartition.c				\
+				src/print/result.c					\
+				src/print/expr.c					\
+				src/print/operation.c				\
+				src/print/numbers.c					\
+				src/print/string.c					\
 
 TESTS_SRC	=	$(SRC)								\
 				tests/main.c						\
@@ -25,6 +37,7 @@ TESTS_SRC	=	$(SRC)								\
 				tests/units/packrat/next.c			\
 				tests/units/packrat/alpha.c			\
 				tests/units/packrat/numbers.c		\
+				tests/units/packrat/operation.c		\
 				tests/units/tokens/create_tokens.c	\
 				tests/units/asserts/char.c			\
 				tests/units/asserts/null.c			\

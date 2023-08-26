@@ -7,9 +7,9 @@
  * @param   tokens  The tokens of the program
  * @return          The CPT of the program
  */
-struct prgm_cpt *launch_parsing(const char ***tokens)
+struct result *launch_parsing(const char ***tokens)
 {
     struct parser parsing = init(tokens);
 
-    return NULL;
+    return program(&parsing);
 }

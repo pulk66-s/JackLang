@@ -21,10 +21,16 @@ struct parser {
 };
 
 enum cpt_type {
+    UNKNOWN,
     NUMBER,
     CHAR,
-    STRING
+    STRING,
+    PROGRAM,
+    EXPR,
+    OPERATION
 };
+
+typedef struct result *(*parser_func)(struct parser *p);
 
 struct result {
     size_t size;

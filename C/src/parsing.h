@@ -3,10 +3,10 @@
 
 #include "parsing/launch.h"
 #include "parsing/manager.h"
-#include "parsing/prgm.h"
-#include "parsing/default/char.h"
+#include "parsing/default.h"
 #include "parsing/words/letters.h"
 #include "parsing/words/numbers.h"
 #include "parsing/words/words.h"
+#include "parsing/words/special_char.h"
 
 #endif

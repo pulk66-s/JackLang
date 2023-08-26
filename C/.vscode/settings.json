@@ -21,6 +21,13 @@
         "categories.h": "c",
         "packrat.h": "c",
         "stdio.h": "c",
-        "initializer_list": "c"
+        "initializer_list": "c",
+        "launch.h": "c",
+        "char.h": "c",
+        "parsing.h": "c",
+        "repartition.h": "c",
+        "program.h": "c",
+        "operation.h": "c",
+        "system_error": "c"
     }
 }

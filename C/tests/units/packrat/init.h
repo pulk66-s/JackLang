@@ -27,4 +27,10 @@ struct parser *init_packrat_parsing(const char ***tokens);
 */
 struct category *init_numbers_category(void);
 
+/**
+ * @brief   Initialize the category that tests the operation parser
+ * @return  The category
+*/
+struct category *init_operations_category(void);
+
 #endif

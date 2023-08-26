@@ -1,0 +1,23 @@
+"Program": [
+    {
+        "Expr": [
+            {
+                "Expr": [
+                    {
+                        "Operation": {
+                            "Operand": "+",
+                            "Left": {
+                                "Number": 1,
+                            },
+                            "Right": {
+                                "Number": 3,
+                            }
+                        },
+                        {
+                            "char": ";",
+                        },
+                    ],
+                },
+            ],
+        },
+    ],

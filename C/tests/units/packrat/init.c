@@ -44,6 +44,18 @@ struct category *init_words_category(void)
 }
 
 /**
+ * @brief   Initialize the category that tests the operation parser
+ * @return  The category
+*/
+struct category *init_operations_category(void)
+{
+    struct category *category = create_default_category("Operation", "Tests the operation parser");
+
+    add_test(category, create_unit_test(test_basic_operation, "test_basic_operation"));
+    return category;
+}
+
+/**
  * @brief   Initialize the parsing unit tests
  * @return  The parsing struct
 */
