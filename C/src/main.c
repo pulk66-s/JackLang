@@ -10,6 +10,9 @@ void packrat_launch(const char ***content)
         .cursor = 0,
         .x = 0,
         .y = 0,
+        .save_x = 0,
+        .save_y = 0,
+        .save_cursor = 0,
         .content = content
     };
     struct result res = program(&p);

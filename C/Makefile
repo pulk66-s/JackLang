@@ -14,6 +14,7 @@ SRC		= 	src/main.c 						\
 			src/grammar/chars.c				\
 			src/grammar/expr.c				\
 			src/grammar/typing.c			\
+			src/grammar/return.c			\
 			src/grammar/function.c			\
 			src/grammar/name.c				\
 			src/grammar/letters.c			\
@@ -25,6 +26,7 @@ SRC		= 	src/main.c 						\
 			src/print/program.c				\
 			src/print/operation.c			\
 			src/print/function.c			\
+			src/print/ret.c					\
 			src/logger/manager.c			\
 
 CFLAGS	=	-W -Wall -Wextra -I./src -g3
