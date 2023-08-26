@@ -2,18 +2,33 @@
 ## CringeLang Makefile
 ##
 
-CC		=	gcc
+CC			=	gcc
 
-SRC		= 	src/main.c 						\
-			src/files/read.c 				\
-			src/files/parsing.c				\
-			src/logger/manager.c			\
+MAIN_SRC	=	src/main.c
+SRC			= 	src/files/read.c 				\
+				src/files/parsing.c				\
+				src/logger/manager.c			\
+				src/parsing/launch.c			\
+				src/parsing/manager.c			\
+				src/parsing/prgm.c				\
+				src/parsing/default/char.c		\
 
-CFLAGS	=	-W -Wall -Wextra -I./src -g3
+TESTS_SRC	=	$(SRC)								\
+				tests/main.c						\
+				tests/unit.c						\
+				tests/units/categories/add.c		\
+				tests/units/categories/launch.c		\
+				tests/units/packrat/init.c			\
+				tests/units/packrat/next.c			\
+				tests/units/tokens/create_tokens.c	\
+				tests/units/asserts/char.c			\
 
-OBJ		=	$(SRC:.c=.o)
+CFLAGS		=	-W -Wall -Wextra -I./src -I./tests -g3
 
-NAME	=	cl
+OBJ			=	$(SRC:.c=.o) $(MAIN_SRC:.c=.o)
+TESTS_OBJ	=	$(TESTS_SRC:.c=.o)
+
+NAME		=	cl
 
 all: $(NAME)
 
@@ -27,6 +42,13 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+run_tests: clean_tests $(TESTS_OBJ)
+	$(CC) $(CFLAGS) $(TESTS_OBJ) -o $@
+	./$@
+
+clean_tests:
+	$(RM) $(TESTS_OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
