@@ -36,6 +36,10 @@
         "create.h": "c",
         "lines.h": "c",
         "lib.h": "c",
-        "start.h": "c"
+        "start.h": "c",
+        "cstdlib": "c",
+        "stdlib.h": "c",
+        "choice.h": "c",
+        "ret.h": "c"
     }
 }

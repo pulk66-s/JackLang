@@ -27,7 +27,8 @@ enum cpt_type {
     STRING,
     PROGRAM,
     EXPR,
-    OPERATION
+    OPERATION,
+    RET
 };
 
 typedef struct result *(*parser_func)(struct parser *p);

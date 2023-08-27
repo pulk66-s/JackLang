@@ -4,5 +4,7 @@
 #include "parsing/manager.h"
 
 struct result *expr(struct parser *p);
+struct result *primary_expression(struct parser *p);
+struct result *secondary_expression(struct parser *p);
 
 #endif

@@ -41,9 +41,9 @@ int main(int ac, char **av)
 
         print_result(cpt);
 
-        struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
-        
-        cl_compiler_llvm_start(ast);
+        // struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
+
+        // cl_compiler_llvm_start(ast);
     }
     return 0;
 }

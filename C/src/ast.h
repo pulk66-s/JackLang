@@ -4,5 +4,7 @@
 #include "ast/create.h"
 #include "ast/lines.h"
 #include "ast/program.h"
+#include "ast/expr.h"
+#include "ast/ret.h"
 
 #endif

@@ -19,6 +19,8 @@ SRC			= 	src/files/read.c 					\
 				src/grammar/program.c				\
 				src/grammar/expr.c					\
 				src/grammar/operation.c				\
+				src/grammar/ret.c					\
+				src/print/ret.c						\
 				src/print/char.c					\
 				src/print/program.c					\
 				src/print/repartition.c				\
@@ -29,6 +31,7 @@ SRC			= 	src/files/read.c 					\
 				src/print/string.c					\
 				src/ast/create.c					\
 				src/ast/lines.c						\
+				src/ast/expr.c						\
 				src/compiler/llvm/lib/module.c		\
 				src/compiler/llvm/lib/function.c	\
 				src/compiler/llvm/lib/block.c		\

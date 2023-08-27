@@ -1,17 +1,24 @@
+Line 0: (return) (42) (+) (24;) 
+======
 "Program": [
     {
         "Expr": [
             {
                 "Expr": [
                     {
-                        "Operation": {
-                            "Operand": "+",
-                            "Left": {
-                                "Number": 1,
+                        "Return": {
+                            "Keyword": "return",
+                            "Expr": {
+                                "Operation": {
+                                    "Operand": "+",
+                                    "Left": {
+                                        "Number": 42,
+                                    },
+                                    "Right": {
+                                        "Number": 24,
+                                    }
+                                }
                             },
-                            "Right": {
-                                "Number": 3,
-                            }
                         },
                         {
                             "char": ";",
