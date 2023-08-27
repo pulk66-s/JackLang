@@ -27,6 +27,15 @@ SRC			= 	src/files/read.c 					\
 				src/print/operation.c				\
 				src/print/numbers.c					\
 				src/print/string.c					\
+				src/ast/create.c					\
+				src/ast/lines.c						\
+				src/compiler/llvm/lib/module.c		\
+				src/compiler/llvm/lib/function.c	\
+				src/compiler/llvm/lib/block.c		\
+				src/compiler/llvm/lib/builder.c		\
+				src/compiler/llvm/lib/constant.c	\
+				src/compiler/llvm/lib/operation.c	\
+				src/compiler/llvm/start.c			\
 
 TESTS_SRC	=	$(SRC)								\
 				tests/main.c						\
@@ -43,7 +52,7 @@ TESTS_SRC	=	$(SRC)								\
 				tests/units/asserts/null.c			\
 				tests/units/asserts/int.c			\
 
-CFLAGS		=	-W -Wall -Wextra -I./src -I./tests -g3
+CFLAGS		=	-W -Wall -Wextra -I./src -I./tests -g3 -lLLVM
 
 OBJ			=	$(SRC:.c=.o) $(MAIN_SRC:.c=.o)
 TESTS_OBJ	=	$(TESTS_SRC:.c=.o)

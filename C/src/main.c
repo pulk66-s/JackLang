@@ -3,6 +3,8 @@
 #include "files.h"
 #include "parsing.h"
 #include "print.h"
+#include "ast.h"
+#include "compiler/llvm.h"
 
 void print_parse_content(const char ***content)
 {
@@ -38,6 +40,10 @@ int main(int ac, char **av)
         struct result *cpt = launch_parsing(parsed);
 
         print_result(cpt);
+
+        struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
+        
+        cl_compiler_llvm_start(ast);
     }
     return 0;
 }

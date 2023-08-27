@@ -28,6 +28,14 @@
         "repartition.h": "c",
         "program.h": "c",
         "operation.h": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "letters.h": "c",
+        "numbers.h": "c",
+        "special_char.h": "c",
+        "words.h": "c",
+        "create.h": "c",
+        "lines.h": "c",
+        "lib.h": "c",
+        "start.h": "c"
     }
 }
