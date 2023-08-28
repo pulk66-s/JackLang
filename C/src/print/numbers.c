@@ -4,8 +4,8 @@
 void print_numbers(struct result *res)
 {
     if (res->datatype != NUMBER) {
-        logger().syntax_debug("print_numbers: res->datatype != NUMBER");
+        logger().cpt_debug("print_numbers: res->datatype != NUMBER");
         return;
     }
-    logger().syntax("\"Number\": %d,\n", *(int *)res->data);
+    logger().cpt("\"Number\": %d,\n", *(int *)res->data);
 }

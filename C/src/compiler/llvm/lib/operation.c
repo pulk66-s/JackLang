@@ -8,7 +8,7 @@
  * @param   b       The second operand
  * @param   builder The builder
 */
-LLVMValueRef create_operation(char op, LLVMValueRef a, LLVMValueRef b, LLVMBuilderRef builder)
+LLVMValueRef create_llvm_operation(char op, LLVMValueRef a, LLVMValueRef b, LLVMBuilderRef builder)
 {
     switch (op)
     {

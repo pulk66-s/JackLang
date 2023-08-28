@@ -40,6 +40,22 @@
         "cstdlib": "c",
         "stdlib.h": "c",
         "choice.h": "c",
-        "ret.h": "c"
+        "ret.h": "c",
+        "constant.h": "c",
+        "bit": "c",
+        "compare": "c",
+        "type_traits": "c",
+        "cmath": "c",
+        "limits": "c",
+        "new": "c",
+        "utility": "c",
+        "builder.h": "c",
+        "block.h": "c",
+        "function.h": "c",
+        "ast.h": "c",
+        "optional": "c",
+        "tuple": "c",
+        "cstdint": "c",
+        "stdint.h": "c"
     }
 }

@@ -7,5 +7,6 @@
 #include "compiler/llvm/lib/block.h"
 #include "compiler/llvm/lib/constant.h"
 #include "compiler/llvm/lib/operation.h"
+#include "compiler/llvm/lib/ret.h"
 
 #endif

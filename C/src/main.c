@@ -4,6 +4,7 @@
 #include "parsing.h"
 #include "print.h"
 #include "ast.h"
+#include "logger.h"
 #include "compiler/llvm.h"
 
 void print_parse_content(const char ***content)
@@ -36,14 +37,22 @@ int main(int ac, char **av)
             continue;
         }
         print_parse_content(parsed);
+        logger().debug("Launching CPT...\n");
 
         struct result *cpt = launch_parsing(parsed);
 
+        logger().debug("===========\n");
+        logger().debug("=   CPT   =\n");
+        logger().debug("===========\n");
         print_result(cpt);
 
-        // struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
+        logger().debug("===========\n");
+        logger().debug("Launching AST...\n");
+        struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
 
-        // cl_compiler_llvm_start(ast);
+        logger().debug("===========\n");
+        logger().debug("Launching llvm...\n");
+        cl_compiler_llvm_start(ast);
     }
     return 0;
 }

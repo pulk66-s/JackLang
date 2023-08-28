@@ -6,5 +6,6 @@
 #include "ast/program.h"
 #include "ast/expr.h"
 #include "ast/ret.h"
+#include "ast/operation.h"
 
 #endif

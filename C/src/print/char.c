@@ -4,8 +4,8 @@
 void print_char(struct result *r)
 {
     if (r->datatype != CHAR) {
-        logger().syntax_debug("print_char: not a char");
+        logger().cpt_debug("print_char: not a char");
         return;
     }
-    logger().syntax("\"char\": \"%c\",\n", *(char *)r->data);
+    logger().cpt("\"char\": \"%c\",\n", *(char *)r->data);
 }

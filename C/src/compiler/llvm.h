@@ -3,5 +3,6 @@
 
 #include "compiler/llvm/lib.h"
 #include "compiler/llvm/start.h"
+#include "compiler/llvm/line.h"
 
 #endif
