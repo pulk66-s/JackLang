@@ -4,8 +4,15 @@
 #include "parsing.h"
 #include <stdint.h>
 
-union constant_ast {
-    int32_t int32;
+enum constant_type {
+    INT32
+};
+
+struct constant_ast {
+    enum constant_type type;
+    union {
+        int32_t int32;
+    } u;
 };
 
 /**
@@ -13,6 +20,6 @@ union constant_ast {
  * @param   result  The current program CPT.
  * @return          The constant AST.
 */
-union constant_ast *create_constant(struct result *res);
+struct constant_ast *create_constant(struct result *res);
 
 #endif

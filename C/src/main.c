@@ -48,8 +48,13 @@ int main(int ac, char **av)
 
         logger().debug("===========\n");
         logger().debug("Launching AST...\n");
+
         struct program_ast *ast = create_program_ast((struct program_cpt *)cpt->data);
 
+        logger().debug("===========\n");
+        logger().debug("=   AST   =\n");
+        logger().debug("===========\n");
+        print_ast_program(ast);
         logger().debug("===========\n");
         logger().debug("Launching llvm...\n");
         cl_compiler_llvm_start(ast);

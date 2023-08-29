@@ -10,9 +10,10 @@
 struct ret_ast *create_ret_ast(struct result *res)
 {
     struct ret_ast *ret = malloc(sizeof(struct ret_ast));
+    struct return_cpt *cpt = res->data;
 
     *ret = (struct ret_ast) {
-        .expr = create_secondary_expr(res)
+        .expr = create_secondary_expr(cpt->expr)
     };
-    return NULL;
+    return ret;
 }

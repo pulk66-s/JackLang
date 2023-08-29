@@ -8,15 +8,15 @@
  * @param   builder     The llvm builder.
  * @return              The llvm constant.
 */
-LLVMValueRef llvm_from_constant(union constant_ast *constant, LLVMModuleRef module, LLVMBuilderRef builder)
+LLVMValueRef llvm_from_constant(struct constant_ast *constant, LLVMModuleRef module, LLVMBuilderRef builder)
 {
     logger().llvm("Starting constant...\n");
 
     LLVMValueRef value = NULL;
 
-    if (constant->int32) {
+    if (constant->u.int32) {
         logger().llvm("Constant is an int32.\n");
-        value = LLVMConstInt(LLVMInt32Type(), constant->int32, 0);
+        value = LLVMConstInt(LLVMInt32Type(), constant->u.int32, 0);
         logger().llvm("Constant int32 finished.\n");
     }
     logger().llvm("Constant finished.\n");

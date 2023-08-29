@@ -20,15 +20,21 @@ SRC			= 	src/files/read.c 					\
 				src/grammar/expr.c					\
 				src/grammar/operation.c				\
 				src/grammar/ret.c					\
-				src/print/ret.c						\
-				src/print/char.c					\
-				src/print/program.c					\
-				src/print/repartition.c				\
-				src/print/result.c					\
-				src/print/expr.c					\
-				src/print/operation.c				\
-				src/print/numbers.c					\
-				src/print/string.c					\
+				src/print/cpt/ret.c					\
+				src/print/cpt/char.c				\
+				src/print/cpt/program.c				\
+				src/print/cpt/repartition.c			\
+				src/print/cpt/result.c				\
+				src/print/cpt/expr.c				\
+				src/print/cpt/operation.c			\
+				src/print/cpt/numbers.c				\
+				src/print/cpt/string.c				\
+				src/print/ast/constant.c			\
+				src/print/ast/expr.c				\
+				src/print/ast/line.c				\
+				src/print/ast/operation.c			\
+				src/print/ast/ret.c					\
+				src/print/ast/program.c				\
 				src/ast/create.c					\
 				src/ast/lines.c						\
 				src/ast/expr.c						\

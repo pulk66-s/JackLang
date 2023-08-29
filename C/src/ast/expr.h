@@ -6,13 +6,28 @@
 #include "ast/constant.h"
 #include "parsing/manager.h"
 
-union primary_expr_ast {
-    struct ret_ast *ret;
+enum ast_primary_expr_type {
+    AST_PRIMARY_EXPR_RET
 };
 
-union secondary_expr_ast {
-    struct operation_ast *operation;
-    union constant_ast *constant;
+struct primary_expr_ast {
+    enum ast_primary_expr_type type;
+    union {
+        struct ret_ast *ret;
+    } u;
+};
+
+enum ast_secondary_expr_type {
+    AST_SECONDARY_EXPR_OPERATION,
+    AST_SECONDARY_EXPR_CONSTANT
+};
+
+struct secondary_expr_ast {
+    enum ast_secondary_expr_type type;
+    union {
+        struct operation_ast *operation;
+        struct constant_ast *constant;
+    } u;
 };
 
 /**
@@ -20,13 +35,13 @@ union secondary_expr_ast {
  * @param   cpt     The current program cpt.
  * @return          The primary expression AST node.
 */
-union primary_expr_ast *create_primary_expr(struct result *cpt);
+struct primary_expr_ast *create_primary_expr(struct result *cpt);
 
 /**
  * @brief       Create a secondary expression AST node.
  * @param   cpt The current program cpt.
  * @return      The secondary expression AST node.
 */
-union secondary_expr_ast *create_secondary_expr(struct result *cpt);
+struct secondary_expr_ast *create_secondary_expr(struct result *cpt);
 
 #endif

@@ -1,4 +1,4 @@
-#include "print/char.h"
+#include "print/cpt/char.h"
 #include "logger.h"
 
 void print_char(struct result *r)

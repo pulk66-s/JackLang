@@ -1,4 +1,4 @@
-#include "print/numbers.h"
+#include "print/cpt/numbers.h"
 #include "logger.h"
 
 void print_numbers(struct result *res)

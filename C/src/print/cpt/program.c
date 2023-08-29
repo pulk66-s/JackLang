@@ -1,5 +1,5 @@
-#include "print/program.h"
-#include "print/repartition.h"
+#include "print/cpt/program.h"
+#include "print/cpt/repartition.h"
 #include "logger.h"
 
 void print_program(struct result *program)

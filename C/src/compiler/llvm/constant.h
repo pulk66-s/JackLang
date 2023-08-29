@@ -11,6 +11,6 @@
  * @param   builder     The llvm builder.
  * @return              The llvm constant.
 */
-LLVMValueRef llvm_from_constant(union constant_ast *constant, LLVMModuleRef module, LLVMBuilderRef builder);
+LLVMValueRef llvm_from_constant(struct constant_ast *constant, LLVMModuleRef module, LLVMBuilderRef builder);
 
 #endif

@@ -5,13 +5,14 @@
  * @param   result  The current program CPT.
  * @return          The constant AST.
 */
-union constant_ast *create_constant(struct result *res)
+struct constant_ast *create_constant(struct result *res)
 {
-    union constant_ast *constant = malloc(sizeof(union constant_ast));
+    struct constant_ast *constant = malloc(sizeof(struct constant_ast));
 
     switch (res->datatype) {
         case NUMBER:
-            constant->int32 = *(int32_t *)res->data;
+            constant->type = INT32;
+            constant->u.int32 = *(int32_t *)res->data;
             break;
         default:
             constant = NULL;

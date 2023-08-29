@@ -1,11 +1,11 @@
-#include "print/repartition.h"
-#include "print/program.h"
-#include "print/expr.h"
-#include "print/operation.h"
-#include "print/numbers.h"
-#include "print/string.h"
-#include "print/char.h"
-#include "print/ret.h"
+#include "print/cpt/repartition.h"
+#include "print/cpt/program.h"
+#include "print/cpt/expr.h"
+#include "print/cpt/operation.h"
+#include "print/cpt/numbers.h"
+#include "print/cpt/string.h"
+#include "print/cpt/char.h"
+#include "print/cpt/ret.h"
 #include <stdio.h>
 
 void repartition(struct result *res)

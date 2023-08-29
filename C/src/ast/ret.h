@@ -4,7 +4,7 @@
 #include "ast/expr.h"
 
 struct ret_ast {
-    union secondary_expr_ast *expr;
+    struct secondary_expr_ast *expr;
 };
 
 /**

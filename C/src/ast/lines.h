@@ -5,7 +5,7 @@
 #include "ast/expr.h"
 
 struct line_ast {
-    union primary_expr_ast *expr;
+    struct primary_expr_ast *expr;
 };
 
 struct line_ast **create_lines_ast(struct program_cpt *cpt);

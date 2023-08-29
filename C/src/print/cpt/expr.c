@@ -1,5 +1,5 @@
-#include "print/expr.h"
-#include "print/repartition.h"
+#include "print/cpt/expr.h"
+#include "print/cpt/repartition.h"
 #include "logger.h"
 
 void print_expr(struct result *res)

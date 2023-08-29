@@ -1,19 +1,25 @@
 #include "ast/expr.h"
 #include "ast/constant.h"
 #include "ast/operation.h"
+#include <string.h>
 
 /**
  * @brief           Create a primary expression AST node.
  * @param   cpt     The current program cpt.
  * @return          The primary expression AST node.
 */
-union primary_expr_ast *create_primary_expr(struct result *cpt)
+struct primary_expr_ast *create_primary_expr(struct result *cpt)
 {
-    union primary_expr_ast *expr = malloc(sizeof(union primary_expr_ast));
+    struct primary_expr_ast *expr = malloc(sizeof(struct primary_expr_ast));
 
+    memset(expr, 0, sizeof(struct primary_expr_ast));
     switch (cpt->datatype) {
         case RET:
-            expr->ret = create_ret_ast(cpt->data);
+            expr->type = AST_PRIMARY_EXPR_RET;
+            expr->u.ret = create_ret_ast(cpt);
+            break;
+        case EXPR:
+            expr = create_primary_expr(cpt->data);
             break;
         default:
             expr = NULL;
@@ -27,16 +33,19 @@ union primary_expr_ast *create_primary_expr(struct result *cpt)
  * @param   cpt The current program cpt.
  * @return      The secondary expression AST node.
 */
-union secondary_expr_ast *create_secondary_expr(struct result *cpt)
+struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
 {
-    union secondary_expr_ast *expr = malloc(sizeof(union secondary_expr_ast));
+    struct secondary_expr_ast *expr = malloc(sizeof(struct secondary_expr_ast));
 
+    memset(expr, 0, sizeof(struct secondary_expr_ast));
     switch (cpt->datatype) {
         case OPERATION:
-            expr->operation = create_operation(cpt);
+            expr->type = AST_SECONDARY_EXPR_OPERATION;
+            expr->u.operation = create_operation(cpt);
             break;
         case NUMBER:
-            expr->constant = create_constant(cpt);
+            expr->type = AST_SECONDARY_EXPR_CONSTANT;
+            expr->u.constant = create_constant(cpt);
             break;
         default:
             expr = NULL;
