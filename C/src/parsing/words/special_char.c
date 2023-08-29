@@ -23,3 +23,28 @@ struct result *semicolon(struct parser *p)
 {
     return special_char(p, ';');
 }
+
+struct result *open_par(struct parser *p)
+{
+    return special_char(p, '(');
+}
+
+struct result *close_par(struct parser *p)
+{
+    return special_char(p, ')');
+}
+
+struct result *open_curly(struct parser *p)
+{
+    return special_char(p, '{');
+}
+
+struct result *close_curly(struct parser *p)
+{
+    return special_char(p, '}');
+}
+
+struct result *comma(struct parser *p)
+{
+    return special_char(p, ',');
+}

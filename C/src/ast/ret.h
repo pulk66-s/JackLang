@@ -2,6 +2,7 @@
 #define __CL_AST_RET_H__
 
 #include "ast/expr.h"
+#include "parsing.h"
 
 struct ret_ast {
     struct secondary_expr_ast *expr;

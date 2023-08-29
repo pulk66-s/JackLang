@@ -1,0 +1,122 @@
+Line 0: (int) (add(int) (a,) (int) (b)) ({) 
+Line 1: (return) (1) (+) (2;) 
+Line 2: (}) 
+======
+[33m[DEBUG][0m Launching CPT...
+Entering function_decl
+type result int
+first_c a
+c d
+pos 1 0 1 0
+c d
+pos 1 0 1 0
+c (
+pos 1 0 1 0
+identifier add
+type result int
+first_c a
+c ,
+pos 2 0 2 0
+identifier a
+type result int
+first_c b
+c )
+pos 4 0 4 0
+identifier b
+type result int
+first_c b
+c )
+pos 4 0 4 0
+identifier b
+res size 2
+[33m[DEBUG][0m ===========
+[33m[DEBUG][0m =   CPT   =
+[33m[DEBUG][0m ===========
+"Program": [
+{
+"function_decl": {
+"name": "add",
+"args": [
+"Expr": [
+{
+"Expr": [
+{
+"String": "int",
+},
+{
+"String": "a",
+},
+{
+"char": ",",
+},
+],
+},
+{
+"Expr": [
+{
+"String": "int",
+},
+{
+"String": "b",
+},
+],
+},
+],
+],
+"lines": [
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Operation": {
+"Operand": "+",
+"Left": {
+"Number": 1,
+},
+"Right": {
+"Number": 2,
+}
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+],
+}
+},
+],
+[33m[DEBUG][0m ===========
+[33m[DEBUG][0m Launching AST...
+[33m[DEBUG][0m ===========
+[33m[DEBUG][0m =   AST   =
+[33m[DEBUG][0m ===========
+[33m[AST][0m "AST_PRGM": {
+[33m[AST][0m "lines": [
+[33m[AST][0m "line": {
+[33m[AST][0m "primary_expr": {
+[33m[AST][0m "error": "null primary expression",
+[33m[AST][0m },
+[33m[AST][0m },
+[33m[AST][0m ]
+[33m[AST][0m },
+[33m[DEBUG][0m ===========
+[33m[DEBUG][0m Launching llvm...
+[32m[LLVM][0m Starting LLVM compiler...
+[32m[LLVM][0m Compiling line 0...
+[32m[LLVM][0m Starting line...
+[32m[LLVM][0m Starting primary expr...
+[32m[LLVM][0m Primary expr is null.
+[32m[LLVM][0m Line finished.
+[32m[LLVM][0m Line 0 compiled.
+[32m[LLVM][0m LLVM compiler finished.

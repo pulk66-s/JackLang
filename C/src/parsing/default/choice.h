@@ -24,4 +24,13 @@ struct result *ordered_choice(struct parser *parser, parser_func *funcs, size_t 
 */
 struct result *sequence(struct parser *parser, parser_func *funcs, size_t size);
 
+/**
+ * @brief           The zero or more parser, it tries to parse the input with the given
+ *                  parser until it fails, and returns the result of all the parsers
+ * @param   parser  The parser
+ * @param   func    The parser to try
+ * @return          The result of all the parsers, or NULL if the parser failed
+*/
+struct result *zero_or_more(struct parser *parser, parser_func func);
+
 #endif

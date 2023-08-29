@@ -5,5 +5,6 @@
 #include "grammar/operation.h"
 #include "grammar/expr.h"
 #include "grammar/ret.h"
+#include "grammar/function.h"
 
 #endif

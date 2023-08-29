@@ -2,6 +2,11 @@
 #include "grammar/expr.h"
 #include <stdlib.h>
 
+static struct result *program_expression(struct parser *p)
+{
+    return primary_expression(p);
+}
+
 /**
  * @brief       Parse a program
  * @details     A program contains many expressions
@@ -16,6 +21,6 @@ struct result *program(struct parser *p)
         .exprs = malloc(sizeof(struct result) * 2)
     };
     prgm->exprs[1] = NULL;
-    prgm->exprs[0] = expr(p);
+    prgm->exprs[0] = program_expression(p);
     return result(prgm, PROGRAM, 1);
 }

@@ -11,4 +11,6 @@
 */
 struct result *alpha_word(struct parser *p);
 
+struct result *identifier(struct parser *p);
+
 #endif

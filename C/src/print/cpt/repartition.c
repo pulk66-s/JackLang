@@ -5,6 +5,7 @@
 #include "print/cpt/numbers.h"
 #include "print/cpt/string.h"
 #include "print/cpt/char.h"
+#include "print/cpt/function.h"
 #include "print/cpt/ret.h"
 #include <stdio.h>
 
@@ -31,6 +32,9 @@ void repartition(struct result *res)
             break;
         case RET:
             print_ret(res);
+            break;
+        case FUNCTION_DECL:
+            print_function(res);
             break;
         default:
             printf("Unknown datatype %d\n", res->datatype);

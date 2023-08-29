@@ -20,6 +20,8 @@ SRC			= 	src/files/read.c 					\
 				src/grammar/expr.c					\
 				src/grammar/operation.c				\
 				src/grammar/ret.c					\
+				src/grammar/function.c				\
+				src/grammar/type.c					\
 				src/print/cpt/ret.c					\
 				src/print/cpt/char.c				\
 				src/print/cpt/program.c				\
@@ -29,6 +31,7 @@ SRC			= 	src/files/read.c 					\
 				src/print/cpt/operation.c			\
 				src/print/cpt/numbers.c				\
 				src/print/cpt/string.c				\
+				src/print/cpt/function.c			\
 				src/print/ast/constant.c			\
 				src/print/ast/expr.c				\
 				src/print/ast/line.c				\

@@ -1,4 +1,5 @@
 #include "grammar/operation.h"
+#include "grammar/function.h"
 #include "grammar/expr.h"
 #include "grammar/ret.h"
 #include "parsing.h"
@@ -8,14 +9,25 @@ struct result *primary_expression(struct parser *p)
     return ordered_choice(
         p,
         (parser_func[]){
+            function_decl
+        },
+        1
+    );
+}
+
+struct result *secondary_expression(struct parser *p)
+{
+    return ordered_choice(
+        p,
+        (parser_func[]){
             operation,
-            ret
+            ret,
         },
         2
     );
 }
 
-struct result *secondary_expression(struct parser *p)
+struct result *third_expression(struct parser *p)
 {
     return ordered_choice(
         p,
@@ -31,7 +43,7 @@ static struct result *expr_stmt(struct parser *p)
     return sequence(
         p,
         (parser_func[]){
-            primary_expression,
+            secondary_expression,
             semicolon,
         },
         2

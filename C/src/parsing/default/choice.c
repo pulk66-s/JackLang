@@ -62,3 +62,39 @@ struct result *sequence(struct parser *parser, parser_func *funcs, size_t size)
     delete_save(parser);
     return res;
 }
+
+/**
+ * @brief           The zero or more parser, it tries to parse the input with the given
+ *                  parser until it fails, and returns the result of all the parsers
+ * @param   parser  The parser
+ * @param   func    The parser to try
+ * @return          The result of all the parsers, or NULL if the parser failed
+*/
+struct result *zero_or_more(struct parser *parser, parser_func func)
+{
+    struct result *res = malloc(sizeof(struct result));
+
+    *res = (struct result) {
+        .datatype = EXPR,
+        .data = NULL,
+        .size = 0
+    };
+    save(parser);
+    while (1) {
+        struct result *sub_res = func(parser);
+
+        if (sub_res == NULL) {
+            delete_save(parser);
+            return res;
+        }
+        res->size++;
+        if (!res->data) {
+            res->data = malloc(sizeof(struct result) * res->size);
+        } else {
+            res->data = realloc(res->data, sizeof(struct result) * res->size);
+        }
+        ((struct result *)res->data)[res->size - 1] = *sub_res;
+    }
+    delete_save(parser);
+    return res;
+}
