@@ -19,6 +19,15 @@ void llvm_from_primary_expr(struct primary_expr_ast *expr, LLVMModuleRef module,
  * @param   builder The LLVM builder
  * @return          The LLVM value
 */
-LLVMValueRef llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef module, LLVMBuilderRef builder);
+void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef module, LLVMBuilderRef builder);
+
+/**
+ * @brief           Create the LLVM IR from the third expr
+ * @param   expr    The third ast expr
+ * @param   module  The LLVM module
+ * @param   builder The LLVM builder
+ * @return          The LLVM value
+*/
+LLVMValueRef llvm_from_third_expr(struct third_expr_ast *expr, LLVMModuleRef module, LLVMBuilderRef builder);
 
 #endif

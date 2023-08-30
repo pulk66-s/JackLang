@@ -7,5 +7,7 @@
 #include "ast/expr.h"
 #include "ast/ret.h"
 #include "ast/operation.h"
+#include "ast/function.h"
+#include "ast/type.h"
 
 #endif

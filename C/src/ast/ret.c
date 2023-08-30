@@ -13,7 +13,7 @@ struct ret_ast *create_ret_ast(struct result *res)
     struct return_cpt *cpt = res->data;
 
     *ret = (struct ret_ast) {
-        .expr = create_secondary_expr(cpt->expr)
+        .expr = create_third_expr(cpt->expr)
     };
     return ret;
 }

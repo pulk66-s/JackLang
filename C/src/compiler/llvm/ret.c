@@ -12,11 +12,11 @@
 void llvm_from_ret(struct ret_ast *ret, LLVMModuleRef module, LLVMBuilderRef builder)
 {
     logger().llvm("Starting ret...\n");
-    logger().llvm("Starting secondary expr.\n");
+    logger().llvm("Starting Third expr.\n");
 
-    LLVMValueRef expr = llvm_from_secondary_expr(ret->expr, module, builder);
+    LLVMValueRef expr = llvm_from_third_expr(ret->expr, module, builder);
 
-    logger().llvm("Secondary expr finished.\n");
+    logger().llvm("Third expr finished.\n");
     create_llvm_ret(expr, builder);
     logger().llvm("Ret finished.\n");
 }

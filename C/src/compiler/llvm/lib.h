@@ -8,5 +8,6 @@
 #include "compiler/llvm/lib/constant.h"
 #include "compiler/llvm/lib/operation.h"
 #include "compiler/llvm/lib/ret.h"
+#include "compiler/llvm/lib/type.h"
 
 #endif

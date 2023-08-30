@@ -12,16 +12,16 @@
 LLVMValueRef llvm_from_binary_operation(struct operation_ast *op, LLVMModuleRef module, LLVMBuilderRef builder)
 {
     logger().llvm("Starting binary operation...\n");
-    logger().llvm("Starting left secondary expr...\n");
+    logger().llvm("Starting left third expr...\n");
 
-    LLVMValueRef left = llvm_from_secondary_expr(op->left, module, builder);
+    LLVMValueRef left = llvm_from_third_expr(op->left, module, builder);
 
-    logger().llvm("Left secondary expr finished.\n");
-    logger().llvm("Starting right secondary expr...\n");
+    logger().llvm("Left third expr finished.\n");
+    logger().llvm("Starting right third expr...\n");
 
-    LLVMValueRef right = llvm_from_secondary_expr(op->right, module, builder);
+    LLVMValueRef right = llvm_from_third_expr(op->right, module, builder);
 
-    logger().llvm("Right secondary expr finished.\n");
+    logger().llvm("Right third expr finished.\n");
  
     LLVMValueRef res = create_llvm_operation(op->operand, left, right, builder);
 

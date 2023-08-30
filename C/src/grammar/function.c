@@ -54,6 +54,24 @@ static struct result *function_decl_lines(struct parser *p)
     return zero_or_more(p, expr);
 }
 
+static struct function_arg_decl_cpt **create_args_decl(struct result *res)
+{
+    struct function_arg_decl_cpt **args = malloc(sizeof(struct function_arg_decl_cpt *) * (res->size + 1));
+
+    for (size_t i = 0; i < res->size; i++) {
+        struct function_arg_decl_cpt *arg = malloc(sizeof(struct function_arg_decl_cpt));
+        struct result *arg_res = ((struct result *)res->data) + i;
+
+        *arg = (struct function_arg_decl_cpt) {
+            .type = ((struct result *)arg_res->data)[0].data,
+            .name = ((struct result *)arg_res->data)[1].data
+        };
+        args[i] = arg;
+    }
+    args[res->size] = NULL;
+    return args;
+}
+
 struct result *function_decl(struct parser *p)
 {
     struct result *res = malloc(sizeof(struct result));
@@ -78,8 +96,9 @@ struct result *function_decl(struct parser *p)
         goto function_decl_error_end;
     }
     *fn = (struct function_decl_cpt) {
+        .type = t->data,
         .name = name->data,
-        .args = args,
+        .args = create_args_decl(args),
         .lines = lines
     };
     delete_save(p);

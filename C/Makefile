@@ -38,25 +38,32 @@ SRC			= 	src/files/read.c 					\
 				src/print/ast/operation.c			\
 				src/print/ast/ret.c					\
 				src/print/ast/program.c				\
+				src/print/ast/function.c			\
+				src/print/ast/type.c				\
+				src/ast/type.c						\
 				src/ast/create.c					\
 				src/ast/lines.c						\
 				src/ast/expr.c						\
 				src/ast/ret.c						\
 				src/ast/operation.c					\
 				src/ast/constant.c					\
+				src/ast/function.c					\
 				src/compiler/llvm/lib/module.c		\
 				src/compiler/llvm/lib/function.c	\
 				src/compiler/llvm/lib/block.c		\
 				src/compiler/llvm/lib/builder.c		\
 				src/compiler/llvm/lib/constant.c	\
 				src/compiler/llvm/lib/operation.c	\
+				src/compiler/llvm/lib/type.c		\
 				src/compiler/llvm/lib/ret.c			\
+				src/compiler/llvm/type.c			\
 				src/compiler/llvm/start.c			\
 				src/compiler/llvm/line.c			\
 				src/compiler/llvm/constant.c		\
 				src/compiler/llvm/expr.c			\
 				src/compiler/llvm/operation.c		\
 				src/compiler/llvm/ret.c				\
+				src/compiler/llvm/function.c		\
 
 TESTS_SRC	=	$(SRC)								\
 				tests/main.c						\

@@ -1,6 +1,7 @@
 #include "ast/expr.h"
 #include "ast/constant.h"
 #include "ast/operation.h"
+#include "ast/function.h"
 #include <string.h>
 
 /**
@@ -14,9 +15,9 @@ struct primary_expr_ast *create_primary_expr(struct result *cpt)
 
     memset(expr, 0, sizeof(struct primary_expr_ast));
     switch (cpt->datatype) {
-        case RET:
-            expr->type = AST_PRIMARY_EXPR_RET;
-            expr->u.ret = create_ret_ast(cpt);
+        case FUNCTION_DECL:
+            expr->type = AST_PRIMARY_EXPR_FUNCTION_DECL;
+            expr->u.fn_decl = create_function_decl(cpt);
             break;
         case EXPR:
             expr = create_primary_expr(cpt->data);
@@ -39,12 +40,37 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
 
     memset(expr, 0, sizeof(struct secondary_expr_ast));
     switch (cpt->datatype) {
+        case RET:
+            expr->type = AST_SECONDARY_EXPR_RET;
+            expr->u.ret = create_ret_ast(cpt);
+            break;
+        case EXPR:
+            expr = create_secondary_expr(cpt->data);
+            break;
+        default:
+            expr = NULL;
+            break;
+    }
+    return expr;
+}
+
+/**
+ * @brief           Create a third expression ast node.
+ * @param   cpt     The current program cpt.
+ * @return          The third expression ast node.
+*/
+struct third_expr_ast *create_third_expr(struct result *cpt)
+{
+    struct third_expr_ast *expr = malloc(sizeof(struct third_expr_ast));
+
+    memset(expr, 0, sizeof(struct third_expr_ast));
+    switch (cpt->datatype) {
         case OPERATION:
-            expr->type = AST_SECONDARY_EXPR_OPERATION;
+            expr->type = AST_THIRD_EXPR_OPERATION;
             expr->u.operation = create_operation(cpt);
             break;
         case NUMBER:
-            expr->type = AST_SECONDARY_EXPR_CONSTANT;
+            expr->type = AST_THIRD_EXPR_CONSTANT;
             expr->u.constant = create_constant(cpt);
             break;
         default:

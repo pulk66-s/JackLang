@@ -11,8 +11,8 @@ struct operation_ast *create_operation(struct result *cpt)
 {
     struct operation_cpt *op = cpt->data;
     char op_code = op->operand;
-    struct secondary_expr_ast *left = create_secondary_expr(op->left);
-    struct secondary_expr_ast *right = create_secondary_expr(op->right);
+    struct third_expr_ast *left = create_third_expr(op->left);
+    struct third_expr_ast *right = create_third_expr(op->right);
     struct operation_ast *ast = malloc(sizeof(struct operation_ast));
 
     memset(ast, 0, sizeof(struct operation_ast));

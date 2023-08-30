@@ -3,9 +3,15 @@
 
 #include "parsing.h"
 
-struct function_decl_cpt {
+struct function_arg_decl_cpt {
+    char *type;
     char *name;
-    struct result *args;
+};
+
+struct function_decl_cpt {
+    char *type;
+    char *name;
+    struct function_arg_decl_cpt **args;
     struct result *lines;
 };
 

@@ -27,10 +27,7 @@ void cl_compiler_llvm_start(struct program_ast *ast)
 
     LLVMBuilderRef builder = LLVMCreateBuilder();
     LLVMModuleRef module = llvm_start();
-    LLVMValueRef fn = create_empty_function(module, "main", LLVMInt32Type());
-    LLVMBasicBlockRef block = create_empty_block(fn, "entry");
 
-    LLVMPositionBuilderAtEnd(builder, block);
     llvm_from_ast(ast, builder, module);
     output_llvm_module(module, "test.ll");
     logger().llvm("LLVM compiler finished.\n");

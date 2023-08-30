@@ -15,7 +15,7 @@ static struct line_ast *create_line(struct result *expr)
     struct line_ast *line = malloc(sizeof(struct line_ast));
 
     *line = (struct line_ast) {
-        .expr = create_primary_expr(expr->data)
+        .expr = create_primary_expr(expr)
     };
     return line;
 }
