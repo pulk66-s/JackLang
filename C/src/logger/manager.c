@@ -19,6 +19,7 @@ static struct logger _log = {
 static const char *YELLOW = "\033[33m";
 static const char *RED = "\033[31m";
 static const char *GREEN = "\033[32m";
+static const char *BLUE = "\033[34m";
 static const char *RESET = "\033[0m";
 
 struct logger logger()
@@ -73,6 +74,7 @@ void log_cpt(const char *fmt, ...)
     }
     va_list args;
     va_start(args, fmt);
+    printf("%s[CPT]%s ", BLUE, RESET);
     vprintf(fmt, args);
     va_end(args);
 }
@@ -84,6 +86,7 @@ void log_cpt_debug(const char *fmt, ...)
     }
     va_list args;
     va_start(args, fmt);
+    printf("%s[CPT_DEBUG]%s ", BLUE, RESET);
     vprintf(fmt, args);
     va_end(args);
 }

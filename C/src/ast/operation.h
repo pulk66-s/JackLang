@@ -6,8 +6,8 @@
 
 struct operation_ast {
     char operand;
-    struct secondary_expr_ast *left;
-    struct secondary_expr_ast *right;
+    struct third_expr_ast *left;
+    struct third_expr_ast *right;
 };
 
 /**

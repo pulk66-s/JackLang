@@ -1,5 +1,6 @@
 #include "print/ast/function.h"
 #include "print/ast/type.h"
+#include "print/ast/expr.h"
 #include "logger.h"
 
 void print_function_decl_ast(struct function_decl_ast *fn_decl)

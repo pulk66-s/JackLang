@@ -9,5 +9,6 @@ struct result *close_par(struct parser *p);
 struct result *open_curly(struct parser *p);
 struct result *close_curly(struct parser *p);
 struct result *comma(struct parser *p);
+struct result *equal(struct parser *p);
 
 #endif

@@ -5,7 +5,7 @@
 #include "parsing.h"
 
 struct ret_ast {
-    struct secondary_expr_ast *expr;
+    struct third_expr_ast *expr;
 };
 
 /**

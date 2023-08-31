@@ -1,6 +1,7 @@
 #include "ast/expr.h"
 #include "ast/constant.h"
 #include "ast/operation.h"
+#include "ast/expr.h"
 #include "ast/function.h"
 #include <string.h>
 
@@ -47,6 +48,10 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
         case EXPR:
             expr = create_secondary_expr(cpt->data);
             break;
+        case VARIABLE_DECL:
+            expr->type = AST_SECONDARY_VAR_DECL;
+            expr->u.var_decl = create_variable_decl_ast(cpt);
+            break;
         default:
             expr = NULL;
             break;
@@ -72,6 +77,10 @@ struct third_expr_ast *create_third_expr(struct result *cpt)
         case NUMBER:
             expr->type = AST_THIRD_EXPR_CONSTANT;
             expr->u.constant = create_constant(cpt);
+            break;
+        case VAR:
+            expr->type = AST_THIRD_EXPR_VAR_CALL;
+            expr->u.var_call = create_variable_call_ast(cpt);
             break;
         default:
             expr = NULL;

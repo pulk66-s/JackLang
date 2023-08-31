@@ -3,6 +3,7 @@
 #include "compiler/llvm/ret.h"
 #include "compiler/llvm/function.h"
 #include "compiler/llvm/constant.h"
+#include "compiler/llvm/variables.h"
 #include "logger.h"
 
 /**
@@ -50,6 +51,11 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
             llvm_from_ret(expr->u.ret, module, builder);
             logger().llvm("Secondary expr ret finished.\n");
             break;
+        case AST_SECONDARY_VAR_DECL:
+            logger().llvm("Secondary expr is a var decl.\n");
+            llvm_from_var_decl(expr->u.var_decl, module, builder);
+            logger().llvm("Secondary expr var decl finished.\n");
+            break;
         default:
             logger().llvm("Secondary expr is unknown. %d\n", expr->type);
             break;
@@ -78,6 +84,11 @@ LLVMValueRef llvm_from_third_expr(struct third_expr_ast *expr, LLVMModuleRef mod
             logger().llvm("Third expr is a constant.\n");
             value = llvm_from_constant(expr->u.constant, module, builder);
             logger().llvm("Third expr constant finished.\n");
+            break;
+        case AST_THIRD_EXPR_VAR_CALL:
+            logger().llvm("Third expr is a var call.\n");
+            value = llvm_from_var_call(expr->u.var_call, module, builder);
+            logger().llvm("Third expr var call finished.\n");
             break;
         default:
             logger().llvm("third expr is unknown. %d\n", expr->type);

@@ -48,3 +48,8 @@ struct result *comma(struct parser *p)
 {
     return special_char(p, ',');
 }
+
+struct result *equal(struct parser *p)
+{
+    return special_char(p, '=');
+}

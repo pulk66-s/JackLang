@@ -1,5 +1,5 @@
-#ifndef __CL_PRINT_STRING_H__
-#define __CL_PRINT_STRING_H__
+#ifndef __CL_PRINT_VAR_H__
+#define __CL_PRINT_VAR_H__
 
 #include "parsing.h"
 

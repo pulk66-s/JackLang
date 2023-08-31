@@ -58,6 +58,11 @@
         "cstdint": "c",
         "stdint.h": "c",
         "print.h": "c",
-        "type.h": "c"
+        "type.h": "c",
+        "logger.h": "c",
+        "variables.h": "c",
+        "variable.h": "c",
+        "line.h": "c",
+        "core.h": "c"
     }
 }

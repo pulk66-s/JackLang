@@ -11,8 +11,7 @@ void print_ret(struct result *r)
         return;
     }
     logger().cpt("\"Return\": {\n");
-    logger().cpt("\"Keyword\": ");
-    logger().cpt("\"%s\",\n", ret_cpt->keyword);
+    logger().cpt("\"Keyword\": \"%s\",\n",  ret_cpt->keyword);
     logger().cpt("\"Expr\": {\n");
     repartition(ret_cpt->expr);
     logger().cpt("}\n},\n");

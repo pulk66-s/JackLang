@@ -1,6 +1,7 @@
 #include "grammar/ret.h"
 #include "parsing/words.h"
 #include "grammar/expr.h"
+#include "logger.h"
 #include <string.h>
 #include <stdlib.h>
 
@@ -18,9 +19,9 @@ static struct result *ret_expr(struct parser *p)
 {
     return ordered_choice(
         p,
-        (parser_func[]){
-            secondary_expression,
-            number,
+        (parser_func[]) {
+            third_expression,
+            expr_value
         },
         2
     );
@@ -37,6 +38,7 @@ struct result *ret(struct parser *p)
     struct return_cpt *ret_cpt = malloc(sizeof(struct return_cpt));
     struct result *datas, *keyword, *expr;
 
+    logger().cpt_debug("ret\n");
     save(p);
     res = sequence(
         p,
@@ -47,6 +49,7 @@ struct result *ret(struct parser *p)
         2
     );
     if (!res) {
+        logger().cpt_debug("Error: return statement expected\n");
         rollback(p);
         return NULL;
     }

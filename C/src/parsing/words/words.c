@@ -1,6 +1,7 @@
 #include "parsing/words/words.h"
 #include "parsing/default/char.h"
 #include "parsing/words/letters.h"
+#include "logger.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -43,11 +44,13 @@ struct result *alpha_word(struct parser *p)
     for (size_t i = 0; i < size; i++) {
         buf[i] = next(p);
     }
-    return result(buf, STRING, 1);
+    return result(buf, VAR, 1);
 }
 
 struct result *identifier(struct parser *p)
 {
+    logger().cpt_debug("identifier\n");
+
     size_t size = 0;
     char *buf;
     char first_c;
@@ -58,6 +61,7 @@ struct result *identifier(struct parser *p)
     saved = p->pos;
     if (!is_alpha(first_c) && first_c != '_') {
         rollback(p);
+        logger().cpt_debug("identifier: NULL\n");
         return NULL;
     }
     size++;
@@ -78,5 +82,6 @@ struct result *identifier(struct parser *p)
     for (size_t i = 0; i < size; i++) {
         buf[i] = next(p);
     }
-    return result(buf, STRING, 1);
+    logger().cpt_debug("identifier: %s\n", buf);
+    return result(buf, VAR, 1);
 }

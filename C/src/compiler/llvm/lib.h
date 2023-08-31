@@ -9,5 +9,6 @@
 #include "compiler/llvm/lib/operation.h"
 #include "compiler/llvm/lib/ret.h"
 #include "compiler/llvm/lib/type.h"
+#include "compiler/llvm/lib/variables.h"
 
 #endif

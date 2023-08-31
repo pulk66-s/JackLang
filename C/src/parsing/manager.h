@@ -24,12 +24,13 @@ enum cpt_type {
     UNKNOWN,
     NUMBER,
     CHAR,
-    STRING,
+    VAR,
     PROGRAM,
     EXPR,
     OPERATION,
     RET,
-    FUNCTION_DECL
+    FUNCTION_DECL,
+    VARIABLE_DECL,
 };
 
 typedef struct result *(*parser_func)(struct parser *p);

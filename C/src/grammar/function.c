@@ -75,7 +75,7 @@ static struct function_arg_decl_cpt **create_args_decl(struct result *res)
 struct result *function_decl(struct parser *p)
 {
     struct result *res = malloc(sizeof(struct result));
-    struct result *t, *name, **args, **lines;
+    struct result *t, *name, *args, *lines;
     struct function_decl_cpt *fn = malloc(sizeof(struct function_decl_cpt));
 
     save(p);

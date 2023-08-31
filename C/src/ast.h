@@ -9,5 +9,6 @@
 #include "ast/operation.h"
 #include "ast/function.h"
 #include "ast/type.h"
+#include "ast/variables.h"
 
 #endif

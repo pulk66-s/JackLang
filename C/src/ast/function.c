@@ -23,8 +23,8 @@ static struct secondary_expr_ast **create_function_decl_lines(struct result *res
 {
     struct secondary_expr_ast **lines = NULL;
 
-    for (size_t i = 0, size = 0; i < res->size; i++) {
-        struct result *r = &res->data[i];
+    for (size_t i = 0; i < res->size; i++) {
+        struct result *r = &((struct result *)res->data)[i];
         struct secondary_expr_ast *expr = create_secondary_expr(r);
 
         if (!lines) {
