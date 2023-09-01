@@ -21,3 +21,14 @@ LLVMValueRef create_empty_function(LLVMModuleRef module, const char *name, LLVMT
 
     return function;
 }
+
+/**
+ * @brief               Get a parameter from a function.
+ * @param   function    The function.
+ * @param   index       The index of the parameter.
+ * @return              The parameter.
+*/
+LLVMValueRef get_function_param(LLVMValueRef function, unsigned int index)
+{
+    return LLVMGetParam(function, index);
+}

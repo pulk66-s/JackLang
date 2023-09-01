@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int _42(void);
+int add(int, int);
 
 int main(void)
 {
-    printf("%d\n", _42());
+    printf("%d\n", add(53, 1));
     return 0;
 }
