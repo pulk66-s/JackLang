@@ -23,6 +23,7 @@ void print_variable_redecl_ast(struct variable_redecl_ast *var_redecl)
 {
     logger().ast("\"variable_redecl\": {\n");
     logger().ast("\"name\": \"%s\",\n", var_redecl->name);
+    logger().ast("\"operator\": \"%s\",\n", var_redecl->operator);
     logger().ast("\"expr\": {\n");
     print_third_expr_ast(var_redecl->expr);
     logger().ast("},\n");

@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int var_redef();
+int count_10();
 
 int main(void)
 {
-    printf("%d\n", var_redef());
+    printf("%d\n", count_10());
     return 0;
 }

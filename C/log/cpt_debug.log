@@ -153,14 +153,14 @@ number
 number: 10
 comparison_op
 buf[0] = ';'
-buf[1] = ')'
-comparison_op: compare ";)" with "=="
-comparison_op: compare ";)" with "!="
-comparison_op: compare ";)" with ">"
-comparison_op: compare ";)" with "<"
-comparison_op: compare ";)" with ">="
-comparison_op: compare ";)" with "<="
-comparison_op: failed, operator=";)"
+buf[1] = 'a'
+comparison_op: compare ";a" with "=="
+comparison_op: compare ";a" with "!="
+comparison_op: compare ";a" with ">"
+comparison_op: compare ";a" with "<"
+comparison_op: compare ";a" with ">="
+comparison_op: compare ";a" with "<="
+comparison_op: failed, operator=";a"
 comparison: failed
 operation
 number
@@ -174,28 +174,36 @@ for_iter
 variable_declaration
 type
 alpha_word
-alpha_word: 
-type: 
+alpha_word: a
+type: a
 identifier
 identifier: NULL
 variable declaration after sequence
 variable_declaration: NULL
 variable_redeclaration
 identifier
-identifier: NULL
-variable_redeclaration: NULL
+identifier: a
 comparison
 number
-Error: number expected
-identifier
-identifier: NULL
+number: 1
+comparison_op
+buf[0] = ')'
+buf[1] = '{'
+comparison_op: compare "){" with "=="
+comparison_op: compare "){" with "!="
+comparison_op: compare "){" with ">"
+comparison_op: compare "){" with "<"
+comparison_op: compare "){" with ">="
+comparison_op: compare "){" with "<="
+comparison_op: failed, operator="){"
 comparison: failed
 operation
 number
-Error: number expected
-identifier
-identifier: NULL
-Error: left operand expected 1
+number: 1
+Error: left operand expected 3
+number
+number: 1
+variable_redeclaration: success
 for_iter success
 for_body
 condition
@@ -339,7 +347,9 @@ alpha_word
 alpha_word: return
 comparison
 number
-number: 1
+Error: number expected
+identifier
+identifier: a
 comparison_op
 buf[0] = ';'
 buf[1] = '}'
@@ -353,10 +363,14 @@ comparison_op: failed, operator=";}"
 comparison: failed
 operation
 number
-number: 1
+Error: number expected
+identifier
+identifier: a
 Error: left operand expected 3
 number
-number: 1
+Error: number expected
+identifier
+identifier: a
 condition
 if_condition
 if_keyword

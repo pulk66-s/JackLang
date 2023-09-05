@@ -21,6 +21,7 @@ void print_variable_redecl(struct result *r)
 
     logger().cpt("\"variable_redecl\": {\n");
     logger().cpt("\"identifier\": \"%s\",\n", cpt->identifier);
+    logger().cpt("\"operator\": \"%s\",\n", cpt->operator);
     logger().cpt("\"value\": {\n");
     repartition(cpt->value);
     logger().cpt("},\n");

@@ -36,7 +36,8 @@ struct variable_redecl_ast *create_variable_redecl_ast(struct result *cpt)
     memset(var_redecl, 0, sizeof(struct variable_redecl_ast));
     *var_redecl = (struct variable_redecl_ast){
         .name = var_redecl_cpt->identifier,
-        .expr = create_third_expr(var_redecl_cpt->value)
+        .expr = create_third_expr(var_redecl_cpt->value),
+        .operator = var_redecl_cpt->operator
     };
     return var_redecl;
 }

@@ -1,16 +1,25 @@
 	.text
 	.file	"start"
-	.globl	var_redef                       # -- Begin function var_redef
+	.globl	count_10                        # -- Begin function count_10
 	.p2align	4, 0x90
-	.type	var_redef,@function
-var_redef:                              # @var_redef
+	.type	count_10,@function
+count_10:                               # @count_10
 	.cfi_startproc
 # %bb.0:                                # %entry
-	movl	$20, -4(%rsp)
-	movl	$20, %eax
+	movl	$0, -4(%rsp)
+	cmpl	$9, -4(%rsp)
+	jg	.LBB0_3
+	.p2align	4, 0x90
+.LBB0_2:                                # %loop
+                                        # =>This Inner Loop Header: Depth=1
+	incl	-4(%rsp)
+	cmpl	$9, -4(%rsp)
+	jle	.LBB0_2
+.LBB0_3:                                # %loop_continue
+	movl	-4(%rsp), %eax
 	retq
 .Lfunc_end0:
-	.size	var_redef, .Lfunc_end0-var_redef
+	.size	count_10, .Lfunc_end0-count_10
 	.cfi_endproc
                                         # -- End function
 	.section	".note.GNU-stack","",@progbits

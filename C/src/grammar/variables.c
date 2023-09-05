@@ -55,6 +55,22 @@ struct result *variable_declaration(struct parser *p)
     return result(cpt, VARIABLE_DECL, 1);
 }
 
+static struct result *operator(struct parser *p)
+{
+    return ordered_choice(
+        p,
+        (parser_func[]) {
+            equal,
+            plus_equal,
+            minus_equal,
+            star_equal,
+            slash_equal,
+            percent_equal
+        },
+        6
+    );
+}
+
 struct result *variable_redeclaration(struct parser *p)
 {
     logger().cpt_debug("variable_redeclaration\n");
@@ -64,12 +80,12 @@ struct result *variable_redeclaration(struct parser *p)
         p,
         (parser_func[]){
             identifier,
-            equal,
+            operator,
             variable_value
         },
         3
     );
-    struct result *datas;
+    struct result *datas, *operator;
     struct variable_redecl_cpt *cpt = malloc(sizeof(struct variable_redecl_cpt));
 
     if (!res) {
@@ -78,8 +94,16 @@ struct result *variable_redeclaration(struct parser *p)
         return NULL;
     }
     datas = (struct result *)res->data;
+    operator = &datas[1];
+    if (operator->datatype == CHAR) {
+        char op = *(char *)operator->data;
+        operator->data = malloc(sizeof(char) * 2);
+        ((char *)operator->data)[0] = op;
+        ((char *)operator->data)[1] = 0;
+    }
     *cpt = (struct variable_redecl_cpt){
         .identifier = datas[0].data,
+        .operator = operator->data,
         .value = &datas[2]
     };
     delete_save(p);

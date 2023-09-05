@@ -11,6 +11,7 @@ struct variable_decl_cpt {
 
 struct variable_redecl_cpt {
     char *identifier;
+    char *operator;
     struct result *value;
 };
 

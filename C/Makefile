@@ -15,6 +15,7 @@ SRC			= 	src/files/read.c 						\
 				src/parsing/default/choice.c			\
 				src/parsing/words/letters.c				\
 				src/parsing/words/words.c				\
+				src/parsing/words/keywords.c			\
 				src/parsing/words/numbers.c				\
 				src/parsing/words/special_char.c		\
 				src/grammar/program.c					\

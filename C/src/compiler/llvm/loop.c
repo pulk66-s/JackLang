@@ -5,7 +5,7 @@
 
 void llvm_from_loop(struct loop_ast *loop, LLVMModuleRef module, LLVMBuilderRef builder)
 {
-    LLVMValueRef cond;
+    LLVMValueRef cond = NULL;
     LLVMBasicBlockRef loop_block, continue_block, condition_block;
 
     logger().llvm("Starting loop...\n");
@@ -23,10 +23,15 @@ void llvm_from_loop(struct loop_ast *loop, LLVMModuleRef module, LLVMBuilderRef 
         logger().llvm("Loop has no init.\n");
     }
     llvm_jmp(builder, condition_block);
-    logger().llvm("Loop has a condition.\n");
     push_block_to_end(builder, condition_block);
-    cond = llvm_from_third_expr(loop->condition, module, builder);
-    llvm_jmp_if(builder, cond, loop_block, continue_block);
+    if (loop->condition) {
+        logger().llvm("Loop has a condition.\n");
+        cond = llvm_from_third_expr(loop->condition, module, builder);
+        llvm_jmp_if(builder, cond, loop_block, continue_block);
+    } else {
+        logger().llvm("Loop has no condition.\n");
+        llvm_jmp(builder, loop_block);
+    }
     logger().llvm("Loop has a body.\n");
     push_block_to_end(builder, loop_block);
     for (size_t i = 0; loop->body[i]; i++) {

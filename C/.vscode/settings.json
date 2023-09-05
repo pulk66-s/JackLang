@@ -69,6 +69,7 @@
         "module.h": "c",
         "comparison.h": "c",
         "loop.h": "c",
-        "variant": "c"
+        "variant": "c",
+        "keywords.h": "c"
     }
 }

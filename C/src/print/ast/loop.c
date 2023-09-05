@@ -5,9 +5,13 @@
 void print_ast_loop(struct loop_ast *loop)
 {
     logger().ast("\"loop\": {\n");
-    logger().ast("\"condition\": {\n");
-    print_third_expr_ast(loop->condition);
-    logger().ast("},\n");
+    if (loop->condition) {
+        logger().ast("\"condition\": {\n");
+        print_third_expr_ast(loop->condition);
+        logger().ast("},\n");
+    } else {
+        logger().ast("\"condition\": null,\n");
+    }
     if (loop->increment) {
         logger().ast("\"increment\": {\n");
         print_third_expr_ast(loop->increment);

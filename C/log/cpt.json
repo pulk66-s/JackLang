@@ -36,6 +36,7 @@
 "start": {
 "variable_redecl": {
 "identifier": "a",
+"operator": "=",
 "value": {
 "Number": 1,
 },
@@ -53,6 +54,13 @@
 },
 },
 "iter": {
+"variable_redecl": {
+"identifier": "a",
+"operator": "+=",
+"value": {
+"Number": 1,
+},
+},
 },
 "body": {
 "Expr": [
@@ -63,6 +71,7 @@
 {
 "variable_redecl": {
 "identifier": "a",
+"operator": "=",
 "value": {
 "Operation": {
 "Operand": "+",
@@ -72,6 +81,7 @@
 "Right": {
 "Number": 1,
 }
+},
 },
 },
 },
@@ -96,7 +106,7 @@
 "Return": {
 "Keyword": "return",
 "Expr": {
-"Number": 1,
+"String": "a",
 }
 },
 },

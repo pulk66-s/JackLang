@@ -59,6 +59,6 @@ void llvm_from_var_redecl(struct variable_redecl_ast *redecl, LLVMModuleRef modu
         return;
     }
     var = llvm_variable_context_get(redecl->name);
-    llvm_assign(var, value, builder);
+    llvm_reassign(var, value, redecl->operator, builder);
     logger().llvm("Var redecl finished.\n");
 }

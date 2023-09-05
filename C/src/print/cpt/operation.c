@@ -19,4 +19,5 @@ void print_operation(struct result *res)
     logger().cpt("\"Right\": {\n");
     repartition(cpt->right);
     logger().cpt("}\n");
+    logger().cpt("},\n");
 }

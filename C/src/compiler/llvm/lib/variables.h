@@ -29,4 +29,13 @@ LLVMValueRef llvm_assign(LLVMValueRef var, LLVMValueRef value, LLVMBuilderRef bu
 */
 LLVMValueRef llvm_get_variable(char *var, LLVMBuilderRef builder);
 
+/**
+ * @brief               Reassign a variable with a new value depending on the operator
+ * @param   var         The variable
+ * @param   value       The value
+ * @param   operator    The operator
+ * @param   builder     The builder
+*/
+void llvm_reassign(LLVMValueRef var, LLVMValueRef value, char *operator, LLVMBuilderRef builder);
+
 #endif

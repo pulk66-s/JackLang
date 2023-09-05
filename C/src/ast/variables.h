@@ -16,6 +16,7 @@ struct variable_call_ast {
 
 struct variable_redecl_ast {
     char *name;
+    char *operator;
     struct third_expr_ast *expr;
 };
 
