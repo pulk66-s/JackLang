@@ -1,0 +1,387 @@
+function_decl
+type
+alpha_word
+alpha_word: int
+type: int
+identifier
+identifier: is_major
+type
+alpha_word
+alpha_word: int
+type: int
+identifier
+identifier: n
+type
+alpha_word
+alpha_word: int
+type: int
+identifier
+identifier: n
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: if
+if_keyword: is if
+cond_value
+comparison
+number
+Error: number expected
+identifier
+identifier: n
+comparison_op
+buf[0] = '<'
+comparison_op: compare "<" with "=="
+comparison_op: compare "<" with "!="
+comparison_op: compare "<" with ">"
+comparison_op: compare "<" with "<"
+comparison_op: success
+comparison
+number
+number: 0
+comparison_op
+buf[0] = ')'
+buf[1] = '{'
+comparison_op: compare "){" with "=="
+comparison_op: compare "){" with "!="
+comparison_op: compare "){" with ">"
+comparison_op: compare "){" with "<"
+comparison_op: compare "){" with ">="
+comparison_op: compare "){" with "<="
+comparison_op: failed, operator="){"
+comparison: failed
+operation
+number
+number: 0
+Error: left operand expected 3
+number
+number: 0
+comparison: success <
+cond_body
+cond_lines
+cursor 4 1 1 0
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: return
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: return
+comparison
+number
+number: 0
+comparison_op
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
+comparison: failed
+operation
+number
+number: 0
+Error: left operand expected 3
+number
+number: 0
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: 
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+cond_lines: end, size: 1
+maybe_else_condition
+else_condition
+else_keyword
+alpha_word
+alpha_word: else
+if_or_body
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: if
+if_keyword: is if
+cond_value
+comparison
+number
+Error: number expected
+identifier
+identifier: n
+comparison_op
+buf[0] = '<'
+comparison_op: compare "<" with "=="
+comparison_op: compare "<" with "!="
+comparison_op: compare "<" with ">"
+comparison_op: compare "<" with "<"
+comparison_op: success
+comparison
+number
+number: 18
+comparison_op
+buf[0] = ')'
+buf[1] = '{'
+comparison_op: compare "){" with "=="
+comparison_op: compare "){" with "!="
+comparison_op: compare "){" with ">"
+comparison_op: compare "){" with "<"
+comparison_op: compare "){" with ">="
+comparison_op: compare "){" with "<="
+comparison_op: failed, operator="){"
+comparison: failed
+operation
+number
+number: 18
+Error: left operand expected 3
+number
+number: 18
+comparison: success <
+cond_body
+cond_lines
+cursor 6 3 1 0
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: return
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: return
+comparison
+number
+number: 1
+comparison_op
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
+comparison: failed
+operation
+number
+number: 1
+Error: left operand expected 3
+number
+number: 1
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: 
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+cond_lines: end, size: 1
+maybe_else_condition
+else_condition
+else_keyword
+alpha_word
+alpha_word: else
+if_or_body
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: if
+if_keyword: is if
+cond_value
+comparison
+number
+Error: number expected
+identifier
+identifier: n
+comparison_op
+buf[0] = '<'
+comparison_op: compare "<" with "=="
+comparison_op: compare "<" with "!="
+comparison_op: compare "<" with ">"
+comparison_op: compare "<" with "<"
+comparison_op: success
+comparison
+number
+number: 100
+comparison_op
+buf[0] = ')'
+buf[1] = '{'
+comparison_op: compare "){" with "=="
+comparison_op: compare "){" with "!="
+comparison_op: compare "){" with ">"
+comparison_op: compare "){" with "<"
+comparison_op: compare "){" with ">="
+comparison_op: compare "){" with "<="
+comparison_op: failed, operator="){"
+comparison: failed
+operation
+number
+number: 100
+Error: left operand expected 3
+number
+number: 100
+comparison: success <
+cond_body
+cond_lines
+cursor 6 5 1 0
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: return
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: return
+comparison
+number
+number: 2
+comparison_op
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
+comparison: failed
+operation
+number
+number: 2
+Error: left operand expected 3
+number
+number: 2
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: 
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+cond_lines: end, size: 1
+maybe_else_condition
+else_condition
+else_keyword
+alpha_word
+alpha_word: return
+maybe_else_condition: end
+maybe_else_condition: res 0
+no else block
+if_boddy 5 1
+maybe_else_condition: end
+maybe_else_condition: res 5
+else block
+else keyword 11 else
+body 10 1
+else body is condition
+if_boddy 5 1
+maybe_else_condition: end
+maybe_else_condition: res 5
+else block
+else keyword 11 else
+body 10 1
+else body is condition
+if_boddy 5 1
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: return
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: return
+comparison
+number
+number: 3
+comparison_op
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
+comparison: failed
+operation
+number
+number: 3
+Error: left operand expected 3
+number
+number: 3
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+ret
+alpha_word
+alpha_word: 
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+function_decl success: is_major

@@ -29,6 +29,7 @@ void cl_compiler_llvm_start(struct program_ast *ast)
     LLVMModuleRef module = llvm_start();
 
     llvm_from_ast(ast, builder, module);
+    remove("test.ll");
     output_llvm_module(module, "test.ll");
     logger().llvm("LLVM compiler finished.\n");
 }

@@ -28,6 +28,10 @@ int main(int ac, char **av)
         printf("USAGE: %s <file>\n", av[0]);
         return 1;
     }
+    remove("log/ast.json");
+    remove("log/cpt.json");
+    remove("log/cpt_debug.log");
+    remove("log/llvm_debug.log");
     for (int i = 1; i < ac; i++) {
         const char *content = read_file(av[i]);
         const char ***parsed = parse_content(content);

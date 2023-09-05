@@ -5,7 +5,7 @@
 
 static bool is_operand(char c)
 {
-    return c == '+' || c == '-' || c == '*' || c == '/';
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '%';
 }
 
 struct result *operation(struct parser *p)

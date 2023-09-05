@@ -4,6 +4,7 @@
 #include "ast/expr.h"
 #include "ast/function.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * @brief           Create a primary expression AST node.
@@ -40,6 +41,7 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
     struct secondary_expr_ast *expr = malloc(sizeof(struct secondary_expr_ast));
 
     memset(expr, 0, sizeof(struct secondary_expr_ast));
+    printf("create_secondary_expr: cpt->datatype = %d\n", cpt->datatype);
     switch (cpt->datatype) {
         case RET:
             expr->type = AST_SECONDARY_EXPR_RET;
@@ -52,7 +54,13 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
             expr->type = AST_SECONDARY_VAR_DECL;
             expr->u.var_decl = create_variable_decl_ast(cpt);
             break;
+        case CONDITION:
+            printf("type condition\n");
+            expr->type = AST_SECONDARY_EXPR_COND;
+            expr->u.condition = create_condition(cpt);
+            break;
         default:
+            printf("create_secondary_expr: unknown type %d\n", cpt->datatype);
             expr = NULL;
             break;
     }
@@ -82,7 +90,15 @@ struct third_expr_ast *create_third_expr(struct result *cpt)
             expr->type = AST_THIRD_EXPR_VAR_CALL;
             expr->u.var_call = create_variable_call_ast(cpt);
             break;
+        case EXPR:
+            expr = create_third_expr(cpt->data);
+            break;
+        case COMPARISON:
+            expr->type = AST_THIRD_EXPR_COMPARISON;
+            expr->u.comparison = create_comparison(cpt);
+            break;
         default:
+            printf("create_third_expr: unknown type %d\n", cpt->datatype);
             expr = NULL;
             break;
     }

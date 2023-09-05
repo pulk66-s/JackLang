@@ -1,3 +1,4 @@
+#include "logger.h"
 #include "grammar/function.h"
 #include "grammar/type.h"
 #include "grammar/expr.h"
@@ -78,21 +79,26 @@ struct result *function_decl(struct parser *p)
     struct result *t, *name, *args, *lines;
     struct function_decl_cpt *fn = malloc(sizeof(struct function_decl_cpt));
 
+    logger().cpt_debug("function_decl\n");
     save(p);
     t = type(p);
     if (!t) {
+        logger().cpt_debug("function_decl failed, type is NULL\n");
         goto function_decl_error_end;
     }
     name = identifier(p);
     if (!name || !open_par(p)) {
+        logger().cpt_debug("function_decl failed, name is NULL\n");
         goto function_decl_error_end;
     }
     args = function_decl_args(p);
     if (!args || !close_par(p) || !open_curly(p)) {
+        logger().cpt_debug("function_decl failed, args is NULL\n");
         goto function_decl_error_end;
     }
     lines = function_decl_lines(p);
     if (!lines || !close_curly(p)) {
+        logger().cpt_debug("function_decl failed, lines is NULL\n");
         goto function_decl_error_end;
     }
     *fn = (struct function_decl_cpt) {
@@ -102,6 +108,7 @@ struct result *function_decl(struct parser *p)
         .lines = lines
     };
     delete_save(p);
+    logger().cpt_debug("function_decl success: %s\n", fn->name);
     return result(fn, FUNCTION_DECL, 1);
 function_decl_error_end:
     rollback(p);

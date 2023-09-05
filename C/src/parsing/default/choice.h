@@ -33,4 +33,13 @@ struct result *sequence(struct parser *parser, parser_func *funcs, size_t size);
 */
 struct result *zero_or_more(struct parser *parser, parser_func func);
 
+/**
+ * @brief           The zero or one parser, it tries to parse the input with the given
+ *                  parser, and returns the result if it succeeds, or an unknown result
+ * @param   parser  The parser
+ * @param   func    The parser to try
+ * @return          The result of the parser, or an unknown result if it failed
+*/
+struct result *zero_or_one(struct parser *parser, parser_func func);
+
 #endif

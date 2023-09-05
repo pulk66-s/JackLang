@@ -1,0 +1,160 @@
+{"Program": [
+{
+"function_decl": {
+"type": "int",
+"name": "is_major",
+"args": [
+{
+"type": "int",
+"name": "n"
+}
+],
+"lines": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"if_stmt": {
+"keyword": "if",
+"condition": {
+"comparison": {
+"operator": "<",
+"left": {
+"String": "n",
+},
+"right": {
+"Number": 0,
+}
+},
+},
+"body": {
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 0,
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+},
+"else": {
+"if_stmt": {
+"keyword": "if",
+"condition": {
+"comparison": {
+"operator": "<",
+"left": {
+"String": "n",
+},
+"right": {
+"Number": 18,
+}
+},
+},
+"body": {
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 1,
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+},
+"else": {
+"if_stmt": {
+"keyword": "if",
+"condition": {
+"comparison": {
+"operator": "<",
+"left": {
+"String": "n",
+},
+"right": {
+"Number": 100,
+}
+},
+},
+"body": {
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 2,
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+},
+}
+},
+}
+},
+}
+},
+],
+},
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 3,
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+}
+],
+}
+},
+]},

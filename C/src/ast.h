@@ -10,5 +10,7 @@
 #include "ast/function.h"
 #include "ast/type.h"
 #include "ast/variables.h"
+#include "ast/condition.h"
+#include "ast/comparison.h"
 
 #endif

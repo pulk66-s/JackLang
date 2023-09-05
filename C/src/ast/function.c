@@ -15,7 +15,6 @@ static struct function_decl_arg_ast **create_function_decl_args(struct function_
         args[i]->type = type_ast(cpt_args[i]->type);
         args[i]->name = cpt_args[i]->name;
     }
-    printf("args size: %d\n", s);
     args[s] = NULL;
     return args;
 }

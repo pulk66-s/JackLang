@@ -8,6 +8,9 @@
 #include "print/cpt/function.h"
 #include "print/cpt/ret.h"
 #include "print/cpt/variables.h"
+#include "print/cpt/keyword.h"
+#include "print/cpt/condition.h"
+#include "print/cpt/comparison.h"
 #include <stdio.h>
 
 void repartition(struct result *res)
@@ -39,6 +42,15 @@ void repartition(struct result *res)
             break;
         case VARIABLE_DECL:
             print_variable_decl(res);
+            break;
+        case CONDITION:
+            print_if_stmt(res);
+            break;
+        case KEYWORD:
+            print_keyword(res);
+            break;
+        case COMPARISON:
+            print_comparison(res);
             break;
         default:
             printf("Unknown datatype %d\n", res->datatype);

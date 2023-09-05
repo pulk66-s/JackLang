@@ -63,6 +63,10 @@
         "variables.h": "c",
         "variable.h": "c",
         "line.h": "c",
-        "core.h": "c"
+        "core.h": "c",
+        "condition.h": "c",
+        "stat.h": "c",
+        "module.h": "c",
+        "comparison.h": "c"
     }
 }

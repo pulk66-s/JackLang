@@ -1,5 +1,6 @@
 #include "files/read.h"
 #include <fcntl.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <string.h>
@@ -32,3 +33,4 @@ char *read_file(const char *path)
     close(fd);
     return buff;
 }
+

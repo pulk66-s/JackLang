@@ -2,9 +2,11 @@
 #define __CL_AST_EXPR_H__
 
 #include "ast/ret.h"
+#include "ast/comparison.h"
 #include "ast/operation.h"
 #include "ast/constant.h"
 #include "ast/variables.h"
+#include "ast/condition.h"
 #include "parsing/manager.h"
 
 enum ast_primary_expr_type {
@@ -20,7 +22,8 @@ struct primary_expr_ast {
 
 enum ast_secondary_expr_type {
     AST_SECONDARY_EXPR_RET,
-    AST_SECONDARY_VAR_DECL
+    AST_SECONDARY_VAR_DECL,
+    AST_SECONDARY_EXPR_COND
 };
 
 struct secondary_expr_ast {
@@ -28,13 +31,15 @@ struct secondary_expr_ast {
     union {
         struct ret_ast *ret;
         struct variable_decl_ast *var_decl;
+        struct condition_ast *condition;
     } u;
 };
 
 enum ast_third_expr_type {
     AST_THIRD_EXPR_OPERATION,
     AST_THIRD_EXPR_CONSTANT,
-    AST_THIRD_EXPR_VAR_CALL
+    AST_THIRD_EXPR_VAR_CALL,
+    AST_THIRD_EXPR_COMPARISON
 };
 
 struct third_expr_ast {
@@ -43,6 +48,7 @@ struct third_expr_ast {
         struct operation_ast *operation;
         struct constant_ast *constant;
         struct variable_call_ast *var_call;
+        struct comparison_ast *comparison;
     } u;
 };
 

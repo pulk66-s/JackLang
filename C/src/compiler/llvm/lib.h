@@ -10,5 +10,8 @@
 #include "compiler/llvm/lib/ret.h"
 #include "compiler/llvm/lib/type.h"
 #include "compiler/llvm/lib/variables.h"
+#include "compiler/llvm/lib/comparison.h"
+#include "compiler/llvm/lib/condition.h"
+#include "compiler/llvm/lib/jmp.h"
 
 #endif

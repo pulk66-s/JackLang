@@ -3,5 +3,6 @@
 
 #include "files/read.h"
 #include "files/parsing.h"
+#include "files/write.h"
 
 #endif

@@ -31,6 +31,9 @@ enum cpt_type {
     RET,
     FUNCTION_DECL,
     VARIABLE_DECL,
+    CONDITION,
+    KEYWORD,
+    COMPARISON
 };
 
 typedef struct result *(*parser_func)(struct parser *p);

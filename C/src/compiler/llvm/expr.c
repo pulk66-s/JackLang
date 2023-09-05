@@ -4,7 +4,10 @@
 #include "compiler/llvm/function.h"
 #include "compiler/llvm/constant.h"
 #include "compiler/llvm/variables.h"
+#include "compiler/llvm/condition.h"
+#include "compiler/llvm/comparison.h"
 #include "logger.h"
+#include <stdlib.h>
 
 /**
  * @brief           Create the LLVM IR from the primary expr
@@ -56,6 +59,11 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
             llvm_from_var_decl(expr->u.var_decl, module, builder);
             logger().llvm("Secondary expr var decl finished.\n");
             break;
+        case AST_SECONDARY_EXPR_COND:
+            logger().llvm("Secondary expr is a cond.\n");
+            llvm_from_condition(expr->u.condition, module, builder, NULL);
+            logger().llvm("Secondary expr cond finished.\n");
+            break;
         default:
             logger().llvm("Secondary expr is unknown. %d\n", expr->type);
             break;
@@ -73,6 +81,7 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
 LLVMValueRef llvm_from_third_expr(struct third_expr_ast *expr, LLVMModuleRef module, LLVMBuilderRef builder)
 {
     LLVMValueRef value = NULL;
+
     logger().llvm("Starting third expr...\n");
     switch (expr->type) {
         case AST_THIRD_EXPR_OPERATION:
@@ -89,6 +98,11 @@ LLVMValueRef llvm_from_third_expr(struct third_expr_ast *expr, LLVMModuleRef mod
             logger().llvm("Third expr is a var call.\n");
             value = llvm_from_var_call(expr->u.var_call, module, builder);
             logger().llvm("Third expr var call finished.\n");
+            break;
+        case AST_THIRD_EXPR_COMPARISON:
+            logger().llvm("Third expr is a comparison.\n");
+            value = llvm_from_comparison(expr->u.comparison, module, builder);
+            logger().llvm("Third expr comparison finished.\n");
             break;
         default:
             logger().llvm("third expr is unknown. %d\n", expr->type);

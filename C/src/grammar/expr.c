@@ -2,6 +2,7 @@
 #include "grammar/function.h"
 #include "grammar/expr.h"
 #include "grammar/ret.h"
+#include "grammar/comparison.h"
 #include "grammar/variables.h"
 #include "parsing.h"
 
@@ -22,20 +23,33 @@ struct result *secondary_expression(struct parser *p)
         p,
         (parser_func[]){
             ret,
-            variable_declaration
+            variable_declaration,
         },
         2
     );
 }
+
+struct result *secondary_expression_without_endchar(struct parser *p)
+{
+    return ordered_choice(
+        p,
+        (parser_func[]){
+            condition
+        },
+        1
+    );
+}
+
 
 struct result *third_expression(struct parser *p)
 {
     return ordered_choice(
         p,
         (parser_func[]){
-            operation,
+            comparison,
+            operation
         },
-        1
+        2
     );
 }
 
@@ -67,7 +81,14 @@ struct result *expr(struct parser *p)
 {
     save(p);
 
-    struct result *r = expr_stmt(p);
+    struct result *r = ordered_choice(
+        p,
+        (parser_func[]){
+            secondary_expression_without_endchar,
+            expr_stmt,
+        },
+        2
+    );
 
     if (!r) {
         rollback(p);

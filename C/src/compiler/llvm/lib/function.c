@@ -32,3 +32,13 @@ LLVMValueRef get_function_param(LLVMValueRef function, unsigned int index)
 {
     return LLVMGetParam(function, index);
 }
+
+/**
+ * @brief           Get the last function of a module.
+ * @param   module  The module.
+ * @return          The last function.
+*/
+LLVMValueRef get_last_function(LLVMModuleRef module)
+{
+    return LLVMGetLastFunction(module);
+}

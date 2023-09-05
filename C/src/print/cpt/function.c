@@ -23,7 +23,9 @@ void print_function(struct result *r)
     }
     logger().cpt("],\n");
     logger().cpt("\"lines\": [\n");
+    logger().cpt("{\n");
     repartition(f->lines);
+    logger().cpt("}\n");
     logger().cpt("],\n");
     logger().cpt("}\n");
 }

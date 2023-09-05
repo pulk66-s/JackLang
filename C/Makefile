@@ -7,6 +7,7 @@ CC			=	gcc
 MAIN_SRC	=	src/main.c
 SRC			= 	src/files/read.c 						\
 				src/files/parsing.c						\
+				src/files/write.c						\
 				src/logger/manager.c					\
 				src/parsing/launch.c					\
 				src/parsing/manager.c					\
@@ -23,6 +24,9 @@ SRC			= 	src/files/read.c 						\
 				src/grammar/function.c					\
 				src/grammar/type.c						\
 				src/grammar/variables.c					\
+				src/grammar/comparison.c				\
+				src/grammar/condition.c					\
+				src/print/cpt/condition.c				\
 				src/print/cpt/ret.c						\
 				src/print/cpt/char.c					\
 				src/print/cpt/program.c					\
@@ -34,7 +38,10 @@ SRC			= 	src/files/read.c 						\
 				src/print/cpt/string.c					\
 				src/print/cpt/function.c				\
 				src/print/cpt/variables.c				\
+				src/print/cpt/keyword.c					\
+				src/print/cpt/comparison.c				\
 				src/print/ast/constant.c				\
+				src/print/ast/condition.c				\
 				src/print/ast/expr.c					\
 				src/print/ast/line.c					\
 				src/print/ast/operation.c				\
@@ -43,7 +50,9 @@ SRC			= 	src/files/read.c 						\
 				src/print/ast/function.c				\
 				src/print/ast/type.c					\
 				src/print/ast/variables.c				\
+				src/print/ast/comparison.c				\
 				src/ast/context/variables.c				\
+				src/ast/comparison.c					\
 				src/ast/type.c							\
 				src/ast/create.c						\
 				src/ast/lines.c							\
@@ -53,6 +62,7 @@ SRC			= 	src/files/read.c 						\
 				src/ast/constant.c						\
 				src/ast/function.c						\
 				src/ast/variables.c						\
+				src/ast/condition.c						\
 				src/compiler/llvm/lib/module.c			\
 				src/compiler/llvm/lib/function.c		\
 				src/compiler/llvm/lib/block.c			\
@@ -62,6 +72,9 @@ SRC			= 	src/files/read.c 						\
 				src/compiler/llvm/lib/type.c			\
 				src/compiler/llvm/lib/ret.c				\
 				src/compiler/llvm/lib/variables.c		\
+				src/compiler/llvm/lib/condition.c		\
+				src/compiler/llvm/lib/comparison.c		\
+				src/compiler/llvm/lib/jmp.c				\
 				src/compiler/llvm/type.c				\
 				src/compiler/llvm/variables.c			\
 				src/compiler/llvm/start.c				\
@@ -71,6 +84,8 @@ SRC			= 	src/files/read.c 						\
 				src/compiler/llvm/operation.c			\
 				src/compiler/llvm/ret.c					\
 				src/compiler/llvm/function.c			\
+				src/compiler/llvm/condition.c			\
+				src/compiler/llvm/comparison.c			\
 				src/compiler/llvm/context/variables.c	\
 
 TESTS_SRC	=	$(SRC)								\

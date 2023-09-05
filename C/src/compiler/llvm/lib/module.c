@@ -1,4 +1,5 @@
 #include "compiler/llvm/lib/module.h"
+#include "files.h"
 #include <stdlib.h>
 
 /**
@@ -27,5 +28,8 @@ LLVMModuleRef create_default_llvm_module(void)
 */
 void output_llvm_module(LLVMModuleRef module, const char *file_path)
 {
-    LLVMPrintModuleToFile(module, file_path, NULL);
+    char *str = LLVMPrintModuleToString(module);
+
+    printf("%s\n", str);
+    write_file(file_path, "%s", str);
 }

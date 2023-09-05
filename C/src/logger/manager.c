@@ -1,4 +1,5 @@
 #include "logger/manager.h"
+#include "files.h"
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -74,6 +75,7 @@ void log_cpt(const char *fmt, ...)
     }
     va_list args;
     va_start(args, fmt);
+    write_file_fmt("log/cpt.json", fmt, args);
     printf("%s[CPT]%s ", BLUE, RESET);
     vprintf(fmt, args);
     va_end(args);
@@ -87,6 +89,7 @@ void log_cpt_debug(const char *fmt, ...)
     va_list args;
     va_start(args, fmt);
     printf("%s[CPT_DEBUG]%s ", BLUE, RESET);
+    write_file_fmt("log/cpt_debug.log", fmt, args);
     vprintf(fmt, args);
     va_end(args);
 }
@@ -137,6 +140,7 @@ void log_ast(const char *fmt, ...)
     va_list args;
     va_start(args, fmt);
     printf("\033[33m[AST]\033[0m ");
+    write_file_fmt("log/ast.json", fmt, args);
     vprintf(fmt, args);
     va_end(args);
 }
@@ -149,6 +153,7 @@ void log_llvm(const char *fmt, ...)
     va_list args;
     va_start(args, fmt);
     printf("%s[LLVM]%s ", GREEN, RESET);
+    write_file_fmt("log/llvm_debug.log", fmt, args);
     vprintf(fmt, args);
     va_end(args);
 }

@@ -98,3 +98,25 @@ struct result *zero_or_more(struct parser *parser, parser_func func)
     delete_save(parser);
     return res;
 }
+
+/**
+ * @brief           The zero or one parser, it tries to parse the input with the given
+ *                  parser, and returns the result if it succeeds, or an unknown result
+ * @param   parser  The parser
+ * @param   func    The parser to try
+ * @return          The result of the parser, or an unknown result if it failed
+*/
+struct result *zero_or_one(struct parser *parser, parser_func func)
+{
+    struct result *res = func(parser);
+
+    if (res == NULL) {
+        res = malloc(sizeof(struct result));
+        *res = (struct result) {
+            .datatype = UNKNOWN,
+            .data = NULL,
+            .size = 0
+        };
+    }
+    return res;
+}

@@ -20,4 +20,11 @@ LLVMValueRef create_empty_function(LLVMModuleRef module, const char *name, LLVMT
 */
 LLVMValueRef get_function_param(LLVMValueRef function, unsigned int index);
 
+/**
+ * @brief           Get the last function of a module.
+ * @param   module  The module.
+ * @return          The last function.
+*/
+LLVMValueRef get_last_function(LLVMModuleRef module);
+
 #endif

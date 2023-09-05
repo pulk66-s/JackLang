@@ -1,0 +1,144 @@
+Starting LLVM compiler...
+Compiling line 0...
+Starting line...
+Starting primary expr...
+Primary expr is a func decl.
+Starting function decl...
+Function decl has 1 args.
+Storing variable n.
+Function decl lines.
+Starting secondary expr...
+Secondary expr is a cond.
+Starting condition...
+Starting third expr...
+Third expr is a comparison.
+Starting third expr...
+Third expr is a var call.
+Starting var call...
+Variable n found.
+Var call finished.
+Third expr var call finished.
+Third expr finished.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr comparison finished.
+Third expr finished.
+Starting secondary expr...
+Secondary expr is a ret.
+Starting ret...
+Starting Third expr.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr finished.
+Ret finished.
+Secondary expr ret finished.
+Secondary expr finished.
+Starting condition...
+Starting third expr...
+Third expr is a comparison.
+Starting third expr...
+Third expr is a var call.
+Starting var call...
+Variable n found.
+Var call finished.
+Third expr var call finished.
+Third expr finished.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr comparison finished.
+Third expr finished.
+Starting secondary expr...
+Secondary expr is a ret.
+Starting ret...
+Starting Third expr.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr finished.
+Ret finished.
+Secondary expr ret finished.
+Secondary expr finished.
+Starting condition...
+Starting third expr...
+Third expr is a comparison.
+Starting third expr...
+Third expr is a var call.
+Starting var call...
+Variable n found.
+Var call finished.
+Third expr var call finished.
+Third expr finished.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr comparison finished.
+Third expr finished.
+Starting secondary expr...
+Secondary expr is a ret.
+Starting ret...
+Starting Third expr.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr finished.
+Ret finished.
+Secondary expr ret finished.
+Secondary expr finished.
+Adding jump from else block to continue block.
+Adding jump from else block to continue block.
+Secondary expr cond finished.
+Secondary expr finished.
+Starting secondary expr...
+Secondary expr is a ret.
+Starting ret...
+Starting Third expr.
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Third expr finished.
+Ret finished.
+Secondary expr ret finished.
+Secondary expr finished.
+Function decl finished.
+Primary expr func decl finished.
+Line finished.
+Line 0 compiled.
+LLVM compiler finished.

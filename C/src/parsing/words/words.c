@@ -22,6 +22,7 @@ struct result *alpha_word(struct parser *p)
     char *buf;
     struct pos saved;
 
+    logger().cpt_debug("alpha_word\n");
     save(p);
     next(p);
     saved = p->pos;
@@ -44,7 +45,8 @@ struct result *alpha_word(struct parser *p)
     for (size_t i = 0; i < size; i++) {
         buf[i] = next(p);
     }
-    return result(buf, VAR, 1);
+    logger().cpt_debug("alpha_word: %s\n", buf);
+    return result(buf, KEYWORD, 1);
 }
 
 struct result *identifier(struct parser *p)

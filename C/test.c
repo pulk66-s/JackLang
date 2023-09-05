@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int add(int, int);
+int is_major(int n);
 
 int main(void)
 {
-    printf("%d\n", add(53, 1));
+    printf("%d\n", is_major(100));
     return 0;
 }
