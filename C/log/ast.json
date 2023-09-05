@@ -1,166 +1,118 @@
 {
-"AST_PRGM": {
-"lines": [
-{
-"line": {
-"primary_expr": {
-"function_decl": {
-"type": "int",
-"name": "is_major",
-"args": [
-{
-"type": "int",
-"name": "n"
-},
-],
-"lines": [
-{
-"secondary_expr": {
-"condition": {
-"cond": {
-"third_expr": {
-"comparison": {
-"operand": "<",
-"left": {
-"third_expr": {
-"variable_call": {
-"name": "n",
-},
-},
-},
-"right": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 0
-},
-},
-},
-},
-},
-},
-"then": [
-{
-"secondary_expr": {
-"ret": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 0
-},
-},
-},
-},
-},
-],
-"else": [
-{
-"secondary_expr": {
-"condition": {
-"cond": {
-"third_expr": {
-"comparison": {
-"operand": "<",
-"left": {
-"third_expr": {
-"variable_call": {
-"name": "n",
-},
-},
-},
-"right": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 18
-},
-},
-},
-},
-},
-},
-"then": [
-{
-"secondary_expr": {
-"ret": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 1
-},
-},
-},
-},
-},
-],
-"else": [
-{
-"secondary_expr": {
-"condition": {
-"cond": {
-"third_expr": {
-"comparison": {
-"operand": "<",
-"left": {
-"third_expr": {
-"variable_call": {
-"name": "n",
-},
-},
-},
-"right": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 100
-},
-},
-},
-},
-},
-},
-"then": [
-{
-"secondary_expr": {
-"ret": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 2
-},
-},
-},
-},
-},
-],
-},
-},
-},
-],
-},
-},
-},
-],
-},
-},
-},
-{
-"secondary_expr": {
-"ret": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 3
-},
-},
-},
-},
-},
-],
-},
-},
-},
-},
-]
-}
+    "AST_PRGM": {
+        "lines": [
+            {
+                "line": {
+                    "primary_expr": {
+                        "function_decl": {
+                            "type": "int",
+                            "name": "count_10",
+                            "args": [],
+                            "lines": [
+                                {
+                                    "secondary_expr": {
+                                        "variable_dec": {
+                                            "name": "a",
+                                            "type": "int",
+                                            "third_expr": {
+                                                "constant": {
+                                                    "type": "int32",
+                                                    "value": 0
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    "secondary_expr": {
+                                        "loop": {
+                                            "condition": {
+                                                "third_expr": {
+                                                    "operation": {
+                                                        "operator": "%",
+                                                        "left": {
+                                                            "third_expr": {
+                                                                "variable_call": {
+                                                                    "name": "a",
+                                                                },
+                                                            },
+                                                        },
+                                                        "right": {
+                                                            "third_expr": {
+                                                                "constant": {
+                                                                    "type": "int32",
+                                                                    "value": 2
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            "increment": {
+                                                "third_expr": {
+                                                    "operation": {
+                                                        "operator": "+",
+                                                        "left": {
+                                                            "third_expr": {
+                                                                "variable_call": {
+                                                                    "name": "a",
+                                                                },
+                                                            },
+                                                        },
+                                                        "right": {
+                                                            "third_expr": {
+                                                                "constant": {
+                                                                    "type": "int32",
+                                                                    "value": 1
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            "init": {
+                                                "third_expr": {
+                                                    "comparison": {
+                                                        "operand": "<",
+                                                        "left": {
+                                                            "third_expr": {
+                                                                "variable_call": {
+                                                                    "name": "a",
+                                                                },
+                                                            },
+                                                        },
+                                                        "right": {
+                                                            "third_expr": {
+                                                                "constant": {
+                                                                    "type": "int32",
+                                                                    "value": 10
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            "body": []
+                                        },
+                                    },
+                                },
+                                {
+                                    "secondary_expr": {
+                                        "ret": {
+                                            "third_expr": {
+                                                "constant": {
+                                                    "type": "int32",
+                                                    "value": 1
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                },
+            },
+        ]
+    }
 }

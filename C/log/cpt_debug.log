@@ -4,31 +4,95 @@ alpha_word
 alpha_word: int
 type: int
 identifier
-identifier: is_major
+identifier: count_10
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: int
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: int
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: int
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
+ret
+alpha_word
+alpha_word: int
+Error: return statement expected
+variable_declaration
 type
 alpha_word
 alpha_word: int
 type: int
 identifier
-identifier: n
-type
-alpha_word
-alpha_word: int
-type: int
-identifier
-identifier: n
+identifier: a
+comparison
+number
+number: 0
+comparison_op
+buf[0] = ';'
+buf[1] = 'f'
+comparison_op: compare ";f" with "=="
+comparison_op: compare ";f" with "!="
+comparison_op: compare ";f" with ">"
+comparison_op: compare ";f" with "<"
+comparison_op: compare ";f" with ">="
+comparison_op: compare ";f" with "<="
+comparison_op: failed, operator=";f"
+comparison: failed
+operation
+number
+number: 0
+Error: left operand expected 3
+number
+number: 0
+variable declaration after sequence
+res size: 4
+variable decl, type: 11, identifier: 3, value: 1
 condition
 if_condition
 if_keyword
 alpha_word
-alpha_word: if
-if_keyword: is if
-cond_value
+alpha_word: for
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: for
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: for
+for_keyword success
+for_init
 comparison
 number
 Error: number expected
 identifier
-identifier: n
+identifier: a
 comparison_op
 buf[0] = '<'
 comparison_op: compare "<" with "=="
@@ -38,7 +102,95 @@ comparison_op: compare "<" with "<"
 comparison_op: success
 comparison
 number
-number: 0
+number: 10
+comparison_op
+buf[0] = ';'
+buf[1] = 'a'
+comparison_op: compare ";a" with "=="
+comparison_op: compare ";a" with "!="
+comparison_op: compare ";a" with ">"
+comparison_op: compare ";a" with "<"
+comparison_op: compare ";a" with ">="
+comparison_op: compare ";a" with "<="
+comparison_op: failed, operator=";a"
+comparison: failed
+operation
+number
+number: 10
+Error: left operand expected 3
+number
+number: 10
+comparison: success <
+for_init success
+for_cond
+comparison
+number
+Error: number expected
+identifier
+identifier: a
+comparison_op
+buf[0] = '%'
+buf[1] = '2'
+comparison_op: compare "%2" with "=="
+comparison_op: compare "%2" with "!="
+comparison_op: compare "%2" with ">"
+comparison_op: compare "%2" with "<"
+comparison_op: compare "%2" with ">="
+comparison_op: compare "%2" with "<="
+comparison_op: failed, operator="%2"
+comparison: failed
+operation
+number
+Error: number expected
+identifier
+identifier: a
+comparison
+number
+number: 2
+comparison_op
+buf[0] = ';'
+buf[1] = 'a'
+comparison_op: compare ";a" with "=="
+comparison_op: compare ";a" with "!="
+comparison_op: compare ";a" with ">"
+comparison_op: compare ";a" with "<"
+comparison_op: compare ";a" with ">="
+comparison_op: compare ";a" with "<="
+comparison_op: failed, operator=";a"
+comparison: failed
+operation
+number
+number: 2
+Error: left operand expected 3
+number
+number: 2
+operation: %
+for_cond success
+for_iter
+comparison
+number
+Error: number expected
+identifier
+identifier: a
+comparison_op
+buf[0] = '+'
+buf[1] = '1'
+comparison_op: compare "+1" with "=="
+comparison_op: compare "+1" with "!="
+comparison_op: compare "+1" with ">"
+comparison_op: compare "+1" with "<"
+comparison_op: compare "+1" with ">="
+comparison_op: compare "+1" with "<="
+comparison_op: failed, operator="+1"
+comparison: failed
+operation
+number
+Error: number expected
+identifier
+identifier: a
+comparison
+number
+number: 1
 comparison_op
 buf[0] = ')'
 buf[1] = '{'
@@ -52,63 +204,13 @@ comparison_op: failed, operator="){"
 comparison: failed
 operation
 number
-number: 0
+number: 1
 Error: left operand expected 3
 number
-number: 0
-comparison: success <
-cond_body
-cond_lines
-cursor 4 1 1 0
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: return
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: return
-while_keyword failed on strcmp
-loop failed
-ret
-alpha_word
-alpha_word: return
-comparison
-number
-number: 0
-comparison_op
-buf[0] = ';'
-buf[1] = '}'
-comparison_op: compare ";}" with "=="
-comparison_op: compare ";}" with "!="
-comparison_op: compare ";}" with ">"
-comparison_op: compare ";}" with "<"
-comparison_op: compare ";}" with ">="
-comparison_op: compare ";}" with "<="
-comparison_op: failed, operator=";}"
-comparison: failed
-operation
-number
-number: 0
-Error: left operand expected 3
-number
-number: 0
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: 
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: 
-while_keyword failed on strcmp
-loop failed
+number: 1
+operation: +
+for_iter success
+for_body
 ret
 alpha_word
 alpha_word: 
@@ -122,56 +224,9 @@ identifier
 identifier: NULL
 variable declaration after sequence
 variable_declaration: NULL
-cond_lines: end, size: 1
-maybe_else_condition
-else_condition
-else_keyword
-alpha_word
-alpha_word: else
-if_or_body
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: if
-if_keyword: is if
-cond_value
-comparison
-number
-Error: number expected
-identifier
-identifier: n
-comparison_op
-buf[0] = '<'
-comparison_op: compare "<" with "=="
-comparison_op: compare "<" with "!="
-comparison_op: compare "<" with ">"
-comparison_op: compare "<" with "<"
-comparison_op: success
-comparison
-number
-number: 18
-comparison_op
-buf[0] = ')'
-buf[1] = '{'
-comparison_op: compare "){" with "=="
-comparison_op: compare "){" with "!="
-comparison_op: compare "){" with ">"
-comparison_op: compare "){" with "<"
-comparison_op: compare "){" with ">="
-comparison_op: compare "){" with "<="
-comparison_op: failed, operator="){"
-comparison: failed
-operation
-number
-number: 18
-Error: left operand expected 3
-number
-number: 18
-comparison: success <
-cond_body
-cond_lines
-cursor 6 3 1 0
+for_body success
+for_loop success
+loop success
 condition
 if_condition
 if_keyword
@@ -184,6 +239,12 @@ while_keyword
 alpha_word
 alpha_word: return
 while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: return
+for_keyword failed on strcmp
+for_loop failed on parse
 loop failed
 ret
 alpha_word
@@ -220,6 +281,12 @@ while_keyword
 alpha_word
 alpha_word: 
 while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: 
+for_keyword failed on strcmp
+for_loop failed on parse
 loop failed
 ret
 alpha_word
@@ -234,202 +301,4 @@ identifier
 identifier: NULL
 variable declaration after sequence
 variable_declaration: NULL
-cond_lines: end, size: 1
-maybe_else_condition
-else_condition
-else_keyword
-alpha_word
-alpha_word: else
-if_or_body
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: if
-if_keyword: is if
-cond_value
-comparison
-number
-Error: number expected
-identifier
-identifier: n
-comparison_op
-buf[0] = '<'
-comparison_op: compare "<" with "=="
-comparison_op: compare "<" with "!="
-comparison_op: compare "<" with ">"
-comparison_op: compare "<" with "<"
-comparison_op: success
-comparison
-number
-number: 100
-comparison_op
-buf[0] = ')'
-buf[1] = '{'
-comparison_op: compare "){" with "=="
-comparison_op: compare "){" with "!="
-comparison_op: compare "){" with ">"
-comparison_op: compare "){" with "<"
-comparison_op: compare "){" with ">="
-comparison_op: compare "){" with "<="
-comparison_op: failed, operator="){"
-comparison: failed
-operation
-number
-number: 100
-Error: left operand expected 3
-number
-number: 100
-comparison: success <
-cond_body
-cond_lines
-cursor 6 5 1 0
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: return
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: return
-while_keyword failed on strcmp
-loop failed
-ret
-alpha_word
-alpha_word: return
-comparison
-number
-number: 2
-comparison_op
-buf[0] = ';'
-buf[1] = '}'
-comparison_op: compare ";}" with "=="
-comparison_op: compare ";}" with "!="
-comparison_op: compare ";}" with ">"
-comparison_op: compare ";}" with "<"
-comparison_op: compare ";}" with ">="
-comparison_op: compare ";}" with "<="
-comparison_op: failed, operator=";}"
-comparison: failed
-operation
-number
-number: 2
-Error: left operand expected 3
-number
-number: 2
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: 
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: 
-while_keyword failed on strcmp
-loop failed
-ret
-alpha_word
-alpha_word: 
-Error: return statement expected
-variable_declaration
-type
-alpha_word
-alpha_word: 
-type: 
-identifier
-identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-cond_lines: end, size: 1
-maybe_else_condition
-else_condition
-else_keyword
-alpha_word
-alpha_word: return
-maybe_else_condition: end
-maybe_else_condition: res 0
-no else block
-if_boddy 5 1
-maybe_else_condition: end
-maybe_else_condition: res 5
-else block
-else keyword 11 else
-body 10 1
-else body is condition
-if_boddy 5 1
-maybe_else_condition: end
-maybe_else_condition: res 5
-else block
-else keyword 11 else
-body 10 1
-else body is condition
-if_boddy 5 1
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: return
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: return
-while_keyword failed on strcmp
-loop failed
-ret
-alpha_word
-alpha_word: return
-comparison
-number
-number: 3
-comparison_op
-buf[0] = ';'
-buf[1] = '}'
-comparison_op: compare ";}" with "=="
-comparison_op: compare ";}" with "!="
-comparison_op: compare ";}" with ">"
-comparison_op: compare ";}" with "<"
-comparison_op: compare ";}" with ">="
-comparison_op: compare ";}" with "<="
-comparison_op: failed, operator=";}"
-comparison: failed
-operation
-number
-number: 3
-Error: left operand expected 3
-number
-number: 3
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: 
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: 
-while_keyword failed on strcmp
-loop failed
-ret
-alpha_word
-alpha_word: 
-Error: return statement expected
-variable_declaration
-type
-alpha_word
-alpha_word: 
-type: 
-identifier
-identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-function_decl success: is_major
+function_decl success: count_10

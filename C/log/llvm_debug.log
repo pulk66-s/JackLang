@@ -4,18 +4,33 @@ Starting line...
 Starting primary expr...
 Primary expr is a func decl.
 Starting function decl...
-Function decl has 1 args.
-Storing variable n.
+Function decl has 0 args.
 Function decl lines.
 Starting secondary expr...
-Secondary expr is a cond.
-Starting condition...
+Secondary expr is a var decl.
+Starting var decl...
+Starting third expr...
+Third expr is a constant.
+Starting constant...
+Constant is an int32.
+Constant int32 finished.
+Constant finished.
+Third expr constant finished.
+Third expr finished.
+Var decl type is not null.
+Storing variable a.
+Secondary expr var decl finished.
+Secondary expr finished.
+Starting secondary expr...
+Secondary expr is a loop.
+Starting loop...
+Loop has an init.
 Starting third expr...
 Third expr is a comparison.
 Starting third expr...
 Third expr is a var call.
 Starting var call...
-Variable n found.
+Variable a found.
 Var call finished.
 Third expr var call finished.
 Third expr finished.
@@ -29,32 +44,20 @@ Third expr constant finished.
 Third expr finished.
 Third expr comparison finished.
 Third expr finished.
-Starting secondary expr...
-Secondary expr is a ret.
-Starting ret...
-Starting Third expr.
+Loop has a condition.
 Starting third expr...
-Third expr is a constant.
-Starting constant...
-Constant is an int32.
-Constant int32 finished.
-Constant finished.
-Third expr constant finished.
-Third expr finished.
-Third expr finished.
-Ret finished.
-Secondary expr ret finished.
-Secondary expr finished.
-Starting condition...
-Starting third expr...
-Third expr is a comparison.
+Third expr is an operation.
+Starting binary operation...
+Starting left third expr...
 Starting third expr...
 Third expr is a var call.
 Starting var call...
-Variable n found.
+Variable a found.
 Var call finished.
 Third expr var call finished.
 Third expr finished.
+Left third expr finished.
+Starting right third expr...
 Starting third expr...
 Third expr is a constant.
 Starting constant...
@@ -63,34 +66,25 @@ Constant int32 finished.
 Constant finished.
 Third expr constant finished.
 Third expr finished.
-Third expr comparison finished.
+Right third expr finished.
+Binary operation finished.
+Third expr operation finished.
 Third expr finished.
-Starting secondary expr...
-Secondary expr is a ret.
-Starting ret...
-Starting Third expr.
+Loop has a body.
+Loop has an increment.
 Starting third expr...
-Third expr is a constant.
-Starting constant...
-Constant is an int32.
-Constant int32 finished.
-Constant finished.
-Third expr constant finished.
-Third expr finished.
-Third expr finished.
-Ret finished.
-Secondary expr ret finished.
-Secondary expr finished.
-Starting condition...
-Starting third expr...
-Third expr is a comparison.
+Third expr is an operation.
+Starting binary operation...
+Starting left third expr...
 Starting third expr...
 Third expr is a var call.
 Starting var call...
-Variable n found.
+Variable a found.
 Var call finished.
 Third expr var call finished.
 Third expr finished.
+Left third expr finished.
+Starting right third expr...
 Starting third expr...
 Third expr is a constant.
 Starting constant...
@@ -99,27 +93,12 @@ Constant int32 finished.
 Constant finished.
 Third expr constant finished.
 Third expr finished.
-Third expr comparison finished.
+Right third expr finished.
+Binary operation finished.
+Third expr operation finished.
 Third expr finished.
-Starting secondary expr...
-Secondary expr is a ret.
-Starting ret...
-Starting Third expr.
-Starting third expr...
-Third expr is a constant.
-Starting constant...
-Constant is an int32.
-Constant int32 finished.
-Constant finished.
-Third expr constant finished.
-Third expr finished.
-Third expr finished.
-Ret finished.
-Secondary expr ret finished.
-Secondary expr finished.
-Adding jump from else block to continue block.
-Adding jump from else block to continue block.
-Secondary expr cond finished.
+Ending loop...
+Secondary expr loop finished.
 Secondary expr finished.
 Starting secondary expr...
 Secondary expr is a ret.
