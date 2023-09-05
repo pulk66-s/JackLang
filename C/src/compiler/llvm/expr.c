@@ -70,6 +70,11 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
             llvm_from_loop(expr->u.loop, module, builder);
             logger().llvm("Secondary expr loop finished.\n");
             break;
+        case AST_SECONDARY_EXPR_VAR_REDECL:
+            logger().llvm("Secondary expr is a var redecl.\n");
+            llvm_from_var_redecl(expr->u.var_redecl, module, builder);
+            logger().llvm("Secondary expr var redecl finished.\n");
+            break;
         default:
             logger().llvm("Secondary expr is unknown. %d\n", expr->type);
             break;

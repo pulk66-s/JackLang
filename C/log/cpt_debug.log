@@ -88,6 +88,54 @@ alpha_word
 alpha_word: for
 for_keyword success
 for_init
+variable_declaration
+type
+alpha_word
+alpha_word: a
+type: a
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: a
+comparison
+number
+number: 1
+comparison_op
+buf[0] = ';'
+buf[1] = 'a'
+comparison_op: compare ";a" with "=="
+comparison_op: compare ";a" with "!="
+comparison_op: compare ";a" with ">"
+comparison_op: compare ";a" with "<"
+comparison_op: compare ";a" with ">="
+comparison_op: compare ";a" with "<="
+comparison_op: failed, operator=";a"
+comparison: failed
+operation
+number
+number: 1
+Error: left operand expected 3
+number
+number: 1
+variable_redeclaration: success
+for_init success
+for_cond
+variable_declaration
+type
+alpha_word
+alpha_word: a
+type: a
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: a
+variable_redeclaration: NULL
 comparison
 number
 Error: number expected
@@ -105,14 +153,14 @@ number
 number: 10
 comparison_op
 buf[0] = ';'
-buf[1] = 'a'
-comparison_op: compare ";a" with "=="
-comparison_op: compare ";a" with "!="
-comparison_op: compare ";a" with ">"
-comparison_op: compare ";a" with "<"
-comparison_op: compare ";a" with ">="
-comparison_op: compare ";a" with "<="
-comparison_op: failed, operator=";a"
+buf[1] = ')'
+comparison_op: compare ";)" with "=="
+comparison_op: compare ";)" with "!="
+comparison_op: compare ";)" with ">"
+comparison_op: compare ";)" with "<"
+comparison_op: compare ";)" with ">="
+comparison_op: compare ";)" with "<="
+comparison_op: failed, operator=";)"
 comparison: failed
 operation
 number
@@ -121,52 +169,70 @@ Error: left operand expected 3
 number
 number: 10
 comparison: success <
-for_init success
-for_cond
-comparison
-number
-Error: number expected
-identifier
-identifier: a
-comparison_op
-buf[0] = '%'
-buf[1] = '2'
-comparison_op: compare "%2" with "=="
-comparison_op: compare "%2" with "!="
-comparison_op: compare "%2" with ">"
-comparison_op: compare "%2" with "<"
-comparison_op: compare "%2" with ">="
-comparison_op: compare "%2" with "<="
-comparison_op: failed, operator="%2"
-comparison: failed
-operation
-number
-Error: number expected
-identifier
-identifier: a
-comparison
-number
-number: 2
-comparison_op
-buf[0] = ';'
-buf[1] = 'a'
-comparison_op: compare ";a" with "=="
-comparison_op: compare ";a" with "!="
-comparison_op: compare ";a" with ">"
-comparison_op: compare ";a" with "<"
-comparison_op: compare ";a" with ">="
-comparison_op: compare ";a" with "<="
-comparison_op: failed, operator=";a"
-comparison: failed
-operation
-number
-number: 2
-Error: left operand expected 3
-number
-number: 2
-operation: %
 for_cond success
 for_iter
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: NULL
+variable_redeclaration: NULL
+comparison
+number
+Error: number expected
+identifier
+identifier: NULL
+comparison: failed
+operation
+number
+Error: number expected
+identifier
+identifier: NULL
+Error: left operand expected 1
+for_iter success
+for_body
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: a
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: a
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: a
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
+ret
+alpha_word
+alpha_word: a
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: a
+type: a
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: a
 comparison
 number
 Error: number expected
@@ -192,15 +258,15 @@ comparison
 number
 number: 1
 comparison_op
-buf[0] = ')'
-buf[1] = '{'
-comparison_op: compare "){" with "=="
-comparison_op: compare "){" with "!="
-comparison_op: compare "){" with ">"
-comparison_op: compare "){" with "<"
-comparison_op: compare "){" with ">="
-comparison_op: compare "){" with "<="
-comparison_op: failed, operator="){"
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
 comparison: failed
 operation
 number
@@ -209,8 +275,26 @@ Error: left operand expected 3
 number
 number: 1
 operation: +
-for_iter success
-for_body
+variable_redeclaration: success
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: 
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
 ret
 alpha_word
 alpha_word: 
@@ -224,6 +308,10 @@ identifier
 identifier: NULL
 variable declaration after sequence
 variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: NULL
+variable_redeclaration: NULL
 for_body success
 for_loop success
 loop success
@@ -301,4 +389,8 @@ identifier
 identifier: NULL
 variable declaration after sequence
 variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: NULL
+variable_redeclaration: NULL
 function_decl success: count_10

@@ -54,3 +54,35 @@ struct result *variable_declaration(struct parser *p)
     delete_save(p);
     return result(cpt, VARIABLE_DECL, 1);
 }
+
+struct result *variable_redeclaration(struct parser *p)
+{
+    logger().cpt_debug("variable_redeclaration\n");
+    save(p);
+
+    struct result *res = sequence(
+        p,
+        (parser_func[]){
+            identifier,
+            equal,
+            variable_value
+        },
+        3
+    );
+    struct result *datas;
+    struct variable_redecl_cpt *cpt = malloc(sizeof(struct variable_redecl_cpt));
+
+    if (!res) {
+        logger().cpt_debug("variable_redeclaration: NULL\n");
+        rollback(p);
+        return NULL;
+    }
+    datas = (struct result *)res->data;
+    *cpt = (struct variable_redecl_cpt){
+        .identifier = datas[0].data,
+        .value = &datas[2]
+    };
+    delete_save(p);
+    logger().cpt_debug("variable_redeclaration: success\n");
+    return result(cpt, VARIABLE_REDECL, 1);
+}

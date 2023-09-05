@@ -56,6 +56,9 @@ void repartition(struct result *res)
         case LOOP:
             print_loop_cpt(res);
             break;
+        case VARIABLE_REDECL:
+            print_variable_redecl(res);
+            break;
         default:
             printf("Unknown datatype %d\n", res->datatype);
             break;

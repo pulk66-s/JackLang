@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int is_major(int n);
+int var_redef();
 
 int main(void)
 {
-    printf("%d\n", is_major(100));
+    printf("%d\n", var_redef());
     return 0;
 }

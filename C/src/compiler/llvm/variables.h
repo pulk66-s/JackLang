@@ -6,5 +6,6 @@
 
 void llvm_from_var_decl(struct variable_decl_ast *decl, LLVMModuleRef module, LLVMBuilderRef builder);
 LLVMValueRef llvm_from_var_call(struct variable_call_ast *call, LLVMModuleRef module, LLVMBuilderRef builder);
+void llvm_from_var_redecl(struct variable_redecl_ast *redecl, LLVMModuleRef module, LLVMBuilderRef builder);
 
 #endif

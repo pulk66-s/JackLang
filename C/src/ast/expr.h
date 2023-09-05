@@ -25,7 +25,8 @@ enum ast_secondary_expr_type {
     AST_SECONDARY_EXPR_RET,
     AST_SECONDARY_VAR_DECL,
     AST_SECONDARY_EXPR_COND,
-    AST_SECONDARY_LOOP
+    AST_SECONDARY_LOOP,
+    AST_SECONDARY_EXPR_VAR_REDECL
 };
 
 struct secondary_expr_ast {
@@ -35,6 +36,7 @@ struct secondary_expr_ast {
         struct variable_decl_ast *var_decl;
         struct condition_ast *condition;
         struct loop_ast *loop;
+        struct variable_redecl_ast *var_redecl;
     } u;
 };
 

@@ -50,6 +50,9 @@ void print_secondary_expr_ast(struct secondary_expr_ast *expr)
         case AST_SECONDARY_LOOP:
             print_ast_loop(expr->u.loop);
             break;
+        case AST_SECONDARY_EXPR_VAR_REDECL:
+            print_variable_redecl_ast(expr->u.var_redecl);
+            break;
         default:
             logger().ast("\"error\": \"unknown secondary expression %d\",\n", expr->type);
             break;

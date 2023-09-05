@@ -53,7 +53,7 @@ static struct result *while_cond(struct parser *p)
 static struct result *while_body(struct parser *p)
 {
     logger().cpt_debug("while_body\n");
-    struct result *res = zero_or_more(p, secondary_expression);
+    struct result *res = zero_or_more(p, expr);
 
     if (!res) {
         logger().cpt_debug("while_body failed on parse\n");
@@ -80,49 +80,71 @@ static struct result *while_loop(struct parser *p)
     );
 }
 
+static struct result *for_header_expr(struct parser *p)
+{
+    return ordered_choice(
+        p,
+        (parser_func[]) {
+            variable_declaration,
+            variable_redeclaration,
+            third_expression
+        },
+        3
+    );
+}
+
 static struct result *for_init(struct parser *p)
 {
+    save(p);
     logger().cpt_debug("for_init\n");
-    struct result *res = third_expression(p);
+    struct result *res = zero_or_one(p, for_header_expr);
 
     if (!res) {
         logger().cpt_debug("for_init failed on parse\n");
+        rollback(p);
         return NULL;
     }
     logger().cpt_debug("for_init success\n");
+    delete_save(p);
     return res;
 }
 
 static struct result *for_cond(struct parser *p)
 {
+    save(p);
     logger().cpt_debug("for_cond\n");
-    struct result *res = third_expression(p);
+    struct result *res = zero_or_one(p, for_header_expr);
 
     if (!res) {
         logger().cpt_debug("for_cond failed on parse\n");
+        rollback(p);
         return NULL;
     }
     logger().cpt_debug("for_cond success\n");
+    delete_save(p);
     return res;
 }
 
 static struct result *for_iter(struct parser *p)
 {
+    save(p);
     logger().cpt_debug("for_iter\n");
-    struct result *res = third_expression(p);
+    struct result *res = zero_or_one(p, for_header_expr);
 
     if (!res) {
         logger().cpt_debug("for_iter failed on parse\n");
+        rollback(p);
         return NULL;
     }
     logger().cpt_debug("for_iter success\n");
+    delete_save(p);
     return res;
 }
 
 static struct result *for_body(struct parser *p)
 {
     logger().cpt_debug("for_body\n");
-    struct result *res = zero_or_more(p, secondary_expression);
+    struct result *res = zero_or_more(p, expr);
 
     if (!res) {
         logger().cpt_debug("for_body failed on parse\n");
@@ -135,7 +157,7 @@ static struct result *for_body(struct parser *p)
 static struct result *for_loop(struct parser *p)
 {
     logger().cpt_debug("for_loop\n");
-    struct result *res  = sequence(
+    struct result *res = sequence(
         p,
         (parser_func[]) {
             for_keyword,

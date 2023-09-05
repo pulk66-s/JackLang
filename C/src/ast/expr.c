@@ -41,7 +41,6 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
     struct secondary_expr_ast *expr = malloc(sizeof(struct secondary_expr_ast));
 
     memset(expr, 0, sizeof(struct secondary_expr_ast));
-    printf("create_secondary_expr: cpt->datatype = %d\n", cpt->datatype);
     switch (cpt->datatype) {
         case RET:
             expr->type = AST_SECONDARY_EXPR_RET;
@@ -61,6 +60,11 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
         case LOOP:
             expr->type = AST_SECONDARY_LOOP;
             expr->u.loop = create_loop_ast(cpt);
+            break;
+        case VARIABLE_REDECL:
+            printf("create_secondary_expr: VARIABLE_REDECL\n");
+            expr->type = AST_SECONDARY_EXPR_VAR_REDECL;
+            expr->u.var_redecl = create_variable_redecl_ast(cpt);
             break;
         default:
             printf("create_secondary_expr: unknown type %d\n", cpt->datatype);

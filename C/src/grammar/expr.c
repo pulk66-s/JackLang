@@ -25,8 +25,9 @@ struct result *secondary_expression(struct parser *p)
         (parser_func[]){
             ret,
             variable_declaration,
+            variable_redeclaration
         },
-        2
+        3
     );
 }
 

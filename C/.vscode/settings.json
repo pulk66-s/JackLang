@@ -68,6 +68,7 @@
         "stat.h": "c",
         "module.h": "c",
         "comparison.h": "c",
-        "loop.h": "c"
+        "loop.h": "c",
+        "variant": "c"
     }
 }

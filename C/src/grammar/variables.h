@@ -9,6 +9,12 @@ struct variable_decl_cpt {
     struct result *value;
 };
 
+struct variable_redecl_cpt {
+    char *identifier;
+    struct result *value;
+};
+
 struct result *variable_declaration(struct parser *p);
+struct result *variable_redeclaration(struct parser *p);
 
 #endif

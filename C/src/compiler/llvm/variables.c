@@ -2,6 +2,7 @@
 #include "compiler/llvm/lib.h"
 #include "compiler/llvm/expr.h"
 #include "compiler/llvm/type.h"
+#include "compiler/llvm/context.h"
 #include "logger.h"
 
 void llvm_from_var_decl(struct variable_decl_ast *decl, LLVMModuleRef module, LLVMBuilderRef builder)
@@ -41,4 +42,23 @@ LLVMValueRef llvm_from_var_call(struct variable_call_ast *call, LLVMModuleRef mo
     var = llvm_get_variable(call->name, builder);
     logger().llvm("Var call finished.\n");
     return var;
+}
+
+void llvm_from_var_redecl(struct variable_redecl_ast *redecl, LLVMModuleRef module, LLVMBuilderRef builder)
+{
+    LLVMValueRef value, var;
+
+    logger().llvm("Starting var redecl...\n");
+    if (!redecl) {
+        logger().llvm("Var redecl is null.\n");
+        return;
+    }
+    value = llvm_from_third_expr(redecl->expr, module, builder);
+    if (!value) {
+        logger().llvm("Var redecl value is null.\n");
+        return;
+    }
+    var = llvm_variable_context_get(redecl->name);
+    llvm_assign(var, value, builder);
+    logger().llvm("Var redecl finished.\n");
 }

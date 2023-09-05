@@ -24,7 +24,8 @@ Secondary expr finished.
 Starting secondary expr...
 Secondary expr is a loop.
 Starting loop...
-Loop has an init.
+Loop has no init.
+Loop has a condition.
 Starting third expr...
 Third expr is a comparison.
 Starting third expr...
@@ -44,34 +45,10 @@ Third expr constant finished.
 Third expr finished.
 Third expr comparison finished.
 Third expr finished.
-Loop has a condition.
-Starting third expr...
-Third expr is an operation.
-Starting binary operation...
-Starting left third expr...
-Starting third expr...
-Third expr is a var call.
-Starting var call...
-Variable a found.
-Var call finished.
-Third expr var call finished.
-Third expr finished.
-Left third expr finished.
-Starting right third expr...
-Starting third expr...
-Third expr is a constant.
-Starting constant...
-Constant is an int32.
-Constant int32 finished.
-Constant finished.
-Third expr constant finished.
-Third expr finished.
-Right third expr finished.
-Binary operation finished.
-Third expr operation finished.
-Third expr finished.
 Loop has a body.
-Loop has an increment.
+Starting secondary expr...
+Secondary expr is a var redecl.
+Starting var redecl...
 Starting third expr...
 Third expr is an operation.
 Starting binary operation...
@@ -97,6 +74,11 @@ Right third expr finished.
 Binary operation finished.
 Third expr operation finished.
 Third expr finished.
+Variable a found.
+Var redecl finished.
+Secondary expr var redecl finished.
+Secondary expr finished.
+Loop has no increment.
 Ending loop...
 Secondary expr loop finished.
 Secondary expr finished.

@@ -1,118 +1,107 @@
 {
-    "AST_PRGM": {
-        "lines": [
-            {
-                "line": {
-                    "primary_expr": {
-                        "function_decl": {
-                            "type": "int",
-                            "name": "count_10",
-                            "args": [],
-                            "lines": [
-                                {
-                                    "secondary_expr": {
-                                        "variable_dec": {
-                                            "name": "a",
-                                            "type": "int",
-                                            "third_expr": {
-                                                "constant": {
-                                                    "type": "int32",
-                                                    "value": 0
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                                {
-                                    "secondary_expr": {
-                                        "loop": {
-                                            "condition": {
-                                                "third_expr": {
-                                                    "operation": {
-                                                        "operator": "%",
-                                                        "left": {
-                                                            "third_expr": {
-                                                                "variable_call": {
-                                                                    "name": "a",
-                                                                },
-                                                            },
-                                                        },
-                                                        "right": {
-                                                            "third_expr": {
-                                                                "constant": {
-                                                                    "type": "int32",
-                                                                    "value": 2
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            "increment": {
-                                                "third_expr": {
-                                                    "operation": {
-                                                        "operator": "+",
-                                                        "left": {
-                                                            "third_expr": {
-                                                                "variable_call": {
-                                                                    "name": "a",
-                                                                },
-                                                            },
-                                                        },
-                                                        "right": {
-                                                            "third_expr": {
-                                                                "constant": {
-                                                                    "type": "int32",
-                                                                    "value": 1
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            "init": {
-                                                "third_expr": {
-                                                    "comparison": {
-                                                        "operand": "<",
-                                                        "left": {
-                                                            "third_expr": {
-                                                                "variable_call": {
-                                                                    "name": "a",
-                                                                },
-                                                            },
-                                                        },
-                                                        "right": {
-                                                            "third_expr": {
-                                                                "constant": {
-                                                                    "type": "int32",
-                                                                    "value": 10
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            "body": []
-                                        },
-                                    },
-                                },
-                                {
-                                    "secondary_expr": {
-                                        "ret": {
-                                            "third_expr": {
-                                                "constant": {
-                                                    "type": "int32",
-                                                    "value": 1
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            ],
-                        },
-                    },
-                },
-            },
-        ]
-    }
+"AST_PRGM": {
+"lines": [
+{
+"line": {
+"primary_expr": {
+"function_decl": {
+"type": "int",
+"name": "count_10",
+"args": [
+],
+"lines": [
+{
+"secondary_expr": {
+"variable_dec": {
+"name": "a",
+"type": "int",
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 0
+},
+},
+},
+},
+},
+{
+"secondary_expr": {
+"loop": {
+"condition": {
+"third_expr": {
+"comparison": {
+"operand": "<",
+"left": {
+"third_expr": {
+"variable_call": {
+"name": "a",
+},
+},
+},
+"right": {
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 10
+},
+},
+},
+},
+},
+},
+"increment": null,
+"init": null,
+"body": [
+{
+"secondary_expr": {
+"variable_redecl": {
+"name": "a",
+"expr": {
+"third_expr": {
+"operation": {
+"operator": "+",
+"left": {
+"third_expr": {
+"variable_call": {
+"name": "a",
+},
+},
+},
+"right": {
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 1
+},
+},
+},
+},
+},
+},
+},
+},
+},
+]
+},
+},
+},
+{
+"secondary_expr": {
+"ret": {
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 1
+},
+},
+},
+},
+},
+],
+},
+},
+},
+},
+]
+}
 }

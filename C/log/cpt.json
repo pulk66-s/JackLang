@@ -20,6 +20,7 @@
 "Number": 0,
 },
 },
+},
 {
 "char": ";",
 },
@@ -33,6 +34,14 @@
 "loop": {
 "keyword": "for",
 "start": {
+"variable_redecl": {
+"identifier": "a",
+"value": {
+"Number": 1,
+},
+},
+},
+"condition": {
 "comparison": {
 "operator": "<",
 "left": {
@@ -43,17 +52,18 @@
 }
 },
 },
-"condition": {
-"Operation": {
-"Operand": "%",
-"Left": {
-"String": "a",
-},
-"Right": {
-"Number": 2,
-}
-},
 "iter": {
+},
+"body": {
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"variable_redecl": {
+"identifier": "a",
+"value": {
 "Operation": {
 "Operand": "+",
 "Left": {
@@ -63,8 +73,15 @@
 "Number": 1,
 }
 },
-"body": {
-"Expr": [
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
 ],
 }
 },

@@ -27,3 +27,16 @@ struct variable_call_ast *create_variable_call_ast(struct result *cpt)
     };
     return var_call;
 }
+
+struct variable_redecl_ast *create_variable_redecl_ast(struct result *cpt)
+{
+    struct variable_redecl_cpt *var_redecl_cpt = cpt->data;
+    struct variable_redecl_ast *var_redecl = malloc(sizeof(struct variable_redecl_ast));
+
+    memset(var_redecl, 0, sizeof(struct variable_redecl_ast));
+    *var_redecl = (struct variable_redecl_ast){
+        .name = var_redecl_cpt->identifier,
+        .expr = create_third_expr(var_redecl_cpt->value)
+    };
+    return var_redecl;
+}

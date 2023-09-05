@@ -4,5 +4,6 @@
 #include "grammar.h"
 
 void print_variable_decl(struct result *r);
+void print_variable_redecl(struct result *r);
 
 #endif
