@@ -26,6 +26,8 @@ SRC			= 	src/files/read.c 						\
 				src/grammar/variables.c					\
 				src/grammar/comparison.c				\
 				src/grammar/condition.c					\
+				src/grammar/loop.c						\
+				src/print/cpt/loop.c					\
 				src/print/cpt/condition.c				\
 				src/print/cpt/ret.c						\
 				src/print/cpt/char.c					\
@@ -51,9 +53,11 @@ SRC			= 	src/files/read.c 						\
 				src/print/ast/type.c					\
 				src/print/ast/variables.c				\
 				src/print/ast/comparison.c				\
+				src/print/ast/loop.c					\
 				src/ast/context/variables.c				\
 				src/ast/comparison.c					\
 				src/ast/type.c							\
+				src/ast/loop.c							\
 				src/ast/create.c						\
 				src/ast/lines.c							\
 				src/ast/expr.c							\
@@ -86,6 +90,7 @@ SRC			= 	src/files/read.c 						\
 				src/compiler/llvm/function.c			\
 				src/compiler/llvm/condition.c			\
 				src/compiler/llvm/comparison.c			\
+				src/compiler/llvm/loop.c				\
 				src/compiler/llvm/context/variables.c	\
 
 TESTS_SRC	=	$(SRC)								\

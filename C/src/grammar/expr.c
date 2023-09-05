@@ -4,6 +4,7 @@
 #include "grammar/ret.h"
 #include "grammar/comparison.h"
 #include "grammar/variables.h"
+#include "grammar/loop.h"
 #include "parsing.h"
 
 struct result *primary_expression(struct parser *p)
@@ -34,9 +35,10 @@ struct result *secondary_expression_without_endchar(struct parser *p)
     return ordered_choice(
         p,
         (parser_func[]){
-            condition
+            condition,
+            loop
         },
-        1
+        2
     );
 }
 

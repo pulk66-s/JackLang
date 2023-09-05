@@ -6,8 +6,7 @@
 void llvm_from_condition(
     struct condition_ast *condition,
     LLVMModuleRef module,
-    LLVMBuilderRef builder,
-    LLVMBasicBlockRef parent_continue_block
+    LLVMBuilderRef builder
 ) {
     LLVMValueRef cond;
     LLVMBasicBlockRef then_block, else_block, continue_block;
@@ -26,7 +25,7 @@ void llvm_from_condition(
     push_block_to_end(builder, then_block);
     for (size_t i = 0; condition->then[i]; i++) {
         if (condition->then[i]->type == AST_SECONDARY_EXPR_COND) {
-            llvm_from_condition(condition->then[i]->u.condition, module, builder, continue_block);
+            llvm_from_condition(condition->then[i]->u.condition, module, builder);
         } else {
             llvm_from_secondary_expr(condition->then[i], module, builder);
         }
@@ -40,7 +39,7 @@ void llvm_from_condition(
         push_block_to_end(builder, else_block);
         for (size_t i = 0; condition->else_[i]; i++) {
             if (condition->else_[i]->type == AST_SECONDARY_EXPR_COND) {
-                llvm_from_condition(condition->else_[i]->u.condition, module, builder, continue_block);
+                llvm_from_condition(condition->else_[i]->u.condition, module, builder);
             } else {
                 llvm_from_secondary_expr(condition->else_[i], module, builder);
             }

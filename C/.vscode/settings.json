@@ -67,6 +67,7 @@
         "condition.h": "c",
         "stat.h": "c",
         "module.h": "c",
-        "comparison.h": "c"
+        "comparison.h": "c",
+        "loop.h": "c"
     }
 }

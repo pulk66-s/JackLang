@@ -6,6 +6,7 @@
 #include "compiler/llvm/variables.h"
 #include "compiler/llvm/condition.h"
 #include "compiler/llvm/comparison.h"
+#include "compiler/llvm/loop.h"
 #include "logger.h"
 #include <stdlib.h>
 
@@ -61,8 +62,13 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
             break;
         case AST_SECONDARY_EXPR_COND:
             logger().llvm("Secondary expr is a cond.\n");
-            llvm_from_condition(expr->u.condition, module, builder, NULL);
+            llvm_from_condition(expr->u.condition, module, builder);
             logger().llvm("Secondary expr cond finished.\n");
+            break;
+        case AST_SECONDARY_LOOP:
+            logger().llvm("Secondary expr is a loop.\n");
+            llvm_from_loop(expr->u.loop, module, builder);
+            logger().llvm("Secondary expr loop finished.\n");
             break;
         default:
             logger().llvm("Secondary expr is unknown. %d\n", expr->type);

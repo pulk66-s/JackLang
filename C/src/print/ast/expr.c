@@ -6,6 +6,7 @@
 #include "print/ast/variables.h"
 #include "print/ast/condition.h"
 #include "print/ast/comparison.h"
+#include "print/ast/loop.h"
 #include "logger.h"
 #include <stdio.h>
 
@@ -25,6 +26,7 @@ void print_primary_expr_ast(struct primary_expr_ast *expr)
             logger().ast("\"error\": \"unknown primary expression\",\n");
             break;
     }
+    logger().ast("},\n");
 }
 
 void print_secondary_expr_ast(struct secondary_expr_ast *expr)
@@ -43,8 +45,10 @@ void print_secondary_expr_ast(struct secondary_expr_ast *expr)
             print_variable_decl_ast(expr->u.var_decl);
             break;
         case AST_SECONDARY_EXPR_COND:
-            printf("type condition\n");
             print_ast_condition(expr->u.condition);
+            break;
+        case AST_SECONDARY_LOOP:
+            print_ast_loop(expr->u.loop);
             break;
         default:
             logger().ast("\"error\": \"unknown secondary expression %d\",\n", expr->type);

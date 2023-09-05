@@ -67,6 +67,12 @@ alpha_word
 alpha_word: return
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: return
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: return
@@ -97,6 +103,12 @@ alpha_word
 alpha_word: 
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: 
@@ -167,6 +179,12 @@ alpha_word
 alpha_word: return
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: return
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: return
@@ -197,6 +215,12 @@ alpha_word
 alpha_word: 
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: 
@@ -267,6 +291,12 @@ alpha_word
 alpha_word: return
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: return
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: return
@@ -297,6 +327,12 @@ alpha_word
 alpha_word: 
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: 
@@ -341,6 +377,12 @@ alpha_word
 alpha_word: return
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: return
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: return
@@ -371,6 +413,12 @@ alpha_word
 alpha_word: 
 if_keyword: not if
 condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+loop failed
 ret
 alpha_word
 alpha_word: 

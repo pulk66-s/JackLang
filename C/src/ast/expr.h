@@ -2,6 +2,7 @@
 #define __CL_AST_EXPR_H__
 
 #include "ast/ret.h"
+#include "ast/loop.h"
 #include "ast/comparison.h"
 #include "ast/operation.h"
 #include "ast/constant.h"
@@ -23,7 +24,8 @@ struct primary_expr_ast {
 enum ast_secondary_expr_type {
     AST_SECONDARY_EXPR_RET,
     AST_SECONDARY_VAR_DECL,
-    AST_SECONDARY_EXPR_COND
+    AST_SECONDARY_EXPR_COND,
+    AST_SECONDARY_LOOP
 };
 
 struct secondary_expr_ast {
@@ -32,6 +34,7 @@ struct secondary_expr_ast {
         struct ret_ast *ret;
         struct variable_decl_ast *var_decl;
         struct condition_ast *condition;
+        struct loop_ast *loop;
     } u;
 };
 

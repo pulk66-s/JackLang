@@ -1,5 +1,7 @@
+{
 "AST_PRGM": {
 "lines": [
+{
 "line": {
 "primary_expr": {
 "function_decl": {
@@ -10,8 +12,9 @@
 "type": "int",
 "name": "n"
 },
-]
+],
 "lines": [
+{
 "secondary_expr": {
 "condition": {
 "cond": {
@@ -140,6 +143,8 @@
 ],
 },
 },
+},
+{
 "secondary_expr": {
 "ret": {
 "third_expr": {
@@ -150,7 +155,12 @@
 },
 },
 },
+},
 ],
 },
-]
 },
+},
+},
+]
+}
+}

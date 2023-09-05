@@ -1,3 +1,4 @@
+#include "print/cpt/loop.h"
 #include "print/cpt/repartition.h"
 #include "print/cpt/program.h"
 #include "print/cpt/expr.h"
@@ -51,6 +52,9 @@ void repartition(struct result *res)
             break;
         case COMPARISON:
             print_comparison(res);
+            break;
+        case LOOP:
+            print_loop_cpt(res);
             break;
         default:
             printf("Unknown datatype %d\n", res->datatype);

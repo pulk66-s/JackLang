@@ -7,8 +7,7 @@
 void llvm_from_condition(
     struct condition_ast *condition,
     LLVMModuleRef module,
-    LLVMBuilderRef builder,
-    LLVMBasicBlockRef parent_continue_block
+    LLVMBuilderRef builder
 );
 
 #endif

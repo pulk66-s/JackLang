@@ -55,9 +55,12 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
             expr->u.var_decl = create_variable_decl_ast(cpt);
             break;
         case CONDITION:
-            printf("type condition\n");
             expr->type = AST_SECONDARY_EXPR_COND;
             expr->u.condition = create_condition(cpt);
+            break;
+        case LOOP:
+            expr->type = AST_SECONDARY_LOOP;
+            expr->u.loop = create_loop_ast(cpt);
             break;
         default:
             printf("create_secondary_expr: unknown type %d\n", cpt->datatype);

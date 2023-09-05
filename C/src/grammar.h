@@ -9,5 +9,6 @@
 #include "grammar/variables.h"
 #include "grammar/condition.h"
 #include "grammar/comparison.h"
+#include "grammar/loop.h"
 
 #endif
