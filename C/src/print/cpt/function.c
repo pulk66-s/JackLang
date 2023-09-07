@@ -29,3 +29,22 @@ void print_function(struct result *r)
     logger().cpt("],\n");
     logger().cpt("}\n");
 }
+
+void print_function_call(struct result *r)
+{
+    if (r->datatype != FUNCTION_CALL) {
+        logger().cpt_debug("print_function_call: r->datatype != FUNCTION_CALL");
+        return;
+    }
+
+    struct function_call_cpt *f = r->data;
+
+    logger().cpt("\"function_call\": {\n");
+    logger().cpt("\"name\": \"%s\",\n", f->identifier);
+    logger().cpt("\"args\": [\n");
+    logger().cpt("{\n");
+    repartition(f->args);
+    logger().cpt("},\n");
+    logger().cpt("]\n");
+    logger().cpt("}\n");
+}

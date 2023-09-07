@@ -11,7 +11,7 @@ static struct variable_context_llvm *context = NULL;
  * @param   value   The value of the variable.
  * @return          The variable context.
 */
-void llvm_variable_context_store(char *name, LLVMValueRef value)
+void llvm_variable_context_store(const char *name, LLVMValueRef value)
 {
     logger().llvm("Storing variable %s.\n", name);
     struct variable_context_llvm *new_context = malloc(sizeof(struct variable_context_llvm));
@@ -27,7 +27,7 @@ void llvm_variable_context_store(char *name, LLVMValueRef value)
  * @param   name    The name of the variable.
  * @return          The variable context.
 */
-LLVMValueRef llvm_variable_context_get(char *name)
+LLVMValueRef llvm_variable_context_get(const char *name)
 {
     struct variable_context_llvm *current = context;
 

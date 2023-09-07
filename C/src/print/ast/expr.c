@@ -53,6 +53,9 @@ void print_secondary_expr_ast(struct secondary_expr_ast *expr)
         case AST_SECONDARY_EXPR_VAR_REDECL:
             print_variable_redecl_ast(expr->u.var_redecl);
             break;
+        case AST_SECONDARY_EXPR_FN_CALL:
+            print_function_call_ast(expr->u.fn_call);
+            break;
         default:
             logger().ast("\"error\": \"unknown secondary expression %d\",\n", expr->type);
             break;
@@ -80,6 +83,9 @@ void print_third_expr_ast(struct third_expr_ast *expr)
             break;
         case AST_THIRD_EXPR_COMPARISON:
             print_comparison_ast(expr->u.comparison);
+            break;
+        case AST_THIRD_EXPR_FN_CALL:
+            print_function_call_ast(expr->u.fn_call);
             break;
         default:
             logger().ast("\"error\": \"unknown third expression %d\",\n", expr->type);

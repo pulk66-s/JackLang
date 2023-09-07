@@ -25,3 +25,17 @@ void print_function_decl_ast(struct function_decl_ast *fn_decl)
     logger().ast("],\n");
     logger().ast("},\n");
 }
+
+void print_function_call_ast(struct function_call_ast *fn_call)
+{
+    logger().ast("\"function_call\": {\n");
+    logger().ast("\"name\": \"%s\",\n", fn_call->name);
+    logger().ast("\"args\": [\n");
+    for (size_t i = 0; fn_call->args[i]; i++) {
+        logger().ast("{\n");
+        print_third_expr_ast(fn_call->args[i]);
+        logger().ast("},\n");
+    }
+    logger().ast("],\n");
+    logger().ast("},\n");
+}

@@ -6,15 +6,43 @@
 "primary_expr": {
 "function_decl": {
 "type": "int",
-"name": "count_10",
+"name": "isEven",
 "args": [
+{
+"type": "int",
+"name": "n"
+},
 ],
 "lines": [
 {
 "secondary_expr": {
-"variable_dec": {
-"name": "a",
-"type": "int",
+"condition": {
+"cond": {
+"third_expr": {
+"operation": {
+"operator": "%",
+"left": {
+"third_expr": {
+"variable_call": {
+"name": "n",
+},
+},
+},
+"right": {
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 2
+},
+},
+},
+},
+},
+},
+"then": [
+{
+"secondary_expr": {
+"ret": {
 "third_expr": {
 "constant": {
 "type": "int32",
@@ -24,51 +52,13 @@
 },
 },
 },
+],
+},
+},
+},
 {
 "secondary_expr": {
-"loop": {
-"condition": {
-"third_expr": {
-"comparison": {
-"operand": "<",
-"left": {
-"third_expr": {
-"variable_call": {
-"name": "a",
-},
-},
-},
-"right": {
-"third_expr": {
-"constant": {
-"type": "int32",
-"value": 10
-},
-},
-},
-},
-},
-},
-"increment": null,
-"init": null,
-"body": [
-{
-"secondary_expr": {
-"variable_redecl": {
-"name": "a",
-"operator": "=",
-"expr": {
-"third_expr": {
-"operation": {
-"operator": "+",
-"left": {
-"third_expr": {
-"variable_call": {
-"name": "a",
-},
-},
-},
-"right": {
+"ret": {
 "third_expr": {
 "constant": {
 "type": "int32",
@@ -78,11 +68,34 @@
 },
 },
 },
+],
 },
 },
 },
 },
-]
+{
+"line": {
+"primary_expr": {
+"function_decl": {
+"type": "int",
+"name": "test",
+"args": [
+],
+"lines": [
+{
+"secondary_expr": {
+"function_call": {
+"name": "isEven",
+"args": [
+{
+"third_expr": {
+"constant": {
+"type": "int32",
+"value": 1
+},
+},
+},
+],
 },
 },
 },
@@ -90,8 +103,9 @@
 "secondary_expr": {
 "ret": {
 "third_expr": {
-"variable_call": {
-"name": "a",
+"constant": {
+"type": "int32",
+"value": 0
 },
 },
 },

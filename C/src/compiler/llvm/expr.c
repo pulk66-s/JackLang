@@ -75,6 +75,11 @@ void llvm_from_secondary_expr(struct secondary_expr_ast *expr, LLVMModuleRef mod
             llvm_from_var_redecl(expr->u.var_redecl, module, builder);
             logger().llvm("Secondary expr var redecl finished.\n");
             break;
+        case AST_SECONDARY_EXPR_FN_CALL:
+            logger().llvm("Secondary expr is a fn call.\n");
+            create_llvm_function_call_from_ast(expr->u.fn_call, module, builder);
+            logger().llvm("Secondary expr fn call finished.\n");
+            break;
         default:
             logger().llvm("Secondary expr is unknown. %d\n", expr->type);
             break;
@@ -114,6 +119,11 @@ LLVMValueRef llvm_from_third_expr(struct third_expr_ast *expr, LLVMModuleRef mod
             logger().llvm("Third expr is a comparison.\n");
             value = llvm_from_comparison(expr->u.comparison, module, builder);
             logger().llvm("Third expr comparison finished.\n");
+            break;
+        case AST_THIRD_EXPR_FN_CALL:
+            logger().llvm("Third expr is a fn call.\n");
+            value = create_llvm_function_call_from_ast(expr->u.fn_call, module, builder);
+            logger().llvm("Third expr fn call finished.\n");
             break;
         default:
             logger().llvm("third expr is unknown. %d\n", expr->type);

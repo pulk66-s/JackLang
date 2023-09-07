@@ -22,7 +22,8 @@ SRC			= 	src/files/read.c 						\
 				src/grammar/expr.c						\
 				src/grammar/operation.c					\
 				src/grammar/ret.c						\
-				src/grammar/function.c					\
+				src/grammar/function/function_decl.c	\
+				src/grammar/function/function_call.c	\
 				src/grammar/type.c						\
 				src/grammar/variables.c					\
 				src/grammar/comparison.c				\
@@ -93,6 +94,7 @@ SRC			= 	src/files/read.c 						\
 				src/compiler/llvm/comparison.c			\
 				src/compiler/llvm/loop.c				\
 				src/compiler/llvm/context/variables.c	\
+				src/compiler/llvm/context/functions.c	\
 
 TESTS_SRC	=	$(SRC)								\
 				tests/main.c						\
@@ -109,7 +111,7 @@ TESTS_SRC	=	$(SRC)								\
 				tests/units/asserts/null.c			\
 				tests/units/asserts/int.c			\
 
-CFLAGS		=	-W -Wall -Wextra -I./src -I./tests -g3 -lLLVM
+CFLAGS		=	-W -Wall -Wextra -I./src -I./tests -g3 -lLLVM -fsanitize=address
 
 OBJ			=	$(SRC:.c=.o) $(MAIN_SRC:.c=.o)
 TESTS_OBJ	=	$(TESTS_SRC:.c=.o)

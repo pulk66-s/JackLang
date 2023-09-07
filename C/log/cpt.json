@@ -2,8 +2,12 @@
 {
 "function_decl": {
 "type": "int",
-"name": "count_10",
+"name": "isEven",
 "args": [
+{
+"type": "int",
+"name": "n"
+}
 ],
 "lines": [
 {
@@ -11,55 +15,17 @@
 {
 "Expr": [
 {
-"Expr": [
-{
-"variable_decl": {
-"type": "int",
-"identifier": "a",
-"value": {
-"Number": 0,
-},
-},
-},
-{
-"char": ";",
-},
-],
-},
-],
-},
-{
-"Expr": [
-{
-"loop": {
-"keyword": "for",
-"start": {
-"variable_redecl": {
-"identifier": "a",
-"operator": "=",
-"value": {
-"Number": 1,
-},
-},
-},
+"if_stmt": {
+"keyword": "if",
 "condition": {
-"comparison": {
-"operator": "<",
-"left": {
-"String": "a",
+"Operation": {
+"Operand": "%",
+"Left": {
+"String": "n",
 },
-"right": {
-"Number": 10,
+"Right": {
+"Number": 2,
 }
-},
-},
-"iter": {
-"variable_redecl": {
-"identifier": "a",
-"operator": "+=",
-"value": {
-"Number": 1,
-},
 },
 },
 "body": {
@@ -69,20 +35,11 @@
 {
 "Expr": [
 {
-"variable_redecl": {
-"identifier": "a",
-"operator": "=",
-"value": {
-"Operation": {
-"Operand": "+",
-"Left": {
-"String": "a",
-},
-"Right": {
-"Number": 1,
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 0,
 }
-},
-},
 },
 },
 {
@@ -93,8 +50,8 @@
 ],
 },
 ],
-}
 },
+}
 },
 ],
 },
@@ -106,7 +63,65 @@
 "Return": {
 "Keyword": "return",
 "Expr": {
-"String": "a",
+"Number": 1,
+}
+},
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+],
+}
+],
+}
+},
+{
+"function_decl": {
+"type": "int",
+"name": "test",
+"args": [
+],
+"lines": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"Expr": [
+{
+"function_call": {
+"name": "isEven",
+"args": [
+{
+"Expr": [
+{
+"Number": 1,
+},
+],
+},
+]
+}
+},
+{
+"char": ";",
+},
+],
+},
+],
+},
+{
+"Expr": [
+{
+"Expr": [
+{
+"Return": {
+"Keyword": "return",
+"Expr": {
+"Number": 0,
 }
 },
 },

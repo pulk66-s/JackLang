@@ -24,6 +24,12 @@ static void llvm_from_ast(struct program_ast *ast, LLVMBuilderRef builder, LLVMM
 void cl_compiler_llvm_start(struct program_ast *ast)
 {
     logger().llvm("Starting LLVM compiler...\n");
+    LLVMInitializeAllTargetInfos();
+    LLVMInitializeAllTargets();
+    LLVMInitializeAllTargetMCs();
+    LLVMInitializeAllAsmPrinters();
+    LLVMInitializeAllAsmParsers();
+    LLVMInitializeAllDisassemblers();
 
     LLVMBuilderRef builder = LLVMCreateBuilder();
     LLVMModuleRef module = llvm_start();

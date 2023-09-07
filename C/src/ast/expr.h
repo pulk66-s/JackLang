@@ -26,7 +26,8 @@ enum ast_secondary_expr_type {
     AST_SECONDARY_VAR_DECL,
     AST_SECONDARY_EXPR_COND,
     AST_SECONDARY_LOOP,
-    AST_SECONDARY_EXPR_VAR_REDECL
+    AST_SECONDARY_EXPR_VAR_REDECL,
+    AST_SECONDARY_EXPR_FN_CALL
 };
 
 struct secondary_expr_ast {
@@ -37,6 +38,7 @@ struct secondary_expr_ast {
         struct condition_ast *condition;
         struct loop_ast *loop;
         struct variable_redecl_ast *var_redecl;
+        struct function_call_ast *fn_call;
     } u;
 };
 
@@ -44,7 +46,8 @@ enum ast_third_expr_type {
     AST_THIRD_EXPR_OPERATION,
     AST_THIRD_EXPR_CONSTANT,
     AST_THIRD_EXPR_VAR_CALL,
-    AST_THIRD_EXPR_COMPARISON
+    AST_THIRD_EXPR_COMPARISON,
+    AST_THIRD_EXPR_FN_CALL
 };
 
 struct third_expr_ast {
@@ -54,6 +57,7 @@ struct third_expr_ast {
         struct constant_ast *constant;
         struct variable_call_ast *var_call;
         struct comparison_ast *comparison;
+        struct function_call_ast *fn_call;
     } u;
 };
 

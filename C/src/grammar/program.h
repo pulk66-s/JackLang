@@ -4,7 +4,7 @@
 #include "parsing/manager.h"
 
 struct program_cpt {
-    struct result **exprs;
+    struct result *exprs;
 };
 
 /**

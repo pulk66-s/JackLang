@@ -4,188 +4,65 @@ alpha_word
 alpha_word: int
 type: int
 identifier
-identifier: count_10
-type
-alpha_word
-alpha_word: 
-type: 
-identifier
-identifier: NULL
-type
-alpha_word
-alpha_word: 
-type: 
-identifier
-identifier: NULL
-condition
-if_condition
-if_keyword
-alpha_word
-alpha_word: int
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: int
-while_keyword failed on strcmp
-for_loop
-for_keyword
-alpha_word
-alpha_word: int
-for_keyword failed on strcmp
-for_loop failed on parse
-loop failed
-ret
-alpha_word
-alpha_word: int
-Error: return statement expected
-variable_declaration
+identifier: isEven
 type
 alpha_word
 alpha_word: int
 type: int
 identifier
-identifier: a
-comparison
-number
-number: 0
-comparison_op
-buf[0] = ';'
-buf[1] = 'f'
-comparison_op: compare ";f" with "=="
-comparison_op: compare ";f" with "!="
-comparison_op: compare ";f" with ">"
-comparison_op: compare ";f" with "<"
-comparison_op: compare ";f" with ">="
-comparison_op: compare ";f" with "<="
-comparison_op: failed, operator=";f"
-comparison: failed
-operation
-number
-number: 0
-Error: left operand expected 3
-number
-number: 0
-variable declaration after sequence
-res size: 4
-variable decl, type: 11, identifier: 3, value: 1
+identifier: n
+type
+alpha_word
+alpha_word: int
+type: int
+identifier
+identifier: n
 condition
 if_condition
 if_keyword
 alpha_word
-alpha_word: for
-if_keyword: not if
-condition: no parsed
-loop
-while_keyword
-alpha_word
-alpha_word: for
-while_keyword failed on strcmp
-for_loop
-for_keyword
-alpha_word
-alpha_word: for
-for_keyword success
-for_init
-variable_declaration
-type
-alpha_word
-alpha_word: a
-type: a
-identifier
-identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-variable_redeclaration
-identifier
-identifier: a
+alpha_word: if
+if_keyword: is if
+cond_value
 comparison
-number
-number: 1
-comparison_op
-buf[0] = ';'
-buf[1] = 'a'
-comparison_op: compare ";a" with "=="
-comparison_op: compare ";a" with "!="
-comparison_op: compare ";a" with ">"
-comparison_op: compare ";a" with "<"
-comparison_op: compare ";a" with ">="
-comparison_op: compare ";a" with "<="
-comparison_op: failed, operator=";a"
-comparison: failed
-operation
-number
-number: 1
-Error: left operand expected 3
-number
-number: 1
-variable_redeclaration: success
-for_init success
-for_cond
-variable_declaration
-type
-alpha_word
-alpha_word: a
-type: a
+function_call
+cursor: 1 1 1
 identifier
-identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-variable_redeclaration
-identifier
-identifier: a
-variable_redeclaration: NULL
-comparison
+identifier: n
+function_call: NULL
 number
 Error: number expected
 identifier
-identifier: a
+identifier: n
 comparison_op
-buf[0] = '<'
-comparison_op: compare "<" with "=="
-comparison_op: compare "<" with "!="
-comparison_op: compare "<" with ">"
-comparison_op: compare "<" with "<"
-comparison_op: success
-comparison
-number
-number: 10
-comparison_op
-buf[0] = ';'
-buf[1] = 'a'
-comparison_op: compare ";a" with "=="
-comparison_op: compare ";a" with "!="
-comparison_op: compare ";a" with ">"
-comparison_op: compare ";a" with "<"
-comparison_op: compare ";a" with ">="
-comparison_op: compare ";a" with "<="
-comparison_op: failed, operator=";a"
+buf[0] = '%'
+buf[1] = '2'
+comparison_op: compare "%2" with "=="
+comparison_op: compare "%2" with "!="
+comparison_op: compare "%2" with ">"
+comparison_op: compare "%2" with "<"
+comparison_op: compare "%2" with ">="
+comparison_op: compare "%2" with "<="
+comparison_op: failed, operator="%2"
 comparison: failed
 operation
+function_call
+cursor: 1 1 1
+identifier
+identifier: n
+function_call: NULL
 number
-number: 10
-Error: left operand expected 3
-number
-number: 10
-comparison: success <
-for_cond success
-for_iter
-variable_declaration
-type
-alpha_word
-alpha_word: a
-type: a
+Error: number expected
+identifier
+identifier: n
+comparison
+function_call
+cursor: 2 1 1
 identifier
 identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-variable_redeclaration
-identifier
-identifier: a
-comparison
+function_call: NULL
 number
-number: 1
+number: 2
 comparison_op
 buf[0] = ')'
 buf[1] = '{'
@@ -198,73 +75,60 @@ comparison_op: compare "){" with "<="
 comparison_op: failed, operator="){"
 comparison: failed
 operation
+function_call
+cursor: 2 1 1
+identifier
+identifier: NULL
+function_call: NULL
 number
-number: 1
+number: 2
 Error: left operand expected 3
+function_call
+cursor: 2 1 1
+identifier
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 2 1 1
+identifier
+identifier: NULL
+function_call: NULL
 number
-number: 1
-variable_redeclaration: success
-for_iter success
-for_body
+number: 2
+operation: %
+cond_body
+cond_lines
+cursor 4 1 1 0
 condition
 if_condition
 if_keyword
 alpha_word
-alpha_word: a
+alpha_word: return
 if_keyword: not if
 condition: no parsed
 loop
 while_keyword
 alpha_word
-alpha_word: a
+alpha_word: return
 while_keyword failed on strcmp
 for_loop
 for_keyword
 alpha_word
-alpha_word: a
+alpha_word: return
 for_keyword failed on strcmp
 for_loop failed on parse
 loop failed
 ret
 alpha_word
-alpha_word: a
-Error: return statement expected
-variable_declaration
-type
-alpha_word
-alpha_word: a
-type: a
+alpha_word: return
+comparison
+function_call
+cursor: 0 2 6
 identifier
 identifier: NULL
-variable declaration after sequence
-variable_declaration: NULL
-variable_redeclaration
-identifier
-identifier: a
-comparison
+function_call: NULL
 number
-Error: number expected
-identifier
-identifier: a
-comparison_op
-buf[0] = '+'
-buf[1] = '1'
-comparison_op: compare "+1" with "=="
-comparison_op: compare "+1" with "!="
-comparison_op: compare "+1" with ">"
-comparison_op: compare "+1" with "<"
-comparison_op: compare "+1" with ">="
-comparison_op: compare "+1" with "<="
-comparison_op: failed, operator="+1"
-comparison: failed
-operation
-number
-Error: number expected
-identifier
-identifier: a
-comparison
-number
-number: 1
+number: 0
 comparison_op
 buf[0] = ';'
 buf[1] = '}'
@@ -277,13 +141,26 @@ comparison_op: compare ";}" with "<="
 comparison_op: failed, operator=";}"
 comparison: failed
 operation
+function_call
+cursor: 0 2 6
+identifier
+identifier: NULL
+function_call: NULL
 number
-number: 1
+number: 0
 Error: left operand expected 3
+function_call
+cursor: 0 2 6
+identifier
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 0 2 6
+identifier
+identifier: NULL
+function_call: NULL
 number
-number: 1
-operation: +
-variable_redeclaration: success
+number: 0
 condition
 if_condition
 if_keyword
@@ -320,9 +197,21 @@ variable_redeclaration
 identifier
 identifier: NULL
 variable_redeclaration: NULL
-for_body success
-for_loop success
-loop success
+function_call
+cursor: 1 2 2
+identifier
+identifier: NULL
+function_call: NULL
+cond_lines: end, size: 1
+maybe_else_condition
+else_condition
+else_keyword
+alpha_word
+alpha_word: return
+maybe_else_condition: end
+maybe_else_condition: res 0
+no else block
+if_boddy 5 1
 condition
 if_condition
 if_keyword
@@ -346,10 +235,13 @@ ret
 alpha_word
 alpha_word: return
 comparison
-number
-Error: number expected
+function_call
+cursor: 0 4 6
 identifier
-identifier: a
+identifier: NULL
+function_call: NULL
+number
+number: 1
 comparison_op
 buf[0] = ';'
 buf[1] = '}'
@@ -362,15 +254,26 @@ comparison_op: compare ";}" with "<="
 comparison_op: failed, operator=";}"
 comparison: failed
 operation
-number
-Error: number expected
+function_call
+cursor: 0 4 6
 identifier
-identifier: a
+identifier: NULL
+function_call: NULL
+number
+number: 1
 Error: left operand expected 3
-number
-Error: number expected
+function_call
+cursor: 0 4 6
 identifier
-identifier: a
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 0 4 6
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
 condition
 if_condition
 if_keyword
@@ -407,4 +310,263 @@ variable_redeclaration
 identifier
 identifier: NULL
 variable_redeclaration: NULL
-function_decl success: count_10
+function_call
+cursor: 1 4 2
+identifier
+identifier: NULL
+function_call: NULL
+function_decl success: isEven
+function_decl
+type
+alpha_word
+alpha_word: int
+type: int
+identifier
+identifier: test
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: isEven
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: isEven
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: isEven
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
+ret
+alpha_word
+alpha_word: isEven
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: isEven
+type: isEven
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: isEven
+variable_redeclaration: NULL
+function_call
+cursor: 2 6 1
+identifier
+identifier: isEven
+function_call_args
+comparison
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+comparison_op
+buf[0] = ')'
+buf[1] = ';'
+comparison_op: compare ");" with "=="
+comparison_op: compare ");" with "!="
+comparison_op: compare ");" with ">"
+comparison_op: compare ");" with "<"
+comparison_op: compare ");" with ">="
+comparison_op: compare ");" with "<="
+comparison_op: failed, operator=");"
+comparison: failed
+operation
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+Error: left operand expected 3
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+comparison
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+comparison_op
+buf[0] = ')'
+buf[1] = ';'
+comparison_op: compare ");" with "=="
+comparison_op: compare ");" with "!="
+comparison_op: compare ");" with ">"
+comparison_op: compare ");" with "<"
+comparison_op: compare ");" with ">="
+comparison_op: compare ");" with "<="
+comparison_op: failed, operator=");"
+comparison: failed
+operation
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+Error: left operand expected 3
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 0 7 7
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 1
+function_call_args: SUCCESS
+function_call: SUCCESS
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: return
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: return
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: return
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
+ret
+alpha_word
+alpha_word: return
+comparison
+function_call
+cursor: 0 8 6
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 0
+comparison_op
+buf[0] = ';'
+buf[1] = '}'
+comparison_op: compare ";}" with "=="
+comparison_op: compare ";}" with "!="
+comparison_op: compare ";}" with ">"
+comparison_op: compare ";}" with "<"
+comparison_op: compare ";}" with ">="
+comparison_op: compare ";}" with "<="
+comparison_op: failed, operator=";}"
+comparison: failed
+operation
+function_call
+cursor: 0 8 6
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 0
+Error: left operand expected 3
+function_call
+cursor: 0 8 6
+identifier
+identifier: NULL
+function_call: NULL
+function_call
+cursor: 0 8 6
+identifier
+identifier: NULL
+function_call: NULL
+number
+number: 0
+condition
+if_condition
+if_keyword
+alpha_word
+alpha_word: 
+if_keyword: not if
+condition: no parsed
+loop
+while_keyword
+alpha_word
+alpha_word: 
+while_keyword failed on strcmp
+for_loop
+for_keyword
+alpha_word
+alpha_word: 
+for_keyword failed on strcmp
+for_loop failed on parse
+loop failed
+ret
+alpha_word
+alpha_word: 
+Error: return statement expected
+variable_declaration
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+variable declaration after sequence
+variable_declaration: NULL
+variable_redeclaration
+identifier
+identifier: NULL
+variable_redeclaration: NULL
+function_call
+cursor: 1 8 2
+identifier
+identifier: NULL
+function_call: NULL
+function_decl success: test
+function_decl
+type
+alpha_word
+alpha_word: 
+type: 
+identifier
+identifier: NULL
+function_decl failed, name is NULL

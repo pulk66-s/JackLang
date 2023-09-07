@@ -4,7 +4,7 @@
 #include <llvm-c/Core.h>
 
 struct variable_context_llvm {
-    char *name;
+    const char *name;
     LLVMValueRef value;
     struct variable_context_llvm *next;
 };
@@ -15,13 +15,13 @@ struct variable_context_llvm {
  * @param   value   The value of the variable.
  * @return          The variable context.
 */
-void llvm_variable_context_store(char *name, LLVMValueRef value);
+void llvm_variable_context_store(const char *name, LLVMValueRef value);
 
 /**
  * @brief           Get a variable from the context.
  * @param   name    The name of the variable.
  * @return          The variable context.
 */
-LLVMValueRef llvm_variable_context_get(char *name);
+LLVMValueRef llvm_variable_context_get(const char *name);
 
 #endif

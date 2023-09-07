@@ -61,3 +61,20 @@ struct function_decl_ast *create_function_decl(struct result *cpt)
     };
     return fn_decl;
 }
+
+struct function_call_ast *create_function_call(struct result *cpt)
+{
+    struct function_call_cpt *fn_cpt = cpt->data;
+    struct function_call_ast *fn_ast = malloc(sizeof(struct function_call_ast));
+
+    *fn_ast = (struct function_call_ast) {
+        .name = fn_cpt->identifier,
+        .args = malloc(sizeof(struct arg_call_ast *) * (fn_cpt->args->size + 1))
+    };
+    fn_ast->args[fn_cpt->args->size] = NULL;
+    for (size_t i = 0; i < fn_cpt->args->size; i++) {
+        fn_ast->args[i] = malloc(sizeof(struct third_expr_ast *));
+        fn_ast->args[i] = create_third_expr(&fn_cpt->args->data[i]);
+    }
+    return fn_ast;
+}

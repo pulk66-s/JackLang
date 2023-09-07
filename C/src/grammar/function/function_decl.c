@@ -1,5 +1,5 @@
 #include "logger.h"
-#include "grammar/function.h"
+#include "grammar/function/function_decl.h"
 #include "grammar/type.h"
 #include "grammar/expr.h"
 
@@ -114,3 +114,4 @@ function_decl_error_end:
     rollback(p);
     return NULL;
 }
+

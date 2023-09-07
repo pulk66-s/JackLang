@@ -27,7 +27,7 @@ LLVMValueRef llvm_assign(LLVMValueRef var, LLVMValueRef value, LLVMBuilderRef bu
  * @param   builder The builder
  * @return          The variable ref
 */
-LLVMValueRef llvm_get_variable(char *var, LLVMBuilderRef builder);
+LLVMValueRef llvm_get_variable(const char *var, LLVMBuilderRef builder);
 
 /**
  * @brief               Reassign a variable with a new value depending on the operator

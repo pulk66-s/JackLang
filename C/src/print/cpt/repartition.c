@@ -59,6 +59,9 @@ void repartition(struct result *res)
         case VARIABLE_REDECL:
             print_variable_redecl(res);
             break;
+        case FUNCTION_CALL:
+            print_function_call(res);
+            break;
         default:
             printf("Unknown datatype %d\n", res->datatype);
             break;

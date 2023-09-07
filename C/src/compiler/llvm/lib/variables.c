@@ -36,7 +36,7 @@ LLVMValueRef llvm_assign(LLVMValueRef var, LLVMValueRef value, LLVMBuilderRef bu
  * @param   builder The builder
  * @return          The variable ref
 */
-LLVMValueRef llvm_get_variable(char *name, LLVMBuilderRef builder)
+LLVMValueRef llvm_get_variable(const char *name, LLVMBuilderRef builder)
 {
     return LLVMBuildLoad2(builder, create_llvm_int_type(32), llvm_variable_context_get(name), "");
 }

@@ -25,9 +25,10 @@ struct result *secondary_expression(struct parser *p)
         (parser_func[]){
             ret,
             variable_declaration,
-            variable_redeclaration
+            variable_redeclaration,
+            function_call
         },
-        3
+        4
     );
 }
 
@@ -50,9 +51,10 @@ struct result *third_expression(struct parser *p)
         p,
         (parser_func[]){
             comparison,
-            operation
+            operation,
+            function_call
         },
-        2
+        3
     );
 }
 
@@ -61,10 +63,11 @@ struct result *expr_value(struct parser *p)
     return ordered_choice(
         p,
         (parser_func[]){
+            function_call,
             number,
-            identifier,
+            identifier
         },
-        2
+        3
     );
 }
 

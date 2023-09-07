@@ -66,6 +66,10 @@ struct secondary_expr_ast *create_secondary_expr(struct result *cpt)
             expr->type = AST_SECONDARY_EXPR_VAR_REDECL;
             expr->u.var_redecl = create_variable_redecl_ast(cpt);
             break;
+        case FUNCTION_CALL:
+            expr->type = AST_SECONDARY_EXPR_FN_CALL;
+            expr->u.fn_call = create_function_call(cpt);
+            break;
         default:
             printf("create_secondary_expr: unknown type %d\n", cpt->datatype);
             expr = NULL;
@@ -103,6 +107,10 @@ struct third_expr_ast *create_third_expr(struct result *cpt)
         case COMPARISON:
             expr->type = AST_THIRD_EXPR_COMPARISON;
             expr->u.comparison = create_comparison(cpt);
+            break;
+        case FUNCTION_CALL:
+            expr->type = AST_THIRD_EXPR_FN_CALL;
+            expr->u.fn_call = create_function_call(cpt);
             break;
         default:
             printf("create_third_expr: unknown type %d\n", cpt->datatype);

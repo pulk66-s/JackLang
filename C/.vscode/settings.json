@@ -70,6 +70,10 @@
         "comparison.h": "c",
         "loop.h": "c",
         "variant": "c",
-        "keywords.h": "c"
+        "keywords.h": "c",
+        "function_decl.h": "c",
+        "function_call.h": "c",
+        "error.h": "c",
+        "externc.h": "c"
     }
 }

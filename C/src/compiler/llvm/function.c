@@ -1,4 +1,5 @@
 #include "compiler/llvm/function.h"
+#include "compiler/llvm/context.h"
 #include "compiler/llvm/type.h"
 #include "compiler/llvm/lib.h"
 #include "compiler/llvm/expr.h"
@@ -40,4 +41,31 @@ void create_llvm_function_from_ast(struct function_decl_ast *fn_decl, LLVMModule
         llvm_from_secondary_expr(fn_decl->lines[i], module, builder);
     }
     logger().llvm("Function decl finished.\n");
+    llvm_function_context_store(name, function);
+}
+
+/**
+ * @brief           Create a llvm function call from a function call AST node.
+ * @param   fn_call The function declaration AST node.
+ * @param   module  The module to create the function in.
+ * @param   builder The LLVM builder.
+ * @return          The LLVM function.
+*/
+LLVMValueRef create_llvm_function_call_from_ast(struct function_call_ast *fn_call, LLVMModuleRef module, LLVMBuilderRef builder)
+{
+    logger().llvm("Starting function call...\n");
+
+    char *name = fn_call->name;
+    LLVMValueRef *args;
+    size_t size = 0;
+
+    for (; fn_call->args[size]; size++);
+    args = malloc(sizeof(LLVMValueRef) * (size + 1));
+    args[size] = NULL;
+    logger().llvm("Function call has %ld args.\n", size);
+    for (size_t i = 0; fn_call->args[i]; i++) {
+        logger().llvm("Function call arg %ld.\n", i);
+        args[i] = llvm_from_third_expr(fn_call->args[i], module, builder);
+    }
+    return create_llvm_function_call(module, builder, name, args);
 }
