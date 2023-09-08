@@ -1,5 +1,6 @@
 #include "CPT/Grammar/Program.hpp"
 #include "CPT/Grammar/Number.hpp"
+#include "CPT/Grammar/Variable.hpp"
 #include "IO.hpp"
 
 namespace CPT
@@ -11,12 +12,15 @@ namespace CPT
             p.save();
             IO::Logger::cpt_debug("\"Program\": {\n");
 
-            struct result *res = Number::parse(p);
+            struct result *var_res = Variable().parse(p);
+            struct result *res = new struct result;
 
-            if (!res) {
+            if (!var_res) {
                 IO::Logger::cpt_debug("\"message\": \"result is null\",\n");
                 IO::Logger::cpt_debug("\"end\": \"fail\"},\n");
+                return nullptr;
             }
+            res->exprs.push_back(new Program(var_res->exprs));
             IO::Logger::cpt_debug("\"end\": \"success\"},\n");
             return res;
         }

@@ -20,6 +20,7 @@ namespace CPT
             Parser(std::vector<std::vector<std::string>> const &tokens);
             struct pos getPos() const;
             char next();
+            char get();
             void prev();
             void save();
             void rollback();

@@ -3,6 +3,7 @@
 
 #include "IO/IONamespace.hpp"
 #include <string>
+#include <stdarg.h>
 
 namespace IO
 {
@@ -15,6 +16,10 @@ namespace IO
         File(std::string path);
         std::string read();
         void write(std::string content);
+        void write_vargs(std::string fmt, va_list args);
+        void append(std::string content);
+        void append_vargs(std::string fmt, va_list args);
+        void del();
     };
 } // namespace IO
 

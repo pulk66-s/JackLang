@@ -25,7 +25,6 @@ namespace CPT
                 return nullptr;
             }
             res->exprs = {};
-            res->type = CPT_NUMBER;
             res->exprs.push_back(new Number(*value));
             p.commit();
             IO::Logger::cpt_debug("\"data\": %d,\n", *value);

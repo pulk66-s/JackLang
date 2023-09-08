@@ -1,5 +1,6 @@
 #include "CPT/Packrat/Parser.hpp"
 #include "IO.hpp"
+#include <iostream>
 
 namespace CPT
 {
@@ -18,7 +19,7 @@ namespace CPT
         char Parser::next()
         {
             if (this->p.y >= this->tokens.size()) {
-                return 0;
+                return '\0';
             }
             if (this->p.x >= this->tokens[this->p.y].size()) {
                 this->p.y++;
@@ -35,21 +36,21 @@ namespace CPT
 
         void Parser::prev()
         {
-            if (this->p.x == 0)
-            {
-                this->p.x = this->tokens[this->p.y].size();
-                this->p.y--;
-                if (this->p.y == 0)
-                {
-                    this->p.y = this->tokens.size();
-                    this->p.z--;
-                    if (this->p.z == 0)
-                    {
-                        this->p.z = this->tokens[0].size();
+            if (this->p.z == 0) {
+                if (this->p.x == 0) {
+                    if (this->p.y == 0) {
+                        return;
                     }
+                    this->p.y--;
+                    this->p.x = this->tokens[this->p.y].size() - 1;
+                    this->p.z = this->tokens[this->p.y][this->p.x].size() - 1;
+                } else {
+                    this->p.x--;
+                    this->p.z = this->tokens[this->p.y][this->p.x].size() - 1;
                 }
+            } else {
+                this->p.z--;
             }
-            this->p.x--;
         }
 
         void Parser::save()
@@ -66,6 +67,11 @@ namespace CPT
         void Parser::commit()
         {
             this->saves.pop_back();
+        }
+
+        char Parser::get()
+        {
+            return this->tokens[this->p.y][this->p.x][this->p.z];
         }
     }; // namespace Packrat
 };     // namespace CPT

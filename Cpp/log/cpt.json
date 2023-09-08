@@ -1,0 +1,15 @@
+"exprs": [
+    "program": {
+        "exprs": [
+            {
+                "variable": {
+                    "name": "a",
+                    "type": "int",
+                    "value": {
+                        "number": 42,
+                    },
+                },
+            },
+        ],
+    },
+],

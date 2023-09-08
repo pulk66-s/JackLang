@@ -11,8 +11,9 @@ namespace CPT
         class Number : public Packrat::IExpr
         {
         public:
+            Number(): value(0) {};
             Number(int value);
-            static struct result *parse(Packrat::Parser &p);
+            struct result *parse(Packrat::Parser &p);
             int get();
             enum cpt_type type() { return CPT_NUMBER; }
 

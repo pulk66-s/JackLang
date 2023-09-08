@@ -1,4 +1,5 @@
 #include "IO/Logger.hpp"
+#include "IO/File.hpp"
 #include <cstdarg>
 #include <string>
 #include <iostream>
@@ -57,10 +58,13 @@ namespace IO
     void Logger::cpt(std::string fmt, ...)
     {
         if (Logger::hasType(Logger::Type::CPT)) {
-            va_list args;
+            File f("log/cpt.json");
+            va_list args, copy;
             va_start(args, fmt);
+            va_copy(copy, args);
             std::cout << YELLOW << "[CPT] " << NC;
             vprintf(fmt.c_str(), args);
+            f.append_vargs(fmt, copy);
             va_end(args);
         }
     }
@@ -68,10 +72,13 @@ namespace IO
     void Logger::cpt_debug(std::string fmt, ...)
     {
         if (Logger::hasType(Logger::Type::CPT_DEBUG)) {
-            va_list args;
+            File f("log/cpt.log");
+            va_list args, copy;
             va_start(args, fmt);
+            va_copy(copy, args);
             std::cout << MAGENTA << "[CPT_DEBUG] " << NC;
             vprintf(fmt.c_str(), args);
+            f.append_vargs(fmt, copy);
             va_end(args);
         }
     }

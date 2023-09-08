@@ -22,4 +22,32 @@ namespace IO
         file << content;
         file.close();
     }
+
+    void File::write_vargs(std::string fmt, va_list args)
+    {
+        char *buffer;
+        vasprintf(&buffer, fmt.c_str(), args);
+        this->write(buffer);
+        free(buffer);
+    }
+
+    void File::append(std::string content)
+    {
+        std::ofstream file(this->path, std::ios_base::app);
+        file << content;
+        file.close();
+    }
+
+    void File::append_vargs(std::string fmt, va_list args)
+    {
+        char *buffer;
+        vasprintf(&buffer, fmt.c_str(), args);
+        this->append(buffer);
+        free(buffer);
+    }
+
+    void File::del()
+    {
+        remove(this->path.c_str());
+    }
 } // namespace IO

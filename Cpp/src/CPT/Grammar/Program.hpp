@@ -11,8 +11,11 @@ namespace CPT
         class Program : public Packrat::IExpr
         {
         public:
-            static struct result *parse(Packrat::Parser &p);
+            Program(): exprs({}) {}
+            Program(std::vector<Packrat::IExpr *> exprs): exprs(exprs) {}
+            struct result *parse(Packrat::Parser &p);
             enum cpt_type type() override { return CPT_PROGRAM; }
+            std::vector<Packrat::IExpr *> get() { return exprs; }
 
         private:
             std::vector<Packrat::IExpr *> exprs;

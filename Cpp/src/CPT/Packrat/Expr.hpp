@@ -10,8 +10,8 @@ namespace CPT
         class IExpr
         {
         public:
-            virtual ~IExpr() = default;
             virtual enum cpt_type type() = 0;
+            virtual struct result *parse(Packrat::Parser &p) = 0;
         };
     }; // namespace Packrat
 };     // namespace CPT
