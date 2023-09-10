@@ -16,7 +16,7 @@ namespace CPT
             if (word == "") {
                 p.rollback();
                 IO::Logger::cpt_debug("\"message\": \"no identifier detected\",\n");
-                IO::Logger::cpt_debug("\"end\": \"fail\"}\n");
+                IO::Logger::cpt_debug("\"end\": \"fail\"},\n");
                 return nullptr;
             }
             *r = {

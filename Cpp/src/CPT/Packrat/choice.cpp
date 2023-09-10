@@ -68,6 +68,25 @@ namespace CPT
             IO::Logger::cpt_debug("\"end\": \"fail\"},\n");
             return nullptr;
         }
+
+        struct result *zero_or_one(Parser &p, IExpr *expr)
+        {
+            IO::Logger::cpt_debug("\"zero_or_one\": {\n");
+
+            struct result *r = new struct result;
+            size_t index = 0;
+
+            r->exprs = {};
+            struct result *r2 = expr->parse(p);
+            if (r2 != nullptr) {
+                r->exprs.insert(r->exprs.end(), r2->exprs.begin(), r2->exprs.end());
+                IO::Logger::cpt_debug("\"expr %d\": \"success\",\n", index);
+            } else {
+                IO::Logger::cpt_debug("\"expr %d\": \"fail\",\n", index);
+            }
+            IO::Logger::cpt_debug("\"end\": \"success\"},\n");
+            return r;
+        }
     } // namespace Packrat
     
 } // namespace CPT

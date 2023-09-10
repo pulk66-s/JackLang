@@ -14,7 +14,9 @@ namespace CPT {
         CPT_VARDECL,
         CPT_IDENTIFIER,
         CPT_CHAR,
-        CPT_FN_DECL
+        CPT_FN_DECL,
+        CPT_COND,
+        CPT_KEYWORD
     };
     namespace Packrat {
         class Parser;
@@ -35,6 +37,7 @@ namespace CPT {
         bool isAlphaNum(char c);
         struct result *sequence(Parser &p, std::vector<IExpr *> exprs);
         struct result *zero_or_more(Parser &p, IExpr *expr);
+        struct result *zero_or_one(Parser &p, IExpr *expr);
         struct result *ordered_choice(Parser &p, std::vector<IExpr *> exprs);
     }; // namespace Packrat
     namespace Grammar
@@ -48,6 +51,15 @@ namespace CPT {
         class FunctionLines;
         class FunctionLine;
         class Statement;
+        class Condition;
+        class Value;
+        class MaybeValue;
+        
+        namespace Keyword
+        {
+            class AKeyword;
+            class If;
+        } // namespace Keyword
     }; // namespace Grammar
 };
 

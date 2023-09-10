@@ -3,6 +3,7 @@
 #include "CPT/Grammar/Identifier.hpp"
 #include "CPT/Grammar/Number.hpp"
 #include "CPT/Grammar/SpecialChar.hpp"
+#include "CPT/Grammar/Value.hpp"
 #include "CPT/Packrat.hpp"
 #include "IO.hpp"
 #include <iostream>
@@ -21,7 +22,7 @@ namespace CPT
                 new Type(),
                 new Identifier(),
                 new SpecialChar('='),
-                new Number()
+                new Value(),
             });
             struct result *ret = new struct result;
 

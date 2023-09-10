@@ -8,5 +8,7 @@
 #include "CPT/Grammar/VariableDecl.hpp"
 #include "CPT/Grammar/SpecialChar.hpp"
 #include "CPT/Grammar/Function.hpp"
+#include "CPT/Grammar/Condition.hpp"
+#include "CPT/Grammar/Keyword.hpp"
 
 #endif

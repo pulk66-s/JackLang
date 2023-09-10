@@ -11,7 +11,8 @@ namespace CPT::Grammar
         IO::Logger::cpt_debug("\"FunctionLine\": {\n");
 
         struct result *res = ordered_choice(p, {
-            new Statement()
+            new Statement(),
+            new Condition(),
         });
         struct result *ret = new struct result;
 

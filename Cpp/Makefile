@@ -1,4 +1,4 @@
-DEBUG		=	0
+DEBUG		=	1
 
 CC			= g++
 
@@ -13,13 +13,19 @@ SRC			=	src/main.cpp								\
 				src/IO/CPT/expr.cpp							\
 				src/IO/CPT/program.cpp						\
 				src/IO/CPT/function.cpp						\
+				src/IO/CPT/condition.cpp					\
+				src/IO/CPT/keyword.cpp						\
 				src/IO/AST/block.cpp						\
 				src/IO/AST/functions.cpp					\
 				src/IO/AST/prgm.cpp							\
 				src/IO/AST/constant.cpp						\
 				src/IO/AST/varDecl.cpp						\
 				src/Parser/Token.cpp						\
+				src/CPT/Grammar/Keyword/AKeyword.cpp		\
 				src/CPT/Grammar/Number.cpp					\
+				src/CPT/Grammar/Value.cpp					\
+				src/CPT/Grammar/MaybeValue.cpp				\
+				src/CPT/Grammar/Condition.cpp				\
 				src/CPT/Grammar/Program.cpp					\
 				src/CPT/Grammar/Type.cpp					\
 				src/CPT/Grammar/VariableDecl.cpp			\

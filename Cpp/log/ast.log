@@ -2,34 +2,8 @@
 "message": "FunctionDecl",
 "FunctionDecl": {
 "Block": {
-"end": "success"},
-"end": "success"},
-"message": "FunctionDecl",
-"FunctionDecl": {
-"Block": {
 "message": "Line 0",
-"message": "VarDecl",
-"VarDecl": {
-"Type": {
-"end": "success"},
-"message": "Number type",
-"value": "3",
-"name": "a",
-"end": "success"},
-"end": "success"},
-"end": "success"},
-"message": "FunctionDecl",
-"FunctionDecl": {
-"Block": {
-"message": "Line 0",
-"message": "VarDecl",
-"VarDecl": {
-"Type": {
-"end": "success"},
-"message": "Number type",
-"value": "3",
-"name": "a",
-"end": "success"},
+"message": "Unknown line type 8",
 "end": "success"},
 "end": "success"},
 "end": "success"},

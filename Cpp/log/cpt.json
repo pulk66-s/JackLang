@@ -1,48 +1,42 @@
 "exprs": [
-"program": {
-"exprs": [
-{
-"FunctionDecl": {
-"type": "int",
-"identifier": "fn",
-"lines": [
-],
-},
-},
-{
-"FunctionDecl": {
-"type": "int",
-"identifier": "fn2",
-"lines": [
-"0": {
-"VariableDecl": {
-"name": "a",
-"type": "int",
-"value": {
-"number": 3,
-},
-},
-},
-],
-},
-},
-{
-"FunctionDecl": {
-"type": "int",
-"identifier": "fn3",
-"lines": [
-"0": {
-"VariableDecl": {
-"name": "a",
-"type": "int",
-"value": {
-"number": 3,
-},
-},
-},
-],
-},
-},
-],
-},
+    "program": {
+        "exprs": [
+            {
+                "FunctionDecl": {
+                    "type": "int",
+                    "identifier": "fn",
+                    "lines": [
+                        "0": {
+                            "Condition": {
+                                "cond": {
+                                    "number": 1,
+                                },
+                                "then": [
+                                    "0": {
+                                        "VariableDecl": {
+                                            "name": "a",
+                                            "type": "int",
+                                            "value": {
+                                                "number": 3,
+                                            },
+                                        },
+                                    },
+                                    "1": {
+                                        "VariableDecl": {
+                                            "name": "b",
+                                            "type": "int",
+                                            "value": {
+                                                "number": 4,
+                                            },
+                                        },
+                                    },
+                                ],
+                                "else": [],
+                            },
+                        },
+                    ],
+                },
+            },
+        ],
+    },
 ],

@@ -3,5 +3,6 @@
 
 #include "IO/File.hpp"
 #include "IO/Logger.hpp"
+#include "IO/IONamespace.hpp"
 
 #endif

@@ -17,6 +17,8 @@ namespace IO {
         void printType(CPT::Grammar::Type *type);
         void printVar(CPT::Grammar::VariableDecl *var);
         void printFnDecl(CPT::Grammar::FunctionDecl *fn);
+        void printCond(CPT::Grammar::Condition *cond);
+        void printKeyword(CPT::Grammar::Keyword::AKeyword *kw);
     };
 
     namespace AST_log {
