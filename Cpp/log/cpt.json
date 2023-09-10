@@ -17,21 +17,42 @@
                                             "name": "a",
                                             "type": "int",
                                             "value": {
-                                                "number": 3,
-                                            },
-                                        },
-                                    },
-                                    "1": {
-                                        "VariableDecl": {
-                                            "name": "b",
-                                            "type": "int",
-                                            "value": {
-                                                "number": 4,
+                                                "number": 1,
                                             },
                                         },
                                     },
                                 ],
-                                "else": [],
+                                "else": [
+                                    "0": {
+                                        "Condition": {
+                                            "cond": {
+                                                "number": 2,
+                                            },
+                                            "then": [
+                                                "0": {
+                                                    "VariableDecl": {
+                                                        "name": "b",
+                                                        "type": "int",
+                                                        "value": {
+                                                            "number": 2,
+                                                        },
+                                                    },
+                                                },
+                                            ],
+                                            "else": [
+                                                "0": {
+                                                    "VariableDecl": {
+                                                        "name": "c",
+                                                        "type": "int",
+                                                        "value": {
+                                                            "number": 3,
+                                                        },
+                                                    },
+                                                },
+                                            ],
+                                        },
+                                    },
+                                ],
                             },
                         },
                     ],

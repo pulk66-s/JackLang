@@ -25,7 +25,6 @@ SRC			=	src/main.cpp								\
 				src/CPT/Grammar/Number.cpp					\
 				src/CPT/Grammar/Value.cpp					\
 				src/CPT/Grammar/MaybeValue.cpp				\
-				src/CPT/Grammar/Condition.cpp				\
 				src/CPT/Grammar/Program.cpp					\
 				src/CPT/Grammar/Type.cpp					\
 				src/CPT/Grammar/VariableDecl.cpp			\
@@ -35,6 +34,12 @@ SRC			=	src/main.cpp								\
 				src/CPT/Grammar/Function/FunctionDecl.cpp	\
 				src/CPT/Grammar/Function/FunctionLines.cpp	\
 				src/CPT/Grammar/Function/FunctionLine.cpp	\
+				src/CPT/Grammar/Condition/Body.cpp			\
+				src/CPT/Grammar/Condition/Condition.cpp		\
+				src/CPT/Grammar/Condition/If.cpp			\
+				src/CPT/Grammar/Condition/Else.cpp			\
+				src/CPT/Grammar/Condition/ElseValue.cpp		\
+				src/CPT/Grammar/Condition/MaybeElse.cpp		\
 				src/CPT/Packrat/Parser.cpp					\
 				src/CPT/Packrat/numbers.cpp					\
 				src/CPT/Packrat/words.cpp					\

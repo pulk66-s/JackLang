@@ -40,6 +40,7 @@ namespace CPT {
         struct result *zero_or_one(Parser &p, IExpr *expr);
         struct result *ordered_choice(Parser &p, std::vector<IExpr *> exprs);
     }; // namespace Packrat
+
     namespace Grammar
     {
         class Number;
@@ -54,11 +55,22 @@ namespace CPT {
         class Condition;
         class Value;
         class MaybeValue;
+
+        namespace Cond
+        {
+            class If;
+            class Else;
+            class Body;
+            class ElseValue;
+            class MaybeElse;
+        } // namespace Cond
         
+
         namespace Keyword
         {
             class AKeyword;
             class If;
+            class Else;
         } // namespace Keyword
     }; // namespace Grammar
 };

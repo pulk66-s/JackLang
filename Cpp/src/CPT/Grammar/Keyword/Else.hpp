@@ -1,5 +1,5 @@
-#ifndef __CL_GRAMMAR_KEYWORD_IF_HPP__
-#define __CL_GRAMMAR_KEYWORD_IF_HPP__
+#ifndef __CL_GRAMMAR_KEYWORD_ELSE_HPP__
+#define __CL_GRAMMAR_KEYWORD_ELSE_HPP__
 
 #include "CPT/CPTNamespace.hpp"
 #include "CPT/Packrat.hpp"
@@ -8,9 +8,9 @@
 
 namespace CPT::Grammar::Keyword
 {
-    class If : public AKeyword {
+    class Else : public AKeyword {
     public:
-        If() : AKeyword("if") {};
+        Else() : AKeyword("else") {};
     };
 } // namespace CPT::Grammar::Keyword
 
