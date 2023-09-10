@@ -13,7 +13,9 @@ namespace IO
             CONSOLE     = 1 << 0,
             DEBUG       = 1 << 1,
             CPT         = 1 << 2,
-            CPT_DEBUG   = 1 << 3
+            CPT_DEBUG   = 1 << 3,
+            AST         = 1 << 4,
+            AST_DEBUG   = 1 << 5,
         };
 
         static bool hasType(int type);
@@ -24,6 +26,8 @@ namespace IO
         static void debug(std::string fmt, ...);
         static void cpt(std::string fmt, ...);
         static void cpt_debug(std::string fmt, ...);
+        static void ast(std::string fmt, ...);
+        static void ast_debug(std::string fmt, ...);
     };
 } // namespace IO
 

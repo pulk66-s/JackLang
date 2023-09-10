@@ -23,7 +23,6 @@ std::vector<std::string> Tokenizer::createTokens(std::string line)
     while (std::getline(stream, token, ' ')) {
         tokens.push_back(token);
     }
-
     return tokens;
 }
 
@@ -37,6 +36,19 @@ std::vector<std::vector<std::string>> Tokenizer::tokenize(std::string filePath)
 
     for (std::string line : lines) {
         tokens.push_back(this->createTokens(line));
+    }
+    for (std::vector<std::string> &line : tokens) {
+        std::vector<std::string> res = {};
+        std::copy_if(line.begin(), line.end(), std::back_inserter(res), [](std::string token) {
+            return !token.empty();
+        });
+        line = res;
+    }
+    for (std::vector<std::string> line : tokens) {
+        for (std::string token : line) {
+            IO::Logger::console("%s ", token.c_str());
+        }
+        IO::Logger::console("\n");
     }
     return tokens;
 }

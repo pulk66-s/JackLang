@@ -16,7 +16,7 @@ namespace CPT
             if (word == "") {
                 p.rollback();
                 IO::Logger::cpt_debug("\"message\": \"no type detected\",\n");
-                IO::Logger::cpt_debug("\"end\": \"fail\"}\n");
+                IO::Logger::cpt_debug("\"end\": \"fail\"},\n");
                 return nullptr;
             }
             IO::Logger::cpt_debug("\"type\": \"%s\",\n", word.c_str());

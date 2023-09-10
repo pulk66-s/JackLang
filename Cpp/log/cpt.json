@@ -1,15 +1,32 @@
 "exprs": [
-    "program": {
-        "exprs": [
-            {
-                "variable": {
-                    "name": "a",
-                    "type": "int",
-                    "value": {
-                        "number": 42,
-                    },
-                },
-            },
-        ],
-    },
+"program": {
+"exprs": [
+{
+"FunctionDecl": {
+"type": "int",
+"identifier": "fn",
+"lines": [
+"0": {
+"VariableDecl": {
+"name": "a",
+"type": "int",
+"value": {
+"number": 42,
+},
+},
+},
+"1": {
+"VariableDecl": {
+"name": "b",
+"type": "int",
+"value": {
+"number": 22,
+},
+},
+},
+],
+},
+},
+],
+},
 ],

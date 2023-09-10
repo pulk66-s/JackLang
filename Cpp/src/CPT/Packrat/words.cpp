@@ -14,6 +14,7 @@ namespace CPT
 
         bool isAlpha(char c)
         {
+            IO::Logger::cpt_debug("\"isAlpha\": \"%c\",\n", c);
             return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
         }
 
@@ -29,10 +30,11 @@ namespace CPT
 
         std::string word(Packrat::Parser &p)
         {
+            char c = p.next();
             struct Packrat::pos prev = p.getPos();
             std::string s = "";
 
-            for (char c = p.next(); isAlpha(c) && !isNextWord(prev, p.getPos()); c = p.next()) {
+            for (; isAlpha(c) && !isNextWord(prev, p.getPos()); c = p.next()) {
                 s += c;
             }
             p.prev();

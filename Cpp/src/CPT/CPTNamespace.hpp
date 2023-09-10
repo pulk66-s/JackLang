@@ -7,12 +7,14 @@
 
 namespace CPT {
     enum cpt_type {
+        CPT_UNKNOWN,
         CPT_NUMBER,
         CPT_PROGRAM,
         CPT_TYPE,
-        CPT_VARIABLE,
+        CPT_VARDECL,
         CPT_IDENTIFIER,
-        CPT_CHAR
+        CPT_CHAR,
+        CPT_FN_DECL
     };
     namespace Packrat {
         class Parser;
@@ -32,14 +34,20 @@ namespace CPT {
         bool isDigit(char c);
         bool isAlphaNum(char c);
         struct result *sequence(Parser &p, std::vector<IExpr *> exprs);
+        struct result *zero_or_more(Parser &p, IExpr *expr);
+        struct result *ordered_choice(Parser &p, std::vector<IExpr *> exprs);
     }; // namespace Packrat
     namespace Grammar
     {
         class Number;
         class Program;
         class Type;
-        class Variable;
+        class VariableDecl;
         class SpecialChar;
+        class FunctionDecl;
+        class FunctionLines;
+        class FunctionLine;
+        class Statement;
     }; // namespace Grammar
 };
 

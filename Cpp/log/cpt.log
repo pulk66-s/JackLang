@@ -1,15 +1,58 @@
 "Program": {
-"Variable": {
+"FunctionDecl": {
 "sequence": {
 "Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "f",
 "type": "int",
 "end": "success"},
 "expr 0": "success",
 "Identifier": {
+"isAlpha": "f",
+"isAlpha": "n",
+"isAlpha": "(",
+"identifier": "fn",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "(",
+"end": "success"},
+"expr 2": "success",
+"SpecialChar": {
+"char": ")",
+"end": "success"},
+"expr 3": "success",
+"SpecialChar": {
+"char": "{",
+"end": "success"},
+"expr 4": "success",
+"FunctionLines": {
+"zero_or_more": {
+"FunctionLine": {
+"ordered_choice": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "2 0 1",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
 "identifier": "a",
 "end": "success"},
 "expr 1": "success",
 "SpecialChar": {
+"char": "=",
 "end": "success"},
 "expr 2": "success",
 "Number": {
@@ -17,5 +60,97 @@
 "end": "success"},
 "expr 3": "success",
 "end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"SpecialChar": {
+"char": ";",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"message": "Choice is 4",
+"end": "success"},
+"expr 0": "success",
+"FunctionLine": {
+"ordered_choice": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "3 1 3",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "b",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "b",
+"isAlpha": "=",
+"identifier": "b",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Number": {
+"data": 22,
+"end": "success"},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"SpecialChar": {
+"char": ";",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"message": "Choice is 4",
+"end": "success"},
+"expr 1": "success",
+"FunctionLine": {
+"ordered_choice": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "3 2 3",
+"sequence": {
+"Type": {
+"isAlpha": "}",
+"message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"expr 0": "fail",
+"end": "fail"},
+"SpecialChar": {
+"character char": "} != ;",
+"message": "no special character detected",
+"end": "fail"},
+"message": "Choice is null",
+"end": "fail"},
+"expr 0": "fail",
+"end": "fail"},
+"message": "Choice is null",
+"end": "fail"},
+"expr 2": "fail",
+"end": "success"},
+"line": 4,
+"line": 4,
+"size": 2,
+"end": "success"},
+"expr 5": "success",
+"SpecialChar": {
+"char": "}",
+"end": "success"},
+"expr 6": "success",
+"end": "success"},
+"line": 4
+"line": 4
+"type": "int",
+"identifier": "fn",
+"nb_lines": 2,
 "end": "success"},
 "end": "success"},

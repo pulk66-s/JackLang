@@ -5,7 +5,8 @@
 #include "CPT/Grammar/Program.hpp"
 #include "CPT/Grammar/Identifier.hpp"
 #include "CPT/Grammar/Type.hpp"
-#include "CPT/Grammar/Variable.hpp"
+#include "CPT/Grammar/VariableDecl.hpp"
 #include "CPT/Grammar/SpecialChar.hpp"
+#include "CPT/Grammar/Function.hpp"
 
 #endif

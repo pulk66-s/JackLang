@@ -1,6 +1,6 @@
 #include "CPT/Grammar/Program.hpp"
 #include "CPT/Grammar/Number.hpp"
-#include "CPT/Grammar/Variable.hpp"
+#include "CPT/Grammar/Function.hpp"
 #include "IO.hpp"
 
 namespace CPT
@@ -12,7 +12,7 @@ namespace CPT
             p.save();
             IO::Logger::cpt_debug("\"Program\": {\n");
 
-            struct result *var_res = Variable().parse(p);
+            struct result *var_res = FunctionDecl().parse(p);
             struct result *res = new struct result;
 
             if (!var_res) {

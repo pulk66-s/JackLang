@@ -18,14 +18,17 @@ namespace IO
             case CPT::CPT_IDENTIFIER:
                 printIdentifier((CPT::Grammar::Identifier *)expr);
                 break;
-            case CPT::CPT_VARIABLE:
-                printVar((CPT::Grammar::Variable *)expr);
+            case CPT::CPT_VARDECL:
+                printVar((CPT::Grammar::VariableDecl *)expr);
                 break;
             case CPT::CPT_CHAR:
                 printChar((CPT::Grammar::SpecialChar *)expr);
                 break;
             case CPT::CPT_TYPE:
                 printType((CPT::Grammar::Type *)expr);
+                break;
+            case CPT::CPT_FN_DECL:
+                printFnDecl((CPT::Grammar::FunctionDecl *)expr);
                 break;
             default:
                 Logger::cpt("{\"fail\": \"Unknown expression type %d\"}", expr->type());

@@ -3,6 +3,8 @@
 #include "IO.hpp"
 #include "Parser/Token.hpp"
 #include "CPT.hpp"
+#include "AST.hpp"
+#include "Compiler.hpp"
 
 int main(int ac, char **av)
 {
@@ -11,6 +13,8 @@ int main(int ac, char **av)
 
     IO::File("log/cpt.log").del();
     IO::File("log/cpt.json").del();
+    IO::File("log/ast.log").del();
+    IO::File("log/ast.json").del();
 
     Tokenizer tokenizer;
     std::vector<std::vector<std::string>> tokens = tokenizer.tokenize(av[1]);
@@ -29,5 +33,8 @@ int main(int ac, char **av)
         return 1;
     }
     IO::CPT_log::printExprs(res->exprs);
+    AST::Program prgm((CPT::Grammar::Program *)res->exprs[0]);
+    IO::AST_log::printPrgm(&prgm);
+    Comp::LLVM::start(&prgm);
     return 0;
 }

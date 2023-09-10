@@ -5,9 +5,9 @@ namespace IO
 {
     namespace CPT_log
     {
-        void printVar(CPT::Grammar::Variable *var)
+        void printVar(CPT::Grammar::VariableDecl *var)
         {
-            Logger::cpt("\"variable\": {\n");
+            Logger::cpt("\"VariableDecl\": {\n");
             Logger::cpt("\"name\": \"%s\",\n", var->get().c_str());
             Logger::cpt("\"type\": \"%s\",\n", var->getType()->get().c_str());
             Logger::cpt("\"value\": {\n");

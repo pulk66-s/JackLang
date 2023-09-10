@@ -17,9 +17,10 @@ namespace CPT
             if (c == '\0') {
                 p.rollback();
                 IO::Logger::cpt_debug("\"message\": \"no special character detected\",\n");
-                IO::Logger::cpt_debug("\"end\": \"fail\"}\n");
+                IO::Logger::cpt_debug("\"end\": \"fail\"},\n");
                 return nullptr;
             }
+            IO::Logger::cpt_debug("\"char\": \"%c\",\n", c);
             IO::Logger::cpt_debug("\"end\": \"success\"},\n");
             *r = {
                 .exprs = {

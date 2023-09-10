@@ -1,0 +1,39 @@
+"Program": {
+"Functions": {
+"0": {
+"FunctionDecl": {
+"name": "fn",
+"Blocks": {
+"0": {
+"Block": {
+"lines": {
+"0": {
+"VarDecl": {
+"name": "a",
+"type": "int32",
+"value": {
+"Constant": {
+"value": 42,
+},
+},
+},
+},
+"1": {
+"VarDecl": {
+"name": "b",
+"type": "int32",
+"value": {
+"Constant": {
+"value": 22,
+},
+},
+},
+},
+},
+},
+},
+},
+},
+},
+},
+},
