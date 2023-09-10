@@ -7,24 +7,50 @@
 "0": {
 "Block": {
 "lines": {
+},
+},
+},
+},
+},
+},
+"1": {
+"FunctionDecl": {
+"name": "fn2",
+"Blocks": {
+"0": {
+"Block": {
+"lines": {
 "0": {
 "VarDecl": {
 "name": "a",
 "type": "int32",
 "value": {
 "Constant": {
-"value": 42,
+"value": 3,
 },
 },
 },
 },
-"1": {
+},
+},
+},
+},
+},
+},
+"2": {
+"FunctionDecl": {
+"name": "fn3",
+"Blocks": {
+"0": {
+"Block": {
+"lines": {
+"0": {
 "VarDecl": {
-"name": "b",
+"name": "a",
 "type": "int32",
 "value": {
 "Constant": {
-"value": 22,
+"value": 3,
 },
 },
 },

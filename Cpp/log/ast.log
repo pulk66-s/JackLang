@@ -2,23 +2,33 @@
 "message": "FunctionDecl",
 "FunctionDecl": {
 "Block": {
+"end": "success"},
+"end": "success"},
+"message": "FunctionDecl",
+"FunctionDecl": {
+"Block": {
 "message": "Line 0",
 "message": "VarDecl",
 "VarDecl": {
 "Type": {
 "end": "success"},
 "message": "Number type",
-"value": "42",
+"value": "3",
 "name": "a",
 "end": "success"},
-"message": "Line 1",
+"end": "success"},
+"end": "success"},
+"message": "FunctionDecl",
+"FunctionDecl": {
+"Block": {
+"message": "Line 0",
 "message": "VarDecl",
 "VarDecl": {
 "Type": {
 "end": "success"},
 "message": "Number type",
-"value": "22",
-"name": "b",
+"value": "3",
+"name": "a",
 "end": "success"},
 "end": "success"},
 "end": "success"},
