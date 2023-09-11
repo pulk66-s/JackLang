@@ -15,6 +15,7 @@ namespace Comp::LLVM::Lib
         void createFunction(Lib::Module *mod);
         void setInsertPoint(Lib::Block *block);
         void createIntRet(int value);
+        void createCond(Lib::Condition *cond);
         llvm::IRBuilder<> *get() const { return this->builder; }
     private:
         Context *context;

@@ -15,6 +15,7 @@ namespace Comp
         class Block;
         class Value;
         class Constant;
+        class Condition;
 
         namespace Lib
         {
@@ -28,6 +29,7 @@ namespace Comp
             class Alloca;
             class Function;
             class FunctionType;
+            class Condition;
         } // namespace Lib
         void start(AST::Program *program);
     } // namespace LLVM

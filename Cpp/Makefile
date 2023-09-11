@@ -1,6 +1,6 @@
 DEBUG		=	1
 
-CC			= g++
+CC			= 	g++
 
 SRC			=	src/main.cpp								\
 				src/IO/File.cpp								\
@@ -60,6 +60,7 @@ SRC			=	src/main.cpp								\
 				src/Compiler/LLVM/VarDecl.cpp				\
 				src/Compiler/LLVM/Type.cpp					\
 				src/Compiler/LLVM/Constant.cpp				\
+				src/Compiler/LLVM/Condition.cpp				\
 				src/Compiler/LLVM/Lib/Module.cpp			\
 				src/Compiler/LLVM/Lib/Value.cpp				\
 				src/Compiler/LLVM/Lib/Builder.cpp			\
@@ -69,6 +70,7 @@ SRC			=	src/main.cpp								\
 				src/Compiler/LLVM/Lib/Function.cpp			\
 				src/Compiler/LLVM/Lib/FunctionType.cpp		\
 				src/Compiler/LLVM/Lib/Constant.cpp			\
+				src/Compiler/LLVM/Lib/Condition.cpp			\
 				src/Compiler/LLVM/Function/Function.cpp		\
 				src/Compiler/LLVM/Function/FunctionType.cpp	\
 

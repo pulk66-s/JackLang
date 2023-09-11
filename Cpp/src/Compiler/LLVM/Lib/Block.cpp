@@ -7,7 +7,18 @@ namespace Comp::LLVM::Lib
 {
     Block::Block(Context *context, Function *function)
     {
-        std::cout << "Creating block" << std::endl;
+        if (!function)
+        {
+            std::cerr << "Function is null" << std::endl;
+        }
+        if (!function->get())
+        {
+            std::cerr << "Function is null" << std::endl;
+        }
+        if (!context->get())
+        {
+            std::cerr << "Context is null" << std::endl;
+        }
         this->block = llvm::BasicBlock::Create(*context->get(), "entry", function->get());
     }
 

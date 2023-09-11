@@ -11,5 +11,6 @@
 #include "Compiler/LLVM/Lib/Value.hpp"
 #include "Compiler/LLVM/Lib/Function.hpp"
 #include "Compiler/LLVM/Lib/FunctionType.hpp"
+#include "Compiler/LLVM/Lib/Condition.hpp"
 
 #endif

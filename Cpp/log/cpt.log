@@ -77,11 +77,12 @@
 "Value": {
 "ordered_choice": {
 "Number": {
-"data": 1,
-"end": "success"},
-"expr 0": "success"},
-"end": "success",},
-"expr 0": "success",
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"end": "fail"},
+"end": "fail",},
+"expr 0": "fail",
 "end": "success"},
 "end": "success"},
 "expr 2": "success",
@@ -105,50 +106,6 @@
 "start_cursor": "2 2 1",
 "sequence": {
 "Type": {
-"isAlpha": "i",
-"isAlpha": "n",
-"isAlpha": "t",
-"isAlpha": "a",
-"type": "int",
-"end": "success"},
-"expr 0": "success",
-"Identifier": {
-"isAlpha": "a",
-"isAlpha": "=",
-"identifier": "a",
-"end": "success"},
-"expr 1": "success",
-"SpecialChar": {
-"char": "=",
-"end": "success"},
-"expr 2": "success",
-"Value": {
-"ordered_choice": {
-"Number": {
-"data": 1,
-"end": "success"},
-"expr 0": "success"},
-"end": "success",},
-"expr 3": "success",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"SpecialChar": {
-"char": ";",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"message": "Choice is 4",
-"end": "success"},
-"expr 0": "success",
-"FunctionLine": {
-"ordered_choice": {
-"Statement": {
-"ordered_choice": {
-"VariableDecl": {
-"start_cursor": "3 3 2",
-"sequence": {
-"Type": {
 "isAlpha": "}",
 "message": "no type detected",
 "end": "fail"},
@@ -178,10 +135,9 @@
 "end": "fail"},
 "message": "Choice is null",
 "end": "fail"},
-"expr 1": "fail",
+"expr 0": "fail",
 "end": "success"},
-"line": 4,
-"size": 1,
+"size": 0,
 "end": "success"},
 "expr 1": "success",
 "SpecialChar": {
@@ -199,301 +155,17 @@
 "Else": {
 "sequence": {
 "else": {
-"message": "Parsed If keyword",
-"end": "success"},
-"expr 0": "success",
-"ElseValue": {
-"ordered_choice": {
-"Condition": {
-"sequence": {
-"If": {
-"sequence": {
-"if": {
-"message": "Parsed If keyword",
-"end": "success"},
-"expr 0": "success",
-"SpecialChar": {
-"char": "(",
-"end": "success"},
-"expr 1": "success",
-"MaybeValue": {
-"zero_or_one": {
-"Value": {
-"ordered_choice": {
-"Number": {
-"data": 2,
-"end": "success"},
-"expr 0": "success"},
-"end": "success",},
-"expr 0": "success",
-"end": "success"},
-"end": "success"},
-"expr 2": "success",
-"SpecialChar": {
-"char": ")",
-"end": "success"},
-"expr 3": "success",
-"Body": {
-"sequence": {
-"SpecialChar": {
-"char": "{",
-"end": "success"},
-"expr 0": "success",
-"FunctionLines": {
-"zero_or_more": {
-"FunctionLine": {
-"ordered_choice": {
-"Statement": {
-"ordered_choice": {
-"VariableDecl": {
-"start_cursor": "4 4 1",
-"sequence": {
-"Type": {
-"isAlpha": "i",
-"isAlpha": "n",
-"isAlpha": "t",
-"isAlpha": "b",
-"type": "int",
-"end": "success"},
-"expr 0": "success",
-"Identifier": {
-"isAlpha": "b",
-"isAlpha": "=",
-"identifier": "b",
-"end": "success"},
-"expr 1": "success",
-"SpecialChar": {
-"char": "=",
-"end": "success"},
-"expr 2": "success",
-"Value": {
-"ordered_choice": {
-"Number": {
-"data": 2,
-"end": "success"},
-"expr 0": "success"},
-"end": "success",},
-"expr 3": "success",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"SpecialChar": {
-"char": ";",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"message": "Choice is 4",
-"end": "success"},
-"expr 0": "success",
-"FunctionLine": {
-"ordered_choice": {
-"Statement": {
-"ordered_choice": {
-"VariableDecl": {
-"start_cursor": "3 5 2",
-"sequence": {
-"Type": {
-"isAlpha": "}",
-"message": "no type detected",
+"message": "Failed to parse else keyword",
 "end": "fail"},
 "end": "fail expr 0"},
 "end": "fail"},
 "expr 0": "fail",
-"end": "fail"},
-"SpecialChar": {
-"character char": "} != ;",
-"message": "no special character detected",
-"end": "fail"},
-"message": "Choice is null",
-"end": "fail"},
-"expr 0": "fail",
-"Condition": {
-"sequence": {
-"If": {
-"sequence": {
-"if": {
-"message": "Failed to parse if keyword",
-"end": "fail"},
-"end": "fail expr 0"},
-"end": "fail",},
-"end": "fail expr 0"},
-"end": "fail"},
-"expr 1": "fail",
-"end": "fail"},
-"message": "Choice is null",
-"end": "fail"},
-"expr 1": "fail",
 "end": "success"},
-"line": 4,
-"size": 1,
-"end": "success"},
-"expr 1": "success",
-"SpecialChar": {
-"char": "}",
-"end": "success"},
-"expr 2": "success",
-"end": "success"},
-"end": "success"},
-"expr 4": "success",
-"end": "success"},
-"end": "success",},
-"expr 0": "success",
-"MaybeElse": {
-"zero_or_one": {
-"Else": {
-"sequence": {
-"else": {
-"message": "Parsed If keyword",
-"end": "success"},
-"expr 0": "success",
-"ElseValue": {
-"ordered_choice": {
-"Condition": {
-"sequence": {
-"If": {
-"sequence": {
-"if": {
-"message": "Failed to parse if keyword",
-"end": "fail"},
-"end": "fail expr 0"},
-"end": "fail",},
-"end": "fail expr 0"},
-"end": "fail"},
-"expr 0": "fail",
-"Body": {
-"sequence": {
-"SpecialChar": {
-"char": "{",
-"end": "success"},
-"expr 0": "success",
-"FunctionLines": {
-"zero_or_more": {
-"FunctionLine": {
-"ordered_choice": {
-"Statement": {
-"ordered_choice": {
-"VariableDecl": {
-"start_cursor": "2 6 1",
-"sequence": {
-"Type": {
-"isAlpha": "i",
-"isAlpha": "n",
-"isAlpha": "t",
-"isAlpha": "c",
-"type": "int",
-"end": "success"},
-"expr 0": "success",
-"Identifier": {
-"isAlpha": "c",
-"isAlpha": "=",
-"identifier": "c",
-"end": "success"},
-"expr 1": "success",
-"SpecialChar": {
-"char": "=",
-"end": "success"},
-"expr 2": "success",
-"Value": {
-"ordered_choice": {
-"Number": {
-"data": 3,
-"end": "success"},
-"expr 0": "success"},
-"end": "success",},
-"expr 3": "success",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"SpecialChar": {
-"char": ";",
-"end": "success"},
-"end": "success"},
-"expr 0": "success"},
-"message": "Choice is 4",
-"end": "success"},
-"expr 0": "success",
-"FunctionLine": {
-"ordered_choice": {
-"Statement": {
-"ordered_choice": {
-"VariableDecl": {
-"start_cursor": "3 7 2",
-"sequence": {
-"Type": {
-"isAlpha": "}",
-"message": "no type detected",
-"end": "fail"},
-"end": "fail expr 0"},
-"end": "fail"},
-"expr 0": "fail",
-"end": "fail"},
-"SpecialChar": {
-"character char": "} != ;",
-"message": "no special character detected",
-"end": "fail"},
-"message": "Choice is null",
-"end": "fail"},
-"expr 0": "fail",
-"Condition": {
-"sequence": {
-"If": {
-"sequence": {
-"if": {
-"message": "Failed to parse if keyword",
-"end": "fail"},
-"end": "fail expr 0"},
-"end": "fail",},
-"end": "fail expr 0"},
-"end": "fail"},
-"expr 1": "fail",
-"end": "fail"},
-"message": "Choice is null",
-"end": "fail"},
-"expr 1": "fail",
-"end": "success"},
-"line": 4,
-"size": 1,
-"end": "success"},
-"expr 1": "success",
-"SpecialChar": {
-"char": "}",
-"end": "success"},
-"expr 2": "success",
-"end": "success"},
-"end": "success"},
-"expr 1": "success"},
+"message": "no else",
 "end": "success"},
 "expr 1": "success",
 "end": "success"},
-"message": "else is a line",
-"body_size": "2",
-"then size": "1",
-"then first type": "4",
-"end": "success"},
-"expr 0": "success",
-"end": "success"},
-"first object type": "8",
-"end": "success"},
-"expr 1": "success",
-"end": "success"},
-"message": "else exists",
-"end": "success"},
-"expr 0": "success"},
-"end": "success"},
-"expr 1": "success",
-"end": "success"},
-"message": "else is a condition",
-"body_size": "2",
-"then size": "1",
-"then first type": "8",
-"end": "success"},
-"expr 0": "success",
-"end": "success"},
-"first object type": "8",
-"end": "success"},
-"expr 1": "success",
-"end": "success"},
-"message": "else exists",
+"message": "else doesn't exists",
 "end": "success"},
 "expr 1": "success"},
 "message": "Choice is 8",
@@ -504,7 +176,7 @@
 "Statement": {
 "ordered_choice": {
 "VariableDecl": {
-"start_cursor": "0 8 1",
+"start_cursor": "0 4 1",
 "sequence": {
 "Type": {
 "isAlpha": "}",

@@ -12,7 +12,7 @@ namespace Comp::LLVM::Lib
     class Function {
     public:
         Function(std::string name, FunctionType *t, Module *mod);
-        llvm::Function *get() { return this->function; }
+        llvm::Function *get() { return this->function; };
     private:
         FunctionType *functionType = nullptr;
         llvm::Function *function = nullptr;

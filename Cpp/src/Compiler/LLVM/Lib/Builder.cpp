@@ -21,4 +21,9 @@ namespace Comp::LLVM::Lib
     {
         this->builder->CreateRet(llvm::ConstantInt::get(llvm::Type::getInt32Ty(*this->context->get()), value, true));
     }
+
+    void Builder::createCond(Lib::Condition *cond)
+    {
+        this->builder->CreateCondBr(cond->getCond(), cond->getTrue()->get(), cond->getFalse()->get());
+    }
 } // namespace Comp::LLVM::Lib
