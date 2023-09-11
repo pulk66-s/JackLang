@@ -1,3 +1,4 @@
+#include "IO/IONamespace.hpp"
 #include "IO/Logger.hpp"
 #include "AST.hpp"
 

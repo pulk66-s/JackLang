@@ -20,6 +20,8 @@ SRC			=	src/main.cpp								\
 				src/IO/AST/prgm.cpp							\
 				src/IO/AST/constant.cpp						\
 				src/IO/AST/varDecl.cpp						\
+				src/IO/AST/condition.cpp					\
+				src/IO/AST/expr.cpp							\
 				src/Parser/Token.cpp						\
 				src/CPT/Grammar/Keyword/AKeyword.cpp		\
 				src/CPT/Grammar/Number.cpp					\
@@ -50,6 +52,8 @@ SRC			=	src/main.cpp								\
 				src/AST/Type.cpp							\
 				src/AST/Program.cpp							\
 				src/AST/VarDecl.cpp							\
+				src/AST/Expr.cpp							\
+				src/AST/Condition.cpp						\
 				src/Compiler/LLVM/start.cpp					\
 				src/Compiler/LLVM/Value.cpp					\
 				src/Compiler/LLVM/Block.cpp					\

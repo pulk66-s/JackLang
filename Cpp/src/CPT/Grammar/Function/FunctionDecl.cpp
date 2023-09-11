@@ -1,5 +1,6 @@
 #include "CPT/Grammar/Function/FunctionDecl.hpp"
 #include "CPT/Grammar/Function/FunctionLines.hpp"
+#include "CPT/Grammar/SpecialChar.hpp"
 #include "CPT/CPTNamespace.hpp"
 #include "IO.hpp"
 

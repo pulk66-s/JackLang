@@ -1,5 +1,6 @@
 #include "AST/Block.hpp"
 #include "AST/VarDecl.hpp"
+#include "AST/Condition.hpp"
 #include "IO.hpp"
 
 namespace AST
@@ -14,6 +15,10 @@ namespace AST
             case CPT::CPT_VARDECL:
                 IO::Logger::ast_debug("\"message\": \"VarDecl\",\n");
                 this->lines.push_back(new VarDecl((CPT::Grammar::VariableDecl *)line));
+                break;
+            case CPT::CPT_COND:
+                this->lines.push_back(new Condition((CPT::Grammar::Condition *)line));
+                IO::Logger::ast_debug("\"message\": \"Condition\",\n");
                 break;
             default:
                 IO::Logger::ast_debug("\"message\": \"Unknown line type %d\",\n", line->type());

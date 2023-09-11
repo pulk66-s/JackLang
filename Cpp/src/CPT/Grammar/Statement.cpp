@@ -1,5 +1,7 @@
-#include "CPT/Grammar/Statement.hpp"
 #include "IO.hpp"
+#include "CPT/Grammar/Statement.hpp"
+#include "CPT/Grammar/VariableDecl.hpp"
+#include "CPT/Grammar/SpecialChar.hpp"
 
 namespace CPT::Grammar
 {

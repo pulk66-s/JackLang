@@ -1,4 +1,5 @@
 #include "CPT/Grammar/Condition/Body.hpp"
+#include "CPT/Grammar/SpecialChar.hpp"
 #include "CPT/Grammar/Function/FunctionLines.hpp"
 #include "IO.hpp"
 

@@ -1,8 +1,8 @@
 #ifndef __CL_IO_IONAMESPACE_HPP__
 #define __CL_IO_IONAMESPACE_HPP__
 
-#include "CPT.hpp"
-#include "AST.hpp"
+#include "CPT/CPTNamespace.hpp"
+#include "AST/ASTNamespace.hpp"
 
 namespace IO {
     class File;
@@ -27,7 +27,10 @@ namespace IO {
         void printBlock(AST::Block *block);
         void printVarDecl(AST::VarDecl *var);
         void printConstant(AST::Constant *c);
-    }
+        void printCondition(AST::Condition *cond);
+        void printExpr(AST::IExpr *expr);
+        void printExprValue(AST::IExpr *value);
+    };
 };
 
 #endif

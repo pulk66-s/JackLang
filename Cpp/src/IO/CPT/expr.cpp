@@ -1,6 +1,7 @@
 #include <iostream>
 #include "IO/IONamespace.hpp"
 #include "IO/Logger.hpp"
+#include "CPT.hpp"
 
 namespace IO
 {

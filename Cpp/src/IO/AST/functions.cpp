@@ -1,5 +1,6 @@
-#include "AST.hpp"
+#include "IO/IONamespace.hpp"
 #include "IO/Logger.hpp"
+#include "AST.hpp"
 
 namespace IO::AST_log
 {

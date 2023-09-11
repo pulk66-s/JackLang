@@ -1,5 +1,5 @@
-#ifndef __CL_AST_FUNCTION_HPP__
-#define __CL_AST_FUNCTION_HPP__
+#ifndef __CL_AST_FUNCTIONDECL_HPP__
+#define __CL_AST_FUNCTIONDECL_HPP__
 
 #include "AST/ASTNamespace.hpp"
 #include "AST/Block.hpp"

@@ -3,7 +3,42 @@
 "FunctionDecl": {
 "Block": {
 "message": "Line 0",
-"message": "Unknown line type 8",
+"Condition": {
+"Block": {
+"message": "Line 0",
+"message": "VarDecl",
+"VarDecl": {
+"Type": {
+"end": "success"},
+"name": "a",
+"end": "success"},
+"end": "success"},
+"Block": {
+"message": "Line 0",
+"Condition": {
+"Block": {
+"message": "Line 0",
+"message": "VarDecl",
+"VarDecl": {
+"Type": {
+"end": "success"},
+"name": "b",
+"end": "success"},
+"end": "success"},
+"Block": {
+"message": "Line 0",
+"message": "VarDecl",
+"VarDecl": {
+"Type": {
+"end": "success"},
+"name": "c",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"message": "Condition",
+"end": "success"},
+"end": "success"},
+"message": "Condition",
 "end": "success"},
 "end": "success"},
 "end": "success"},

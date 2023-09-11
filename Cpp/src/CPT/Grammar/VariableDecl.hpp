@@ -13,7 +13,7 @@ namespace CPT
         public:
             VariableDecl(): t(nullptr), identifier(""), value(nullptr) {};
             VariableDecl(Type *type, std::string identifier, Packrat::IExpr *value): t(type), identifier(identifier), value(value) {};
-            enum cpt_type type() override { return CPT_VARDECL; };
+            enum cpt_type type()  { return CPT_VARDECL; };
             struct result *parse(Packrat::Parser &p);
             Type *getType() { return t; };
             std::string get() { return identifier; };
@@ -25,7 +25,6 @@ namespace CPT
             Packrat::IExpr *value;
         };
     } // namespace Grammar
-
 } // namespace CPT
 
 #endif

@@ -11,7 +11,7 @@ namespace CPT::Grammar::Keyword
         AKeyword() {};
         AKeyword(std::string data) : data(data) {};
         struct result *parse(Packrat::Parser &p);
-        enum cpt_type type() override { return CPT_KEYWORD; };
+        enum cpt_type type()  { return CPT_KEYWORD; };
         std::string get() { return data; };
     protected:
         std::string data = "";

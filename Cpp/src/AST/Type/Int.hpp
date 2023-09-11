@@ -10,7 +10,7 @@ namespace AST::Type
     public:
         Int(int base): base(base) {};
         int get_base() { return base; };
-        std::string getName() const override { return "int" + std::to_string(base); };
+        std::string getName() const  { return "int" + std::to_string(base); };
 
     private:
         int base;

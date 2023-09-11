@@ -1,3 +1,4 @@
+#include "IO/IONamespace.hpp"
 #include "IO/Logger.hpp"
 #include "AST.hpp"
 
@@ -9,14 +10,7 @@ namespace IO::AST_log
         IO::Logger::ast("\"name\": \"%s\",\n", var->getName().c_str());
         IO::Logger::ast("\"type\": \"%s\",\n", var->getType()->getName().c_str());
         IO::Logger::ast("\"value\": {\n");
-        switch (var->getValue()->type()) {
-            case AST::AST_CONSTANT:
-                printConstant((AST::Constant *)var->getValue());
-                break;
-            default:
-                IO::Logger::ast("\"message\": \"Unknown type '%d'\",\n", var->getValue()->type());
-                break;
-        }
+        printExprValue(var->getValue());
         IO::Logger::ast("},\n");
         IO::Logger::ast("},\n");
     }

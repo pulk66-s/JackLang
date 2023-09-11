@@ -55,6 +55,7 @@ namespace CPT {
         class Condition;
         class Value;
         class MaybeValue;
+        class Identifier;
 
         namespace Cond
         {

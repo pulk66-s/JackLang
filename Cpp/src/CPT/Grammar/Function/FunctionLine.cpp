@@ -1,5 +1,6 @@
 #include "CPT/Grammar/Function/FunctionLine.hpp"
 #include "CPT/Grammar/Statement.hpp"
+#include "CPT/Grammar/Condition.hpp"
 #include "CPT/Packrat.hpp"
 #include "IO.hpp"
 

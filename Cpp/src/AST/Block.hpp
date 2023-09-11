@@ -6,8 +6,7 @@
 #include "CPT.hpp"
 #include <vector>
 
-namespace AST
-{
+namespace AST {
     class Block {
     public:
         Block(std::vector<CPT::Packrat::IExpr *> lines);

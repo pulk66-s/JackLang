@@ -13,8 +13,8 @@ namespace CPT
         public:
             Type(): name("") {};
             Type(std::string name): name(name) {};
-            struct result *parse(Packrat::Parser &p) override;
-            enum cpt_type type() override { return CPT_TYPE; };
+            struct result *parse(Packrat::Parser &p) ;
+            enum cpt_type type()  { return CPT_TYPE; };
             std::string get() { return name; };
 
         private:

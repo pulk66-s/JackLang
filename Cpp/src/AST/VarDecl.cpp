@@ -10,15 +10,11 @@ namespace AST
         IO::Logger::ast_debug("\"VarDecl\": {\n");
         this->name = vardecl->get();
         this->t = IType::createType(vardecl->getType());
-        switch (vardecl->getValue()->type()) {
-        case CPT::CPT_NUMBER:
-            IO::Logger::ast_debug("\"message\": \"Number type\",\n");
-            this->value = new Constant(((CPT::Grammar::Number *)vardecl->getValue())->get());
-            IO::Logger::ast_debug("\"value\": \"%d\",\n", ((CPT::Grammar::Number *)vardecl->getValue())->get());
-            break;
-        default:
-            IO::Logger::ast_debug("\"message\": \"Unknown type '%d'\",\n", vardecl->getValue()->type());
-            break;
+        this->value = createValue(vardecl->getValue());
+        if (!this->value) {
+            IO::Logger::ast_debug("\"message\": \"Value is null\",\n");
+            IO::Logger::ast_debug("\"end\": \"failure\"},\n");
+            return;
         }
         if(!this->t) {
             IO::Logger::ast_debug("\"message\": \"Type is null\"");

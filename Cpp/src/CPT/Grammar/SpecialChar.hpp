@@ -12,8 +12,8 @@ namespace CPT
         {
         public:
             SpecialChar(char c) : c(c) {}
-            struct result *parse(Packrat::Parser &p) override;
-            enum cpt_type type() override { return CPT_CHAR; }
+            struct result *parse(Packrat::Parser &p) ;
+            enum cpt_type type()  { return CPT_CHAR; }
             char get() { return c; }
         private:
             char c;

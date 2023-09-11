@@ -9,5 +9,6 @@
 #include "AST/FunctionDecl.hpp"
 #include "AST/Type.hpp"
 #include "AST/VarDecl.hpp"
+#include "AST/Condition.hpp"
 
 #endif

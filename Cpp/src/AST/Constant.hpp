@@ -9,7 +9,7 @@ namespace AST
     class Constant : public IExpr {
     public:
         Constant(int v): value(v) {};
-        enum ast_type type() override { return AST_CONSTANT; };
+        enum ast_type type() { return AST_CONSTANT; };
         int getValue() const { return value; };
     private:
         int value;
