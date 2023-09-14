@@ -13,6 +13,7 @@ jobs:
 
       - name: Upload ssh key
         run: |
+          mkdir -p ~/.ssh/
           touch ~/.ssh/id_rsa
           touch ~/.ssh/id_rsa.pub
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
