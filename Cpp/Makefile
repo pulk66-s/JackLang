@@ -76,9 +76,10 @@ SRC_FILES	=	src/IO/File.cpp								\
 
 SRC			=	$(SRC_MAIN) $(SRC_FILES)
 
-TESTS_FILES	=	tests/unit/int.cpp		\
-				tests/unit/type.cpp		\
-				tests/unit/parse.cpp	\
+TESTS_FILES	=	tests/unit/int.cpp			\
+				tests/unit/type.cpp			\
+				tests/unit/identifier.cpp	\
+				tests/unit/parse.cpp		\
 
 TESTS_SRC	=	$(TESTS_FILES) $(SRC_FILES)
 TESTER		=	CppTester

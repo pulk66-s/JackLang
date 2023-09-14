@@ -39,3 +39,11 @@ Test(type, unknown) {
 
     assert_type(res, "fea");
 }
+
+Test(type, wrong_value) {
+    struct CPT::result *res = parse_file("tests/files/type/wrong_value.cl", [&](CPT::Packrat::Parser &p) {
+        return CPT::Grammar::Type().parse(p);
+    });
+
+    expect(res).to.be.null();
+}

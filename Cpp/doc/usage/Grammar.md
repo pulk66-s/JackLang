@@ -9,6 +9,10 @@ program: number
 
 type: ('a-z' | 'A-Z')+
 
+identifier:
+    ('a-z' | 'A-Z' | '_')
+    ('a-z' | 'A-Z' | '0-9' | '_')*
+
 number: sign? digit+
 
 sign: '+' | '-'

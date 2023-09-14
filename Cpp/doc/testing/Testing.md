@@ -18,3 +18,5 @@ See the [repository](https://github.com/pulk66-s/CppTester) of the tester.
 This is where the tests are described.
 
 - [Numbers](unit/Numbers.md): Testing integer
+- [Types](unit/Types.md): Testing types
+- [Identifiers](unit/Identifiers.md): Testing identifiers

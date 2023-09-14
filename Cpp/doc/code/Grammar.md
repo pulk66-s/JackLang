@@ -36,8 +36,8 @@ Here is the file architecture and the corresponding documentation:
         - If.hpp
     - Condition.hpp
     - Function.hpp
-    - Identifier.cpp
-    - Identifier.hpp
+    - [Identifier.cpp](Grammar/Identifier.md)
+    - [Identifier.hpp](Grammar/Identifier.md)
     - Keyword.hpp
     - MaybeValue.cpp
     - MaybeValue.hpp

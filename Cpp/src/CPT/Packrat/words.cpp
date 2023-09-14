@@ -47,7 +47,7 @@ namespace CPT
             std::string s = "";
             char c = p.next();
 
-            if (!isAlpha(c)) {
+            if (!isAlpha(c) && c != '_') {
                 p.prev();
                 return "";
             }
