@@ -84,7 +84,8 @@ TESTER		=	CppTester
 
 OBJ			=	$(SRC:.cpp=.o)
 DEBUG_FLAGS	=	-g3 -fsanitize=address
-CFLAGS		=	-W -Wall -Wextra -lLLVM -I./src
+LLVM_FLAGS	=	$(shell llvm-config --libs)
+CFLAGS		=	-W -Wall -Wextra $(LLVM_FLAGS) -I./src
 ifeq ($(DEBUG), 1)
 	CFLAGS	+=	$(DEBUG_FLAGS)
 endif
@@ -104,7 +105,7 @@ fclean: clean
 re: fclean all
 
 run_tests:
-	$(TESTER) --includes ./src --libs LLVM $(TESTS_SRC)
+	$(TESTER) --includes ./src --libs $(shell echo $(LLVM_FLAGS) | cut -c 3-) $(TESTS_SRC)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
