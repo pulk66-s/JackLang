@@ -1,0 +1,30 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Upload ssh key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+
+      - name: Install tester repo
+        run: |
+          git clone git@github.com:pulk66-s/CppTester.git
+          cd CppTester
+          ./scripts/install/fedora.sh
+          cd ..
+          rm -rf CppTester
+      
+      - name: Build and test
+        run: make run_tests
