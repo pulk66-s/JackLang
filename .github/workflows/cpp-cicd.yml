@@ -21,18 +21,13 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
 
-      - name: Install llvm and llvm dev
+
+      - name: Build and test
         run: |
           sudo apt-get install -y llvm llvm-dev
-
-      - name: Install tester repo
-        run: |
           git clone git@github.com:pulk66-s/CppTester.git
           cd CppTester
           ./scripts/install/fedora.sh
           cd ..
           rm -rf CppTester
-          CppTester
-      
-      - name: Build and test
-        run: cd Cpp && make run_tests
+          cd Cpp && make run_tests
