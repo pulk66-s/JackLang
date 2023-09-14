@@ -1,9 +1,9 @@
-#include <CppTester/Tests.hpp>
-#include <CppTester/Assert.hpp>
 #include <string>
 #include "CPT.hpp"
 #include "IO.hpp"
 #include "parse.hpp"
+#include <CppTester/Tests.hpp>
+#include <CppTester/Assert.hpp>
 
 static void assert_number(struct CPT::result *r, int nb)
 {

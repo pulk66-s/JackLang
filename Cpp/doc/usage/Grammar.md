@@ -7,6 +7,8 @@ This file contains the grammar of the language, which is used to parse the code.
 ```antlr
 program: number
 
+type: ('a-z' | 'A-Z')+
+
 number: sign? digit+
 
 sign: '+' | '-'

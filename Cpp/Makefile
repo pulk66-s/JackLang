@@ -77,6 +77,7 @@ SRC_FILES	=	src/IO/File.cpp								\
 SRC			=	$(SRC_MAIN) $(SRC_FILES)
 
 TESTS_FILES	=	tests/unit/int.cpp		\
+				tests/unit/type.cpp		\
 				tests/unit/parse.cpp	\
 
 TESTS_SRC	=	$(TESTS_FILES) $(SRC_FILES)
@@ -106,6 +107,7 @@ re: fclean all
 
 run_tests:
 	$(TESTER) --includes ./src --libs $(shell echo $(LLVM_FLAGS) | cut -c 3-) $(TESTS_SRC)
+	echo $$?
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@

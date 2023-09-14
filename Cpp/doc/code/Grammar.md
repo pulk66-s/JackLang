@@ -49,8 +49,8 @@ Here is the file architecture and the corresponding documentation:
     - SpecialChar.cpp
     - Statement.cpp
     - Statement.hpp
-    - Type.cpp
-    - Type.hpp
+    - [Type.cpp](Grammar/Type.md)
+    - [Type.hpp](Grammar/Type.md)
     - Value.cpp
     - Value.hpp
     - VariableDecl.cpp

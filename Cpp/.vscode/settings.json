@@ -52,6 +52,8 @@
         "variant": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "*.def": "cpp"
+        "*.def": "cpp",
+        "cerrno": "cpp",
+        "queue": "cpp"
     }
 }
