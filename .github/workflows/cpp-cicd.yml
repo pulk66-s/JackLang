@@ -21,6 +21,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
 
+      - name: Install llvm and llvm dev
+        run: |
+          sudo apt-get install -y llvm llvm-dev
+
       - name: Install tester repo
         run: |
           git clone git@github.com:pulk66-s/CppTester.git
