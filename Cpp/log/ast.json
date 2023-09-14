@@ -10,10 +10,71 @@
 "0": {
 "Condition": {
 "condition": {
+"message": "Unknown type '3'",
 },
 "trueBlock": {
+"Block": {
+"lines": {
+"0": {
+"VarDecl": {
+"name": "a",
+"type": "int32",
+"value": {
+"Constant": {
+"value": 1,
+},
+},
+},
+},
+},
+},
 },
 "falseBlock": {
+"Block": {
+"lines": {
+"0": {
+"Condition": {
+"condition": {
+"message": "Unknown type '3'",
+},
+"trueBlock": {
+"Block": {
+"lines": {
+"0": {
+"VarDecl": {
+"name": "b",
+"type": "int32",
+"value": {
+"Constant": {
+"value": 2,
+},
+},
+},
+},
+},
+},
+},
+"falseBlock": {
+"Block": {
+"lines": {
+"0": {
+"VarDecl": {
+"name": "c",
+"type": "int32",
+"value": {
+"Constant": {
+"value": 3,
+},
+},
+},
+},
+},
+},
+},
+},
+},
+},
+},
 },
 },
 },

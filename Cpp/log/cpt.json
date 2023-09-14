@@ -1,24 +1,63 @@
 "exprs": [
-"program": {
-"exprs": [
-{
-"FunctionDecl": {
-"type": "int",
-"identifier": "fn",
-"lines": [
-"0": {
-"Condition": {
-"cond": {
-},
-"then": [
-],
-"else": [
-],
-},
-},
-],
-},
-},
-],
-},
+    "program": {
+        "exprs": [
+            {
+                "FunctionDecl": {
+                    "type": "int",
+                    "identifier": "fn",
+                    "lines": [
+                        "0": {
+                            "Condition": {
+                                "cond": {
+                                    "number": 1,
+                                },
+                                "then": [
+                                    "0": {
+                                        "VariableDecl": {
+                                            "name": "a",
+                                            "type": "int",
+                                            "value": {
+                                                "number": 1,
+                                            },
+                                        },
+                                    },
+                                ],
+                                "else": [
+                                    "0": {
+                                        "Condition": {
+                                            "cond": {
+                                                "number": 2,
+                                            },
+                                            "then": [
+                                                "0": {
+                                                    "VariableDecl": {
+                                                        "name": "b",
+                                                        "type": "int",
+                                                        "value": {
+                                                            "number": 2,
+                                                        },
+                                                    },
+                                                },
+                                            ],
+                                            "else": [
+                                                "0": {
+                                                    "VariableDecl": {
+                                                        "name": "c",
+                                                        "type": "int",
+                                                        "value": {
+                                                            "number": 3,
+                                                        },
+                                                    },
+                                                },
+                                            ],
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    ],
+                },
+            },
+        ],
+    },
 ],

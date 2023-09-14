@@ -2,8 +2,8 @@ DEBUG		=	1
 
 CC			= 	g++
 
-SRC			=	src/main.cpp								\
-				src/IO/File.cpp								\
+SRC_MAIN	= 	src/main.cpp
+SRC_FILES	=	src/IO/File.cpp								\
 				src/IO/Logger.cpp							\
 				src/IO/CPT/char.cpp							\
 				src/IO/CPT/number.cpp						\
@@ -74,6 +74,13 @@ SRC			=	src/main.cpp								\
 				src/Compiler/LLVM/Function/Function.cpp		\
 				src/Compiler/LLVM/Function/FunctionType.cpp	\
 
+SRC			=	$(SRC_MAIN) $(SRC_FILES)
+
+TESTS_FILES	=	tests/unit/int.cpp		\
+				tests/unit/parse.cpp	\
+
+TESTS_SRC	=	$(TESTS_FILES) $(SRC_FILES)
+TESTER		=	CppTester
 
 OBJ			=	$(SRC:.cpp=.o)
 DEBUG_FLAGS	=	-g3 -fsanitize=address
@@ -95,6 +102,9 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+run_tests:
+	$(TESTER) --includes ./src --libs LLVM $(TESTS_SRC)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
