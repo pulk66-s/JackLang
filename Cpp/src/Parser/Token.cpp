@@ -29,8 +29,6 @@ std::vector<std::string> Tokenizer::createTokens(std::string line)
 
 std::vector<std::vector<std::string>> Tokenizer::tokenize(std::string filePath)
 {
-    std::cout << "running pwd" << std::endl;
-    system("pwd");
     IO::Logger::console("Tokenizing file %s\n", filePath.c_str());
     IO::File file(filePath);
     std::string content = file.read();

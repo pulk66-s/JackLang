@@ -766,3 +766,844 @@
 "data": 42,
 "end": "success"},
 "end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},

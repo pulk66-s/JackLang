@@ -3,20 +3,17 @@
 #include <iostream>
 #include "IO.hpp"
 
-namespace CPT
+namespace CPT::Packrat
 {
-    namespace Packrat
+    char character(Packrat::Parser &p, char c)
     {
-        char character(Packrat::Parser &p, char c)
-        {
-            char target = p.next();
-            if (target == c) {
-                p.commit();
-                return c;
-            }
-            IO::Logger::cpt_debug("\"character char\": \"%c != %c\",\n", target, c);
-            p.prev();
-            return '\0';
+        char target = p.next();
+        if (target == c) {
+            p.commit();
+            return c;
         }
-    } // namespace Packrat
+        IO::Logger::cpt_debug("\"character char\": \"%c != %c\",\n", target, c);
+        p.prev();
+        return '\0';
+    }
 } // namespace CPT
