@@ -28,6 +28,7 @@ jobs:
           ./scripts/install/fedora.sh
           cd ..
           rm -rf CppTester
+          CppTester
       
       - name: Build and test
-        run: make run_tests
+        run: cd Cpp && make run_tests
