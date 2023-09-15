@@ -1,10 +1,10 @@
 # Grammar Variable Declaration
 
 A Variable Declaration in CL is composed of multiple parts:
-- The type of the variable
-- The name of the variable
-- The special char '='
-- The value of the variable
+- The [type](Type.md) of the variable
+- The [name](Identifier.md) of the variable
+- The [special char](SpecialChar.md) '='
+- The [value](Value.md) of the variable
     - The value can be either a number or an identifier
 
 As you can see in the [language grammar](../../usage/Grammar.md), a variable declaration looks like:
@@ -14,9 +14,7 @@ variable_decl:
     type
     identifier
     '='
-    variable_value
-
-variable_value: number | identifier
+    value
 ```
 
 ## Code

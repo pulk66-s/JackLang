@@ -11,9 +11,9 @@ variable_decl:
     type
     identifier
     '='
-    variable_value
+    value
 
-variable_value: number | identifier
+value: number | identifier
 
 type:   ('a-z' | 'A-Z')+
 

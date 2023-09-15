@@ -21,3 +21,5 @@ This is where the tests are described.
 - [Types](unit/Types.md): Testing types
 - [Identifiers](unit/Identifiers.md): Testing identifiers
 - [Variable Declaration](unit/VariableDecl.md): Testing variable declaration
+- [Value](unit/Value.md): Testing possibles expression values
+- [SpecialChar](unit/SpecialChar.md): Testing the SpecialChar parsing class

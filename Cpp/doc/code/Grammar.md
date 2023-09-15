@@ -45,13 +45,13 @@ Here is the file architecture and the corresponding documentation:
     - [Number.hpp](Grammar/Number.md)
     - Program.cpp
     - Program.hpp
-    - SpecialChar.hpp
-    - SpecialChar.cpp
+    - [SpecialChar.hpp](Grammar/SpecialChar.md)
+    - [SpecialChar.cpp](Grammar/SpecialChar.md)
     - Statement.cpp
     - Statement.hpp
     - [Type.cpp](Grammar/Type.md)
     - [Type.hpp](Grammar/Type.md)
-    - Value.cpp
-    - Value.hpp
+    - [Value.cpp](Grammar/Value.md)
+    - [Value.hpp](Grammar/Value.md)
     - [VariableDecl.cpp](Grammar/VariableDecl.md)
     - [VariableDecl.hpp](Grammar/VariableDecl.md)

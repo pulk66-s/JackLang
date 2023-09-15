@@ -10,5 +10,6 @@
 #include "CPT/Grammar/Function.hpp"
 #include "CPT/Grammar/Condition.hpp"
 #include "CPT/Grammar/Keyword.hpp"
+#include "CPT/Grammar/Value.hpp"
 
 #endif

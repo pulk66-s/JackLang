@@ -9,10 +9,10 @@ namespace CPT::Grammar
     class SpecialChar : public Packrat::IExpr
     {
     public:
-        SpecialChar(char c) : c(c) {}
-        struct result *parse(Packrat::Parser &p) ;
-        enum cpt_type type()  { return CPT_CHAR; }
-        char get() { return c; }
+        SpecialChar(char c) : c(c) {};
+        struct result *parse(Packrat::Parser &p);
+        enum cpt_type type()  { return CPT_CHAR; };
+        char get() { return c; };
     private:
         char c;
     };
