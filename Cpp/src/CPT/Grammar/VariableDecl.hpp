@@ -4,27 +4,24 @@
 #include "CPT/CPTNamespace.hpp"
 #include "CPT/Packrat.hpp"
 
-namespace CPT
+namespace CPT::Grammar
 {
-    namespace Grammar
+    class VariableDecl : public Packrat::IExpr
     {
-        class VariableDecl : public Packrat::IExpr
-        {
-        public:
-            VariableDecl(): t(nullptr), identifier(""), value(nullptr) {};
-            VariableDecl(Type *type, std::string identifier, Packrat::IExpr *value): t(type), identifier(identifier), value(value) {};
-            enum cpt_type type()  { return CPT_VARDECL; };
-            struct result *parse(Packrat::Parser &p);
-            Type *getType() { return t; };
-            std::string get() { return identifier; };
-            Packrat::IExpr *getValue() { return value; };
+    public:
+        VariableDecl(): t(nullptr), identifier(""), value(nullptr) {};
+        VariableDecl(Type *type, std::string identifier, Packrat::IExpr *value): t(type), identifier(identifier), value(value) {};
+        enum cpt_type type()  { return CPT_VARDECL; };
+        struct result *parse(Packrat::Parser &p);
+        Type *getType() { return t; };
+        std::string get() { return identifier; };
+        Packrat::IExpr *getValue() { return value; };
 
-        private:
-            Type *t;
-            std::string identifier;
-            Packrat::IExpr *value;
-        };
-    } // namespace Grammar
+    private:
+        Type *t;
+        std::string identifier;
+        Packrat::IExpr *value;
+    };
 } // namespace CPT
 
 #endif

@@ -53,5 +53,5 @@ Here is the file architecture and the corresponding documentation:
     - [Type.hpp](Grammar/Type.md)
     - Value.cpp
     - Value.hpp
-    - VariableDecl.cpp
-    - VariableDecl.hpp
+    - [VariableDecl.cpp](Grammar/VariableDecl.md)
+    - [VariableDecl.hpp](Grammar/VariableDecl.md)

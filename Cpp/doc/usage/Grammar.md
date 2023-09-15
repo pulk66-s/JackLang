@@ -5,9 +5,17 @@ This file contains the grammar of the language, which is used to parse the code.
 ## Global structure
 
 ```antlr
-program: number
+program: variable_decl*
 
-type: ('a-z' | 'A-Z')+
+variable_decl:
+    type
+    identifier
+    '='
+    variable_value
+
+variable_value: number | identifier
+
+type:   ('a-z' | 'A-Z')+
 
 identifier:
     ('a-z' | 'A-Z' | '_')

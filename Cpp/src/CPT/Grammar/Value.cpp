@@ -1,5 +1,6 @@
 #include "CPT/Grammar/Value.hpp"
 #include "CPT/Grammar/Number.hpp"
+#include "CPT/Grammar/Identifier.hpp"
 #include "IO.hpp"
 
 namespace CPT::Grammar
@@ -10,6 +11,7 @@ namespace CPT::Grammar
         p.save();
         struct result *res = Packrat::ordered_choice(p, {
             new Number(),
+            new Identifier(),
         });
         if (!res) {
             IO::Logger::cpt_debug("\"end\": \"fail\",},\n");

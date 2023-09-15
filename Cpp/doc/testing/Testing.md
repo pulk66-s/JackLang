@@ -20,3 +20,4 @@ This is where the tests are described.
 - [Numbers](unit/Numbers.md): Testing integer
 - [Types](unit/Types.md): Testing types
 - [Identifiers](unit/Identifiers.md): Testing identifiers
+- [Variable Declaration](unit/VariableDecl.md): Testing variable declaration
