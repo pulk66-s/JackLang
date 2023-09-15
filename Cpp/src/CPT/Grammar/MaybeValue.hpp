@@ -13,5 +13,4 @@ namespace CPT::Grammar
     };
 } // namespace CPT::Grammar
 
-
 #endif

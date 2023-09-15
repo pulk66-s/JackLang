@@ -5,7 +5,11 @@ This file contains the grammar of the language, which is used to parse the code.
 ## Global structure
 
 ```antlr
-program: variable_decl*
+program: statement*
+
+statement:
+    variable_decl
+    ';'
 
 variable_decl:
     type

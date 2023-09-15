@@ -38,17 +38,17 @@ Here is the file architecture and the corresponding documentation:
     - Function.hpp
     - [Identifier.cpp](Grammar/Identifier.md)
     - [Identifier.hpp](Grammar/Identifier.md)
-    - Keyword.hpp
-    - MaybeValue.cpp
-    - MaybeValue.hpp
+    - [Keyword.hpp](Grammar/Keyword.md)
+    - [MaybeValue.cpp](Grammar/MaybeValue.md)
+    - [MaybeValue.hpp](Grammar/MaybeValue.md)
     - [Number.cpp](Grammar/Number.md)
     - [Number.hpp](Grammar/Number.md)
     - Program.cpp
     - Program.hpp
     - [SpecialChar.hpp](Grammar/SpecialChar.md)
     - [SpecialChar.cpp](Grammar/SpecialChar.md)
-    - Statement.cpp
-    - Statement.hpp
+    - [Statement.cpp](Grammar/Statement.md)
+    - [Statement.hpp](Grammar/Statement.md)
     - [Type.cpp](Grammar/Type.md)
     - [Type.hpp](Grammar/Type.md)
     - [Value.cpp](Grammar/Value.md)

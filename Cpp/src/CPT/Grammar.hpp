@@ -11,5 +11,7 @@
 #include "CPT/Grammar/Condition.hpp"
 #include "CPT/Grammar/Keyword.hpp"
 #include "CPT/Grammar/Value.hpp"
+#include "CPT/Grammar/MaybeValue.hpp"
+#include "CPT/Grammar/Statement.hpp"
 
 #endif

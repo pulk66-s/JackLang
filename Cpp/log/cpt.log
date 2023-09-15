@@ -4852,3 +4852,2712 @@
 "data": 42,
 "end": "success"},
 "end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "1",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": "a",
+"type": "fea",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "a",
+"isAlpha": "=",
+"type": "a",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "4",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "4 != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "#",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "# != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"end": "fail expr 3"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "=",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "b != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "b != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "b",
+"isAlpha": ""identifier": "b",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"SpecialChar": {
+"char": ";",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"expr 0": "fail",
+"end": "fail"},
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "Choice is null",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "a != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "a != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": ""identifier": "a",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": "b != a",
+"message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"SpecialChar": {
+"char": "a",
+"end": "success"},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": ""identifier": "_____",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "l",
+"isAlpha": "o",
+"isAlpha": "w",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "c",
+"isAlpha": "a",
+"isAlpha": "s",
+"isAlpha": "e",
+"isAlpha": ""identifier": "identifierlowercase",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ".",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "D",
+"isAlpha": "e",
+"isAlpha": "N",
+"isAlpha": "t",
+"isAlpha": "I",
+"isAlpha": "f",
+"isAlpha": "I",
+"isAlpha": "e",
+"isAlpha": "R",
+"isAlpha": "m",
+"isAlpha": "I",
+"isAlpha": "x",
+"isAlpha": "E",
+"isAlpha": "d",
+"isAlpha": "C",
+"isAlpha": "a",
+"isAlpha": "S",
+"isAlpha": "e",
+"isAlpha": ""identifier": "iDeNtIfIeRmIxEdCaSe",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "I",
+"isAlpha": "D",
+"isAlpha": "E",
+"isAlpha": "N",
+"isAlpha": "T",
+"isAlpha": "I",
+"isAlpha": "F",
+"isAlpha": "I",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "U",
+"isAlpha": "P",
+"isAlpha": "P",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "C",
+"isAlpha": "A",
+"isAlpha": "S",
+"isAlpha": "E",
+"isAlpha": ""identifier": "IDENTIFIERUPPERCASE",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "thisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "f",
+"isAlpha": ""identifier": "f",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "a",
+"isAlpha": "n",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "this_is_an_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "3",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "_",
+"isAlpha": ""identifier": "id3ntifier_",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "T",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "ThisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": ""type": "fea",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": ""type": "int",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "1",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": "a",
+"type": "fea",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "a",
+"isAlpha": "=",
+"type": "a",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "4",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "4 != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "#",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "# != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"end": "fail expr 3"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "=",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "b != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "b != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "b",
+"isAlpha": ""identifier": "b",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"SpecialChar": {
+"char": ";",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"expr 0": "fail",
+"end": "fail"},
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "Choice is null",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "a != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "a != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": ""identifier": "a",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": "b != a",
+"message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"SpecialChar": {
+"char": "a",
+"end": "success"},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": ""identifier": "_____",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "l",
+"isAlpha": "o",
+"isAlpha": "w",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "c",
+"isAlpha": "a",
+"isAlpha": "s",
+"isAlpha": "e",
+"isAlpha": ""identifier": "identifierlowercase",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ".",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "D",
+"isAlpha": "e",
+"isAlpha": "N",
+"isAlpha": "t",
+"isAlpha": "I",
+"isAlpha": "f",
+"isAlpha": "I",
+"isAlpha": "e",
+"isAlpha": "R",
+"isAlpha": "m",
+"isAlpha": "I",
+"isAlpha": "x",
+"isAlpha": "E",
+"isAlpha": "d",
+"isAlpha": "C",
+"isAlpha": "a",
+"isAlpha": "S",
+"isAlpha": "e",
+"isAlpha": ""identifier": "iDeNtIfIeRmIxEdCaSe",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "I",
+"isAlpha": "D",
+"isAlpha": "E",
+"isAlpha": "N",
+"isAlpha": "T",
+"isAlpha": "I",
+"isAlpha": "F",
+"isAlpha": "I",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "U",
+"isAlpha": "P",
+"isAlpha": "P",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "C",
+"isAlpha": "A",
+"isAlpha": "S",
+"isAlpha": "E",
+"isAlpha": ""identifier": "IDENTIFIERUPPERCASE",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "thisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "f",
+"isAlpha": ""identifier": "f",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "a",
+"isAlpha": "n",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "this_is_an_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "3",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "_",
+"isAlpha": ""identifier": "id3ntifier_",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "T",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "ThisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": ""type": "fea",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": ""type": "int",
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "e != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "e != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": "f",
+"isAlpha": ""identifier": "eaf",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 0": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 0": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "a != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "a != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": ""identifier": "a",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 0": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"expr 0": "fail",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "1",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": "a",
+"type": "fea",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "a",
+"isAlpha": "=",
+"type": "a",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "4",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "4 != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "#",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"character char": "# != =",
+"message": "no special character detected",
+"end": "fail"},
+"end": "fail expr 2"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"end": "fail expr 3"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "=",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "=",
+"message": "no identifier detected",
+"end": "fail"},
+"end": "fail expr 1"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "b != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "b != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "b",
+"isAlpha": ""identifier": "b",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "a",
+"type": "int",
+"end": "success"},
+"expr 0": "success",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": "=",
+"identifier": "a",
+"end": "success"},
+"expr 1": "success",
+"SpecialChar": {
+"char": "=",
+"end": "success"},
+"expr 2": "success",
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 3": "success",
+"end": "success"},
+"end": "success"},
+"expr 0": "success"},
+"SpecialChar": {
+"char": ";",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Statement": {
+"ordered_choice": {
+"VariableDecl": {
+"start_cursor": "0 0 0",
+"sequence": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"end": "fail expr 0"},
+"end": "fail"},
+"expr 0": "fail",
+"end": "fail"},
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "Choice is null",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "a != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "a != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": ""identifier": "a",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": "b != a",
+"message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"SpecialChar": {
+"char": "a",
+"end": "success"},
+"end": "success"},
+"Program": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": "_",
+"isAlpha": ""identifier": "_____",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "l",
+"isAlpha": "o",
+"isAlpha": "w",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "c",
+"isAlpha": "a",
+"isAlpha": "s",
+"isAlpha": "e",
+"isAlpha": ""identifier": "identifierlowercase",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ".",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "D",
+"isAlpha": "e",
+"isAlpha": "N",
+"isAlpha": "t",
+"isAlpha": "I",
+"isAlpha": "f",
+"isAlpha": "I",
+"isAlpha": "e",
+"isAlpha": "R",
+"isAlpha": "m",
+"isAlpha": "I",
+"isAlpha": "x",
+"isAlpha": "E",
+"isAlpha": "d",
+"isAlpha": "C",
+"isAlpha": "a",
+"isAlpha": "S",
+"isAlpha": "e",
+"isAlpha": ""identifier": "iDeNtIfIeRmIxEdCaSe",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "1",
+"message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "I",
+"isAlpha": "D",
+"isAlpha": "E",
+"isAlpha": "N",
+"isAlpha": "T",
+"isAlpha": "I",
+"isAlpha": "F",
+"isAlpha": "I",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "U",
+"isAlpha": "P",
+"isAlpha": "P",
+"isAlpha": "E",
+"isAlpha": "R",
+"isAlpha": "C",
+"isAlpha": "A",
+"isAlpha": "S",
+"isAlpha": "E",
+"isAlpha": ""identifier": "IDENTIFIERUPPERCASE",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "thisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "f",
+"isAlpha": ""identifier": "f",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "t",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "_",
+"isAlpha": "a",
+"isAlpha": "n",
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "this_is_an_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Identifier": {
+"isAlpha": "_",
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "_identifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "i",
+"isAlpha": "d",
+"isAlpha": "3",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": "_",
+"isAlpha": ""identifier": "id3ntifier_",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Identifier": {
+"isAlpha": "T",
+"isAlpha": "h",
+"isAlpha": "i",
+"isAlpha": "s",
+"isAlpha": "I",
+"isAlpha": "s",
+"isAlpha": "A",
+"isAlpha": "n",
+"isAlpha": "I",
+"isAlpha": "d",
+"isAlpha": "e",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": "i",
+"isAlpha": "f",
+"isAlpha": "i",
+"isAlpha": "e",
+"isAlpha": "r",
+"isAlpha": ""identifier": "ThisIsAnIdentifier",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": "1",
+"message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "f",
+"isAlpha": "e",
+"isAlpha": "a",
+"isAlpha": ""type": "fea",
+"end": "success"},
+"end": "success"},
+"Program": {
+"Type": {
+"isAlpha": ""message": "no type detected",
+"end": "fail"},
+"message": "result is null",
+"end": "fail"},
+"Program": {
+"Type": {
+"isAlpha": "i",
+"isAlpha": "n",
+"isAlpha": "t",
+"isAlpha": ""type": "int",
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ". != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ". != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ".",
+"message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"expr 0": "fail",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"expr 0": "success"},
+"end": "success",},
+"expr 0": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "a != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "a != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": "a",
+"isAlpha": ""identifier": "a",
+"end": "success"},
+"expr 1": "success"},
+"end": "success",},
+"expr 0": "success",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"MaybeValue": {
+"zero_or_one": {
+"Value": {
+"ordered_choice": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": ""message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",
+"reason": "Number is null"},
+"expr 0": "fail",
+"Identifier": {
+"isAlpha": ""message": "no identifier detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"end": "fail",},
+"expr 0": "fail",
+"end": "success"},
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "0 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "0 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 0,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"char": "+",
+"end": "success"},
+"expr 0": "success"},
+"data": 42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "- != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"char": "-",
+"end": "success"},
+"expr 1": "success"},
+"data": -42,
+"end": "success"},
+"end": "success"},
+"Program": {
+"Number": {
+"ordered_choice": {
+"SpecialChar": {
+"character char": "4 != +",
+"message": "no special character detected",
+"end": "fail"},
+"expr 0": "fail",
+"SpecialChar": {
+"character char": "4 != -",
+"message": "no special character detected",
+"end": "fail"},
+"expr 1": "fail",
+"end": "fail"},
+"data": 42,
+"end": "success"},
+"end": "success"},

@@ -80,7 +80,9 @@ TESTS_FILES	=	tests/unit/int.cpp			\
 				tests/unit/type.cpp			\
 				tests/unit/identifier.cpp	\
 				tests/unit/specialchar.cpp	\
+				tests/unit/maybe_value.cpp	\
 				tests/unit/values.cpp		\
+				tests/unit/statement.cpp	\
 				tests/unit/VariableDecl.cpp	\
 				tests/unit/parse.cpp		\
 

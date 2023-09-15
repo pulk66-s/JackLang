@@ -23,3 +23,5 @@ This is where the tests are described.
 - [Variable Declaration](unit/VariableDecl.md): Testing variable declaration
 - [Value](unit/Value.md): Testing possibles expression values
 - [SpecialChar](unit/SpecialChar.md): Testing the SpecialChar parsing class
+- [Statement](unit/Statement.md): Testing all the possible Statements
+- [Maybe Value](unit/MaybeValue.md): Testing the aybeValue class
